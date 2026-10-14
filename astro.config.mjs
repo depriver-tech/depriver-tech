@@ -22,7 +22,7 @@ export default defineConfig({
   redirects: { "/blog": "/" },
   integrations: [
     sitemap({
-      filter: (page) => !page.includes("/moderate/") && page !== `${SITE}/blog/`,
+      filter: (page) => !page.includes("/moderate/") && !page.includes("/publisher/") && page !== `${SITE}/blog/`,
       serialize(item) {
         if (item.url in postDates) {
           item.lastmod = postDates[item.url] ? new Date(postDates[item.url]).toISOString() : undefined;

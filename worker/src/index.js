@@ -17,10 +17,15 @@
 //
 // Secrets (wrangler secret put): SALT, ADMIN_KEY, optional TURNSTILE_SECRET, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
 
+import { socialAdmin, finishOAuth, runScheduler } from './social/index.js';
+
 const SLUG = /^[a-z0-9][a-z0-9-]{0,119}$/;
 const OWNER_NAME = "Privatus Cosmas";
 
 export default {
+  async scheduled(controller, env, ctx) {
+    ctx.waitUntil(runScheduler(env));
+  },
   async fetch(request, env, ctx) {
     const origin = request.headers.get("Origin") || "";
     const allowed = (env.ALLOWED_ORIGINS || "").split(",").map((s) => s.trim()).filter(Boolean);
@@ -41,10 +46,20 @@ export default {
     const method = request.method;
 
     try {
+      if (/^\/social\/oauth\/(instagram|linkedin)\/callback$/.test(url.pathname) && method === 'GET') {
+        return await finishOAuth(request, env);
+      }
       // ── owner endpoints ─────────────────────────────────────
       if (route === "admin") {
         const key = (request.headers.get("Authorization") || "").replace(/^Bearer\s+/i, "");
-        if (!env.ADMIN_KEY || !(await safeEqual(key, env.ADMIN_KEY))) return json({ error: "unauthorized" }, 401);
+        const ownerAuthorized = env.ADMIN_KEY && await safeEqual(key, env.ADMIN_KEY);
+        const publisherAuthorized = a === 'social' && env.PUBLISHER_KEY && await safeEqual(key, env.PUBLISHER_KEY);
+        if (!ownerAuthorized && !publisherAuthorized) return json({ error: "unauthorized" }, 401);
+        if (a === 'social') {
+          if (origin && !allowed.includes(origin)) return json({ error:'forbidden' },403);
+          if (Number(request.headers.get('Content-Length') || 0) > 32768) return json({ error:'Request too large.' },413);
+          return await socialAdmin(request,env,json);
+        }
         return await admin(env, method, a, b, parts[3], url, request, json);
       }
 

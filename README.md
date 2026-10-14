@@ -21,6 +21,7 @@ After installing or changing Omarchy themes, run `npm run themes` to regenerate
 `src/styles/themes.css` and `src/data/themes.json`, then commit them.
 
 ## Where things live
+- `/publisher/`: private social publishing studio; see [setup and operating guide](docs/social-publisher.md).
 - `src/data/story.ts`: every chapter of the life story, services, lessons and contact details. Edit text here.
 - `STORY.md`: the raw life-story notes (local only, git-ignored, never published).
 - `src/content/blog/*.md`: blog posts (Markdown).

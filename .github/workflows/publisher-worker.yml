@@ -1,0 +1,53 @@
+name: Deploy publishing Worker
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'worker/**'
+      - 'src/content/blog/**'
+      - 'scripts/social-catalog.mjs'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/publisher-worker.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publisher-worker
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run social:test
+      - name: Check deployment connection
+        id: connection
+        shell: bash
+        run: |
+          if [ -n "$CLOUDFLARE_API_TOKEN" ] && [ -n "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo 'ready=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'ready=false' >> "$GITHUB_OUTPUT"
+            echo '::warning::Publishing Worker not deployed: configure CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID repository secrets. Website deployment is separate.'
+          fi
+      - name: Apply additive publishing schema
+        if: steps.connection.outputs.ready == 'true'
+        working-directory: worker
+        run: npx --yes wrangler@4.147.0 d1 execute depriver-engage --remote --file migrations/0001_social.sql
+      - name: Deploy Worker and refresh private catalog
+        if: steps.connection.outputs.ready == 'true'
+        working-directory: worker
+        run: npx --yes wrangler@4.147.0 deploy

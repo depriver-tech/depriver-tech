@@ -5,11 +5,13 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/terrain.mjs && astro build",
+    "build": "node scripts/terrain.mjs && astro build && node scripts/social-catalog.mjs --media",
     "preview": "astro preview",
     "terrain": "node scripts/terrain.mjs",
     "themes": "node scripts/omarchy-themes.mjs",
-    "carousel": "python3 studio/build.py"
+    "carousel": "python3 studio/build.py",
+    "social:catalog": "node scripts/social-catalog.mjs",
+    "social:test": "node scripts/social-catalog.mjs && node worker/tests/social.test.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
@@ -21,6 +23,7 @@
   "devDependencies": {
     "@resvg/resvg-js": "^2.6.2",
     "d3-contour": "^4.0.2",
+    "js-yaml": "^4.3.2",
     "satori": "^0.33.5",
     "sharp": "^0.35.5",
     "simplex-noise": "^4.0.3"

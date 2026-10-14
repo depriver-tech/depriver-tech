@@ -5,10 +5,22 @@ main = "src/index.js"
 compatibility_date = "2026-09-01"
 workers_dev = true
 
+[build]
+command = "node ../scripts/social-catalog.mjs"
+
+[triggers]
+crons = ["*/5 * * * *"]
+
 [vars]
 SITE_URL = "https://depriver.tech"
 ALLOWED_ORIGINS = "https://depriver.tech,https://www.depriver.tech,http://localhost:4321"
 AI_MODEL = "@cf/meta/llama-4-scout-17b-16e-instruct"
+# Two switches: deployment gate here + Pause/Resume inside the private publisher.
+SOCIAL_PUBLISHING_ENABLED = "false"
+SOCIAL_API_URL = "https://depriver-engage.depriver-tech.workers.dev"
+# Verify supported versions when connecting the developer apps.
+LINKEDIN_API_VERSION = "202605"
+INSTAGRAM_API_VERSION = "v25.0"
 
 [ai]
 binding = "AI"
