@@ -60,6 +60,12 @@ renders `studio/<slug>/make.py` to full-size Instagram JPGs in `studio/<slug>/ex
 web slides into `public/carousels/<slug>/`. Then write `src/content/blog/<slug>.md` with `carousel: <slug>`.
 New carousel: copy one of the `studio/<slug>/` folders, rename it to the new slug, and edit `make.py`.
 
+## Post downloads
+Every published post includes a **Download article (TXT)** link with the complete article and source URL.
+Carousel posts also offer **Download all slides (ZIP)** with every numbered image and the article in one file.
+These files are generated at build time under `/downloads/`, using the same publication filter as the blog;
+draft and future posts do not get downloads. Download links work without JavaScript.
+
 ## Link previews
 Every post gets a branded 1200×630 share image at `/og/blog/<slug>.jpg` (built by `src/pages/og/`), plus full
 Open Graph/Twitter tags, so links unfurl properly on WhatsApp, X, LinkedIn and Facebook.

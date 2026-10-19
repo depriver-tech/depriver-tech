@@ -1,0 +1,17 @@
+---
+interface Props { slug: string; slideCount?: number }
+const { slug, slideCount = 0 } = Astro.props;
+---
+<div class="post-download" aria-label="Download this post">
+  {slideCount > 0 && <a class="download-primary" href={`/downloads/${slug}.zip`} download={`${slug}.zip`}>↓ Download all {slideCount} slides (ZIP)</a>}
+  <a href={`/downloads/${slug}.txt`} download={`${slug}.txt`}>↓ Download article (TXT)</a>
+  <p>{slideCount > 0 ? "All slide images and the full article in one ZIP, ready to save and read offline." : "Save the full article to read offline."}</p>
+</div>
+<style>
+  .post-download { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
+  a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 16px; border-radius: 12px; background: var(--surface-2); color: var(--heading); text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+  a.download-primary { background: var(--accent); color: var(--on-accent); }
+  a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+  p { flex-basis: 100%; margin: 0; color: var(--muted); font-size: 0.8rem; }
+</style>

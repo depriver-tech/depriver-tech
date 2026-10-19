@@ -5,6 +5,7 @@ import PostCard from "../../components/PostCard.astro";
 import Carousel from "../../components/Carousel.astro";
 import Engage from "../../components/Engage.astro";
 import Comments from "../../components/Comments.astro";
+import PostDownload from "../../components/PostDownload.astro";
 import { seriesOf } from "../../data/series";
 import { livePosts, slidesFor, readingMinutes, formatDate, type Post } from "../../lib/posts";
 
@@ -56,6 +57,7 @@ const jsonLd = {
           {ser && <a class="v-series" href="/#series">{ser.name}</a>}
           <h1 class="v-title">{post.data.title}</h1>
           <p class="v-desc" data-desc>{post.data.description}</p>
+          <PostDownload slug={post.id} slideCount={slides.length} />
           <p class="v-step" data-step hidden><span data-step-n></span><button type="button" data-follow-toggle>Read everything</button></p>
           <div class="prose v-prose" data-clamp><Content /></div>
           <button class="v-more" type="button" data-more-text hidden>more</button>
@@ -75,6 +77,7 @@ const jsonLd = {
         </p>
         <h1 class="display" data-reveal>{post.data.title}</h1>
         <p class="desc" data-reveal>{post.data.description}</p>
+        <PostDownload slug={post.id} />
         <div class="author" data-reveal>
           <img src="/img/me-cut.webp" alt="" width="48" height="48" />
           <div><strong>Privatus Cosmas</strong><span>Software Engineer & Digital Innovator</span></div>
