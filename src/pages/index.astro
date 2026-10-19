@@ -6,7 +6,6 @@ import PostCard from "../components/PostCard.astro";
 import { series, topics, seriesOf, topicsOf } from "../data/series";
 import { talks, talkBase } from "../data/talks";
 import { guides, guideFile, guideAsset } from "../data/guides";
-import { chapters } from "../data/story";
 
 const posts = await livePosts();
 const upcoming = await upcomingPosts(4);
@@ -24,7 +23,7 @@ const PAGE = 9;
 const marquee = ["Software", "Careers", "Students", "Kiswahili", "Security", "Code", "Mbeya", "Tanzania", "Learning in public"];
 const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short", timeZone: "Africa/Dar_es_Salaam" });
 ---
-<Base title="Privatus Cosmas (Priver) | Software Engineer in Tanzania" description="Privatus Cosmas, also known as Priver, is a software engineer in Mbeya, Tanzania. Explore web and mobile development, practical tech lessons and his story.">
+<Base title="Privatus Cosmas (Priver) | Software Engineer in Tanzania" description="Privatus Cosmas, also known as Priver, is a software engineer in Mbeya, Tanzania. Explore web and mobile development, practical tech lessons and software development services.">
   <!-- ── HERO ─────────────────────────────────────────── -->
   <section class="hero wrap" data-home-hero>
     <div class="hero-copy">
@@ -47,7 +46,7 @@ const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", da
       <div class="fan" data-fan>
         {fan.map((src, i) => <img class={`f${i}`} src={src} alt="" width="400" height="500" loading={i ? "lazy" : "eager"} />)}
       </div>
-      <a class="me" href="/story/" tabindex="-1" data-float>
+      <a class="me" href="/about/" tabindex="-1" data-float>
         <img src="/img/me-cut.webp" alt="" width="56" height="56" />
         <span><strong>Privatus Cosmas</strong><em>Software Engineer & Digital Innovator</em></span>
       </a>
@@ -151,7 +150,7 @@ const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", da
     )}
   </section>
 
-  <!-- ── GUIDE + TALK + STORY ──────────────────────── -->
+  <!-- ── GUIDE + TALK + ABOUT ──────────────────────── -->
   <section class="wrap block duo">
     {guide && (
       <div class="duo-card guide" data-reveal>
@@ -178,14 +177,12 @@ const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", da
         <span class="go">Open the slides <span aria-hidden="true">→</span></span>
       </a>
     )}
-    <a class="duo-card story deep" href="/story/" data-reveal>
-      <span class="label">My story</span>
-      <h3>From Kitwe village to writing code</h3>
-      <ol class="years">
-        {chapters.slice(0, 6).map((c) => <li>{c.year}</li>)}
-      </ol>
+    <a class="duo-card story deep" href="/about/" data-reveal>
+      <span class="label">About Privatus</span>
+      <h3>Software with a practical purpose.</h3>
+      <p class="about-summary">Web and mobile apps, business systems and practical tech lessons from Mbeya, Tanzania.</p>
       <img src="/img/me-cut-540.webp" alt="" width="540" height="720" loading="lazy" />
-      <span class="go">Read the chapters <span aria-hidden="true">→</span></span>
+      <span class="go">Meet the engineer <span aria-hidden="true">→</span></span>
     </a>
   </section>
 </Base>
@@ -417,14 +414,7 @@ const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", da
   .story { color: var(--deep-text); min-height: 420px; }
   .story h3 { color: var(--on-deep); max-width: 11em; position: relative; z-index: 1; }
   .story .go { position: relative; z-index: 1; }
-  .years { list-style: none; padding: 0; margin: 0; display: grid; gap: 2px; font-weight: 700; font-size: 1.1rem; position: relative; z-index: 1; }
-  .years li { color: transparent; -webkit-text-stroke: 1px color-mix(in srgb, var(--on-deep) 50%, transparent); transition: color 0.4s, -webkit-text-stroke-color 0.4s; }
-  .story:hover .years li { color: var(--accent); -webkit-text-stroke-color: var(--accent); }
-  .story:hover .years li:nth-child(2) { transition-delay: 0.05s; }
-  .story:hover .years li:nth-child(3) { transition-delay: 0.1s; }
-  .story:hover .years li:nth-child(4) { transition-delay: 0.15s; }
-  .story:hover .years li:nth-child(5) { transition-delay: 0.2s; }
-  .story:hover .years li:nth-child(6) { transition-delay: 0.25s; }
+  .about-summary { max-width: 18em; position: relative; z-index: 1; }
   .story img { position: absolute; right: -4%; bottom: 0; height: 92%; width: auto; filter: grayscale(1) var(--photo-filter); transition: transform 0.8s var(--ease); }
   .story:hover img { transform: translateY(-8px) scale(1.02); }
 

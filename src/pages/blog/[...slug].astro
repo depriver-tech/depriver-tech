@@ -32,7 +32,7 @@ const jsonLd = {
   url,
   mainEntityOfPage: { "@type": "WebPage", "@id": url },
   publisher: { "@id": "https://depriver.tech/#person" },
-  author: { "@type": "Person", "@id": "https://depriver.tech/#person", name: "Privatus Cosmas", url: "https://depriver.tech/story/" },
+  author: { "@type": "Person", "@id": "https://depriver.tech/#person", name: "Privatus Cosmas", url: "https://depriver.tech/about/" },
   keywords: post.data.tags.join(", "),
 };
 ---
@@ -47,7 +47,7 @@ const jsonLd = {
       </div>
       <aside class="v-panel" data-reveal data-lenis-prevent>
         <div class="v-top">
-          <a class="v-author" href="/story/">
+          <a class="v-author" href="/about/">
             <img src="/img/me-cut.webp" alt="" width="44" height="44" />
             <span><strong>Privatus Cosmas</strong><em>{formatDate(post.data.date, "long")} · {slides.length} slides</em></span>
           </a>

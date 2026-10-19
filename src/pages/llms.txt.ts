@@ -25,7 +25,8 @@ ${services.map((s) => `- ${s.title}: ${s.body}`).join("\n")}
 ## Pages
 - [Software development](https://depriver.tech/software-engineer-tanzania/): services and working with Privatus
 - [Docs Archive](https://depriver.tech/docs/): downloadable Git lesson and resources
-- [His story](https://depriver.tech/story/): from Kitwe village in Kagera to software engineer, told in chapters
+- [About Privatus](https://depriver.tech/about/): professional background, software engineering and contact details
+- [His personal story](https://depriver.tech/story/): from Kitwe village in Kagera to software engineer, told in chapters
 - [Blog](https://depriver.tech/): posts and carousels on software, learning and tech life
 - [Free guides](https://depriver.tech/guides/): free books for beginners, read online or download
 - [Talks](https://depriver.tech/talks/): slides from his talks, presentable in the browser

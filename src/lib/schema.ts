@@ -9,7 +9,7 @@ export const personJsonLd = {
   "@id": `${SITE}/#person`,
   name: "Privatus Cosmas",
   alternateName: ["Priver", "Privatus", "depriver", "@_depriver"],
-  url: `${SITE}/story/`,
+  url: `${SITE}/about/`,
   image: `${SITE}/img/me-cut.webp`,
   jobTitle: "Software Engineer",
   description:
@@ -40,7 +40,7 @@ export const websiteJsonLd = {
   url: SITE,
   name: "Privatus Cosmas",
   alternateName: ["Priver", "depriver.tech"],
-  description: "Software engineering, practical lessons and the life story of Privatus Cosmas, Software Engineer & Digital Innovator in Mbeya, Tanzania.",
+  description: "Software engineering and practical tech lessons by Privatus Cosmas (Priver), a software engineer in Mbeya, Tanzania.",
   inLanguage: "en",
   author: { "@id": `${SITE}/#person` },
   publisher: { "@id": `${SITE}/#person` },

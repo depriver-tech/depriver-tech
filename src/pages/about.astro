@@ -1,0 +1,52 @@
+---
+import Base from '../layouts/Base.astro';
+import { contact } from '../data/story';
+const jsonLd = {
+  '@context': 'https://schema.org', '@type': 'ProfilePage',
+  url: 'https://depriver.tech/about/', name: 'About Privatus Cosmas (Priver)',
+  mainEntity: { '@id': 'https://depriver.tech/#person' },
+};
+---
+<Base title="About Privatus Cosmas (Priver) | Software Engineer" description="Meet Privatus Cosmas (Priver), a software engineer in Mbeya, Tanzania, building web and mobile apps, business systems and integrations, and sharing practical tech lessons." jsonLd={jsonLd}>
+  <article class="about-page wrap">
+    <header class="intro">
+      <div>
+        <p class="label">ABOUT / PRIVATUS COSMAS</p>
+        <h1>Hi, I’m Privatus.<br /><span>Call me Priver.</span></h1>
+        <p class="lead">I’m a software engineer based in Mbeya, Tanzania. I build web and mobile applications, business systems and integrations that help people get things done.</p>
+        <div class="actions"><a class="btn" href="#contact">Let’s work together</a><a href="/software-engineer-tanzania/">Explore my services →</a></div>
+      </div>
+      <figure><img src="/img/privatus-editorial.png" alt="Portrait of Privatus Cosmas" width="768" height="1024" /><figcaption>Priver / Software engineer</figcaption></figure>
+    </header>
+    <div class="details">
+      <section><p class="label">MY WORK</p><h2>Useful software starts with understanding people.</h2><p>My work spans web and mobile apps, SaaS and business systems, systems integration, and dashboards. I’m interested in the everyday problems behind a project: where work slows down, what information is missing and how software can make the next step easier.</p><a href="/software-engineer-tanzania/">What I can help you build →</a></section>
+      <section><p class="label">BACKGROUND</p><h2>Learning by building.</h2><p>I graduated from Mbeya University of Science and Technology with a Diploma in Computer Science. My experience includes computer repairs, technical work, exhibitions and software engineering while studying.</p><p>I share practical lessons through articles, talks and downloadable guides, helping others find their way into technology.</p><a href="/docs/">Explore the Docs Archive →</a></section>
+    </div>
+    <section id="contact" class="contact deep">
+      <p class="label">GET IN TOUCH</p><h2>Have something in mind?</h2>
+      <p>Tell me what you’re building, who it’s for and where you need help. You can reach me in English or Kiswahili.</p>
+      <div class="actions"><a class="btn" href={contact.whatsappHref}>Message on WhatsApp</a><a href={contact.emailHref}>{contact.email}</a></div>
+      <div class="profiles"><a href={contact.githubHref}>GitHub ↗</a><a href={contact.linkedinHref}>LinkedIn ↗</a><a href="/contact/">Save my contact card →</a></div>
+    </section>
+  </article>
+</Base>
+<style>
+  .about-page { padding-top: 150px; padding-bottom: 90px; }
+  .intro { display: grid; grid-template-columns: 1.4fr 1fr; align-items: center; gap: clamp(28px, 5vw, 72px); }
+  h1 { font-size: clamp(2.6rem, 5.6vw, 4.8rem); line-height: 1.08; letter-spacing: -.04em; margin: 18px 0 24px; }
+  h1 span { color: var(--muted); }
+  .lead { font-size: 1.15rem; line-height: 1.85; max-width: 36em; }
+  .actions, .profiles { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; margin-top: 26px; }
+  figure { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 24px; background: repeating-linear-gradient(transparent 0 31px, var(--line) 31px 32px), var(--surface); }
+  figure img { display: block; width: 100%; height: auto; max-height: 490px; object-fit: contain; object-position: bottom; }
+  figcaption { padding: 18px 24px; border-top: 1px solid var(--line); color: var(--heading); font-weight: 600; }
+  .details { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin: 80px 0; }
+  h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); line-height: 1.2; margin: 16px 0; }
+  p { line-height: 1.85; }
+  .contact { padding: clamp(26px, 5vw, 60px); border-radius: 24px; background: var(--deep); color: var(--deep-text); scroll-margin-top: 150px; }
+  .contact h2, .contact a:not(.btn) { color: var(--on-deep); }
+  .contact p { max-width: 44em; }
+  .contact .label { color: var(--accent); }
+  .actions a { overflow-wrap: anywhere; }
+  @media (max-width: 760px) { .intro, .details { grid-template-columns: 1fr; } .details { gap: 36px; margin: 48px 0; } figure { max-width: 420px; width: 100%; margin-inline: auto; } }
+</style>
