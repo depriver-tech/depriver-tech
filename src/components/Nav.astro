@@ -4,6 +4,7 @@ const path = Astro.url.pathname;
 const links = [
   { href: "/", label: "Blog", match: (p: string) => p === "/" || p.startsWith("/blog") },
   { href: "/guides/", label: "Guides", match: (p: string) => p.startsWith("/guides") },
+  { href: "/docs/", label: "Docs Archive", match: (p: string) => p.startsWith("/docs") },
   { href: "/talks/", label: "Talks", match: (p: string) => p.startsWith("/talks") },
   { href: "/story/", label: "My story", match: (p: string) => p.startsWith("/story") },
   { href: "/story/#contact", label: "Contact", match: () => false },

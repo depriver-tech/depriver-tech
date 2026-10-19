@@ -11,7 +11,8 @@
     "themes": "node scripts/omarchy-themes.mjs",
     "carousel": "python3 studio/build.py",
     "social:catalog": "node scripts/social-catalog.mjs",
-    "social:test": "node scripts/social-catalog.mjs && node worker/tests/social.test.mjs"
+    "social:test": "node scripts/social-catalog.mjs && node worker/tests/social.test.mjs",
+    "archive:test": "node scripts/social-catalog.mjs && node worker/tests/archive.test.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",

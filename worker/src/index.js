@@ -17,6 +17,7 @@
 //
 // Secrets (wrangler secret put): SALT, ADMIN_KEY, optional TURNSTILE_SECRET, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
 
+import { archivePublic, archiveAdmin } from './archive.js';
 import { socialAdmin, finishOAuth, runScheduler } from './social/index.js';
 
 const SLUG = /^[a-z0-9][a-z0-9-]{0,119}$/;
@@ -31,7 +32,7 @@ export default {
     const allowed = (env.ALLOWED_ORIGINS || "").split(",").map((s) => s.trim()).filter(Boolean);
     const cors = {
       "Access-Control-Allow-Origin": allowed.includes(origin) ? origin : allowed[0] || "*",
-      "Access-Control-Allow-Methods": "GET, POST, DELETE, OPTIONS",
+      "Access-Control-Allow-Methods": "GET, HEAD, POST, DELETE, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type, Authorization",
       "Access-Control-Max-Age": "86400",
       Vary: "Origin",
@@ -55,6 +56,10 @@ export default {
         const ownerAuthorized = env.ADMIN_KEY && await safeEqual(key, env.ADMIN_KEY);
         const publisherAuthorized = a === 'social' && env.PUBLISHER_KEY && await safeEqual(key, env.PUBLISHER_KEY);
         if (!ownerAuthorized && !publisherAuthorized) return json({ error: "unauthorized" }, 401);
+        if (a === 'archive') {
+          if (origin && !allowed.includes(origin)) return json({error:'forbidden'},403);
+          return await archiveAdmin(request, env, json);
+        }
         if (a === 'social') {
           if (origin && !allowed.includes(origin)) return json({ error:'forbidden' },403);
           if (Number(request.headers.get('Content-Length') || 0) > 32768) return json({ error:'Request too large.' },413);
@@ -62,6 +67,8 @@ export default {
         }
         return await admin(env, method, a, b, parts[3], url, request, json);
       }
+
+      if (route === "archive") return await archivePublic(request, env, json, cors);
 
       // ── public reads ────────────────────────────────────────
       if (route === "stats" && method === "GET") {

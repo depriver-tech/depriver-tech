@@ -33,3 +33,8 @@ database_id = "07403856-d6f6-495c-bac4-931415d45a1d"
 
 [observability]
 enabled = true
+
+# Create this private bucket before deployment; see docs/docs-archive.md.
+[[r2_buckets]]
+binding = "ARCHIVE_FILES"
+bucket_name = "depriver-docs-archive"

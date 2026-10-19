@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import {site} from '../../data/site';
+---
+<Base title="Manage Docs Archive · depriver.tech" noindex={true}>
+<main class="manager wrap" data-archive-manager data-api={site.engageApi}>
+ <a href="/docs/">← Back to Docs Archive</a><h1>Your archive desk.</h1><p>Upload a file, review its details, then publish it when it is ready.</p>
+ <form id="archive-login"><label for="owner-key">Owner admin key</label><div class="login-row"><input id="owner-key" type="password" required autocomplete="off" placeholder="Enter your admin key"/><button type="submit">Unlock archive</button></div><p class="hint">Use your existing site admin key. It is kept only in this page's memory.</p></form>
+ <p id="manager-status" role="status" aria-live="polite"></p>
+ <section id="archive-workspace" hidden>
+  <div class="workspace-heading"><h2>New upload</h2><button id="archive-lock" type="button">Lock archive</button></div>
+  <form id="archive-upload">
+   <label>Title<input name="title" required minlength="2" maxlength="120" placeholder="A useful title for this file" /></label>
+   <label>Description<textarea name="description" maxlength="1000" rows="3" placeholder="What is inside? Include a version or platform for applications."></textarea></label>
+   <label>Choose a file<input name="file" type="file" required accept=".pdf,.doc,.docx,.odt,.txt,.md,.csv,.xls,.xlsx,.ppt,.pptx,.epub,.jpg,.jpeg,.png,.webp,.gif,.avif,.apk,.aab,.exe,.msi,.dmg,.deb,.rpm,.appimage,.zip,.7z,.tar,.gz,.tgz" /></label>
+   <p class="hint">Documents, images, application installers and ZIP/archive files. Maximum 95 MiB per file. Uploads are saved as drafts; publishing makes the file publicly downloadable.</p>
+   <button id="upload-button" type="submit">Upload as draft</button><progress id="upload-progress" max="100" value="0" hidden aria-label="File upload progress"></progress>
+  </form>
+  <h2>Your uploaded files</h2><p class="hint">Hide removes a file from public browsing and downloads. The file remains stored as a draft.</p><div id="manager-list"></div><button id="manager-more" hidden type="button">Load more</button>
+  <p class="hint">The bundled Git lesson is managed in the website source and is always listed separately.</p>
+ </section>
+ <noscript>Enable JavaScript to sign in and upload files.</noscript>
+</main>
+<script>import '../../scripts/archive-manager';</script>
+</Base>
+<style>
+.manager{padding-top:155px;padding-bottom:90px;max-width:900px}.manager h1{font-size:clamp(2rem,5vw,3.5rem);margin:25px 0 12px}.manager h2{margin:28px 0 15px}.manager p{line-height:1.7}.manager form{padding:24px;border:1px solid var(--line);border-radius:10px;background:var(--surface);margin-top:25px}.manager label{display:block;font-weight:500;margin-bottom:18px}.manager input,.manager textarea{display:block;width:100%;padding:12px;margin-top:8px;border:1px solid var(--line);border-radius:5px;background:var(--bg);color:var(--heading);font:inherit}.manager button{padding:12px 18px;border:0;border-radius:5px;background:var(--heading);color:var(--bg);font:inherit;cursor:pointer}.manager button:disabled{opacity:.55;cursor:wait}.manager .hint{font-size:.8rem;color:var(--muted)}.login-row{display:flex;gap:15px;align-items:center}.login-row input{margin:0;flex:1;min-width:0}.manager [hidden]{display:none!important}.workspace-heading{display:flex;justify-content:space-between;align-items:center;gap:20px}.manager :global(.upload-row){padding:20px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}.manager :global(.upload-row h3){margin:0 0 8px}.manager :global(.upload-row p){font-size:.85rem;color:var(--muted)}.manager :global(.upload-row button){margin:8px 12px 0 0}.manager progress{display:block;width:100%;margin-top:20px}.manager :is(input,textarea,button,a):focus-visible{outline:3px solid var(--accent);outline-offset:3px}#manager-status{min-height:25px}#manager-more{margin-top:20px}@media(max-width:600px){.login-row{flex-direction:column;align-items:stretch}.manager form{padding:18px}}
+</style>

@@ -20,6 +20,12 @@ with a live preview card. The choice is remembered per visitor.
 After installing or changing Omarchy themes, run `npm run themes` to regenerate
 `src/styles/themes.css` and `src/data/themes.json`, then commit them.
 
+## Docs Archive
+
+- `/docs/`: searchable public downloads, including the 22-page Git notebook.
+- `/docs/manage/`: owner-only uploads with draft, publish and hide controls.
+- [Archive setup and operations](docs/docs-archive.md) covers R2/D1 deployment and limits.
+
 ## Where things live
 - `/publisher/`: private social publishing studio; see [setup and operating guide](docs/social-publisher.md).
 - `src/data/story.ts`: every chapter of the life story, services, lessons and contact details. Edit text here.

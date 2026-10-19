@@ -8,6 +8,7 @@ on:
       - 'worker/**'
       - 'src/content/blog/**'
       - 'scripts/social-catalog.mjs'
+      - 'scripts/ensure-archive-bucket.mjs'
       - 'package.json'
       - 'package-lock.json'
       - '.github/workflows/publisher-worker.yml'
@@ -33,6 +34,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run social:test
+      - run: npm run archive:test
       - name: Check deployment connection
         id: connection
         shell: bash
@@ -47,6 +49,13 @@ jobs:
         if: steps.connection.outputs.ready == 'true'
         working-directory: worker
         run: npx --yes wrangler@4.147.0 d1 execute depriver-engage --remote --file migrations/0001_social.sql
+      - name: Ensure private archive storage
+        if: steps.connection.outputs.ready == 'true'
+        run: node scripts/ensure-archive-bucket.mjs
+      - name: Apply additive archive schema
+        if: steps.connection.outputs.ready == 'true'
+        working-directory: worker
+        run: npx --yes wrangler@4.147.0 d1 execute depriver-engage --remote --file migrations/0002_archive.sql
       - name: Deploy Worker and refresh private catalog
         if: steps.connection.outputs.ready == 'true'
         working-directory: worker
