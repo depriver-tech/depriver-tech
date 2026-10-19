@@ -1,0 +1,37 @@
+[
+  {
+    "slug": "python-dsa",
+    "title": "Python with DSA",
+    "pages": 64,
+    "lessons": 20,
+    "code_files": 40
+  },
+  {
+    "slug": "python-web",
+    "title": "Python for Web",
+    "pages": 64,
+    "lessons": 20,
+    "code_files": 40
+  },
+  {
+    "slug": "python-ai-ml",
+    "title": "Python for AI & ML",
+    "pages": 64,
+    "lessons": 20,
+    "code_files": 40
+  },
+  {
+    "slug": "python-backend",
+    "title": "Python for Backend",
+    "pages": 64,
+    "lessons": 20,
+    "code_files": 40
+  },
+  {
+    "slug": "python-automation",
+    "title": "Python for Automation",
+    "pages": 64,
+    "lessons": 20,
+    "code_files": 40
+  }
+]

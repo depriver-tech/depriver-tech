@@ -14,8 +14,9 @@ const {resource}=Astro.props;
       </div>
       <section class="preview-details"><h2>What’s inside</h2><ul>{resource.topics.map(topic=><li>{topic}</li>)}</ul>
         {resource.cover ? <><p>Preview the actual first page here, or open the full searchable PDF to browse every lesson.</p><a class="btn" href={`/archive/${resource.file}`} target="_blank" rel="noopener">Open full PDF ↗</a></> : <><p>Extract the ZIP, open its folder in a terminal, then follow README.md. Start with the examples or run the complete project:</p><pre>python expenses.py total<br />python -m unittest test_expenses -v</pre><p>This is a preview of the ZIP contents. Download and extract the kit to run the files.</p></>}
+        {resource.practice && <><p>Practise every lesson with 40 standalone Python files, setup instructions and a text edition of the lessons.</p><a class="companion" href={`/archive/${resource.practice}`} download>Download this book’s practice kit (ZIP) ↓</a></>}
         <a class="download-link" href={`/archive/${resource.file}`} download>Download {resource.cover ? 'PDF' : 'practice ZIP'} ↓</a>
-        {resource.slug.startsWith('python') && <a class="companion" href={`/docs/${resource.cover ? 'python-practice' : 'python-notebook'}/`}>Explore the {resource.cover ? 'practice files' : 'companion notebook'} →</a>}
+        {['python-notebook', 'python-practice'].includes(resource.slug) && <a class="companion" href={`/docs/${resource.cover ? 'python-practice' : 'python-notebook'}/`}>Explore the {resource.cover ? 'practice files' : 'companion notebook'} →</a>}
       </section>
     </div>
   </article>

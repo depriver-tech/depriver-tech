@@ -1,0 +1,1202 @@
+[
+  {
+    "label": "dsa/01_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/01_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/02_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/02_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/03_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/03_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/04_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/04_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/05_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/05_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/06_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/06_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/07_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/07_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/08_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/08_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/09_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/09_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/10_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/10_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/11_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/11_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/12_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/12_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/13_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/13_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/14_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/14_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/15_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/15_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/16_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/16_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/17_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/17_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/18_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/18_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/19_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/19_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/20_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "dsa/20_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "web/01_example",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "web/01_solution",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "web/02_example",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "web/02_solution",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "web/03_example",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "web/03_solution",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "web/04_example",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "web/04_solution",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "web/05_example",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "web/05_solution",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "web/06_example",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "web/06_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "web/07_example",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "web/07_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "web/08_example",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "web/08_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "web/09_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "web/09_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "web/10_example",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "web/10_solution",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "web/11_example",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "web/11_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "web/12_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "web/12_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "web/13_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "web/13_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "web/14_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "web/14_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "web/15_example",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "web/15_solution",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "web/16_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "web/16_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "web/17_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "web/17_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "web/18_example",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "web/18_solution",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "web/19_example",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "web/19_solution",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "web/20_example",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "web/20_solution",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "backend/01_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/01_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/02_example",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "backend/02_solution",
+    "passed": true,
+    "interpreter": "/usr/bin/python3",
+    "stderr": ""
+  },
+  {
+    "label": "backend/03_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/03_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/04_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/04_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/05_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/05_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/06_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/06_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/07_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/07_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/08_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/08_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/09_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/09_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/10_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/10_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/11_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/11_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/12_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/12_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/13_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/13_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/14_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/14_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/15_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/15_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/16_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/16_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/17_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/17_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/18_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/18_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/19_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/19_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/20_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "backend/20_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/01_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/01_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/02_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/02_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/03_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/03_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/04_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/04_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/05_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/05_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/06_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/06_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/07_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/07_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/08_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/08_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/09_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/09_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/10_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/10_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/11_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/11_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/12_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/12_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/13_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/13_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/14_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/14_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/15_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/15_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/16_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/16_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/17_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/17_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/18_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/18_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/19_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/19_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/20_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "ai_ml/20_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/01_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/01_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/02_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/02_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/03_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/03_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/04_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/04_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/05_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/05_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/06_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/06_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/07_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/07_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/08_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/08_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/09_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/09_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/10_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/10_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/11_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/11_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/12_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/12_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/13_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/13_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/14_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/14_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/15_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/15_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/16_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/16_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/17_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/17_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/18_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/18_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/19_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/19_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/20_example",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  },
+  {
+    "label": "automation/20_solution",
+    "passed": true,
+    "interpreter": "/home/priver/Projects/pino/.venv/bin/python",
+    "stderr": ""
+  }
+]
