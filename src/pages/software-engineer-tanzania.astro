@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import { contact } from '../data/story';
+const url='https://depriver.tech/software-engineer-tanzania/';
+const jsonLd={
+  '@context':'https://schema.org','@type':'WebPage','@id':url,url,
+  name:'Software development in Tanzania - Privatus Cosmas (Priver)',
+  description:'Web and mobile applications, business systems, integrations and dashboards by Privatus Cosmas, a software engineer based in Mbeya, Tanzania.',
+  about:{'@id':'https://depriver.tech/#person'},
+  isPartOf:{'@id':'https://depriver.tech/#website'},
+  breadcrumb:{'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://depriver.tech/'},{'@type':'ListItem',position:2,name:'Software development',item:url}]}
+};
+---
+<Base title="Software Engineer in Tanzania | Privatus Cosmas (Priver)" description="Work with Privatus Cosmas (Priver), a software engineer in Mbeya, Tanzania, on web apps, mobile apps, business systems, integrations and dashboards." jsonLd={jsonLd}>
+ <article class="services-page wrap">
+  <nav aria-label="Breadcrumb"><a href="/">Home</a> / Software development</nav>
+  <header><p class="label">PRIVATUS COSMAS / PRIVER</p><h1>Software engineering<br/>from Mbeya, Tanzania.</h1><p class="lead">I’m Privatus Cosmas, also known as Priver. I build software that helps people get things done: web and mobile applications, business systems, integrations and dashboards.</p><a class="btn" href={contact.whatsappHref}>Discuss your project</a></header>
+  <section aria-labelledby="services-title"><h2 id="services-title">What I can help you build</h2><div class="service-grid">
+   <div><h3>Web and mobile applications</h3><p>Turn an idea into a product people can use. Start with the audience, the problem and the essential features, then build a clear path from the first screen to the task completed.</p></div>
+   <div><h3>Business systems and SaaS</h3><p>Bring everyday workflows into software. Tell me how your team currently works, where information gets lost and which repetitive tasks take the most time.</p></div>
+   <div><h3>Systems integration</h3><p>Connect applications that need to exchange information. A useful starting point is a list of your existing tools, the data that should move between them and who needs access.</p></div>
+   <div><h3>Dashboards and reporting</h3><p>Make operational information easier to understand. We can discuss the decisions you need to make, your data sources and the measures that matter to your work.</p></div>
+  </div></section>
+  <section><h2>Start with the problem</h2><p>When you get in touch, describe who will use the software, what they need to accomplish and what you already have. Include any deadline, budget range or technical constraints so we can discuss a realistic scope.</p><p>I’m based in Mbeya and available to discuss projects in Tanzania, East Africa and remotely. You can contact me in English or Kiswahili.</p><a href={contact.emailHref}>Email Privatus Cosmas</a></section>
+  <section><h2>Get to know my work and thinking</h2><p>Read <a href="/story/">my story</a> for the background behind my work, explore <a href={contact.githubHref}>my GitHub profile</a>, or browse <a href="/#posts">my software and technology articles</a>. The <a href="/docs/">Docs Archive</a> includes a practical Git notebook with examples and exercises.</p></section>
+ </article>
+</Base>
+<style>
+.services-page{max-width:1040px;padding-top:145px;padding-bottom:90px}.services-page nav{font-size:.85rem;color:var(--muted);margin-bottom:35px}.services-page header{max-width:850px;margin-bottom:65px}.services-page h1{font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.12;letter-spacing:-.04em;margin:18px 0 26px}.services-page .lead{font-size:1.15rem;line-height:1.8}.services-page section{margin-top:50px}.services-page h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:22px}.services-page h3{font-size:1.1rem;margin-bottom:12px}.services-page p{line-height:1.85;color:var(--muted);margin-bottom:20px}.service-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}.service-grid>div{padding:25px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}.service-grid p{margin:0}.services-page a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}@media(max-width:650px){.service-grid{grid-template-columns:1fr}.services-page{padding-top:160px}}
+</style>

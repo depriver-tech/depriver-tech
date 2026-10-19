@@ -5,6 +5,7 @@ import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import Viora from "../components/Viora.astro";
 import { site } from "../data/site";
+import { contact } from "../data/story";
 import { personJsonLd, websiteJsonLd } from "../lib/schema";
 
 interface Props {
@@ -22,8 +23,8 @@ interface Props {
   bare?: boolean;
 }
 const {
-  title = "Privatus Cosmas · Software Engineer & Digital Innovator",
-  description = "From Kitwe village in Kagera to writing software in Mbeya. The story, the setbacks and the work of Privatus Cosmas.",
+  title = "Privatus Cosmas (Priver) | Software Engineer in Tanzania",
+  description = "Privatus Cosmas, also known as Priver, is a software engineer in Mbeya, Tanzania, building web and mobile apps, business systems and integrations.",
   image = "/og/home.jpg",
   imageAlt = "Privatus Cosmas, Software Engineer & Digital Innovator",
   type = "website",
@@ -80,7 +81,7 @@ const imageUrl = new URL(image, Astro.site);
     {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
     <link rel="alternate" type="text/plain" title="About Privatus Cosmas for AI assistants" href="/llms.txt" />
     <link rel="me" href="https://github.com/Stark-Priver" />
-    <link rel="me" href="https://instagram.com/_depriver" />
+    <link rel="me" href={contact.instagramHref} />
     <script type="application/ld+json" set:html={JSON.stringify([personJsonLd, websiteJsonLd])} />
     <script is:inline>
       document.documentElement.classList.add("js");

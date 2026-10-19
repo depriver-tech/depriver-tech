@@ -30,7 +30,9 @@ const jsonLd = {
   dateModified: (post.data.updated ?? post.data.date).toISOString(),
   image: new URL(`/og/blog/${post.id}.jpg`, Astro.site).toString(),
   url,
-  author: { "@type": "Person", name: "Privatus Cosmas", url: "https://depriver.tech/story/" },
+  mainEntityOfPage: { "@type": "WebPage", "@id": url },
+  publisher: { "@id": "https://depriver.tech/#person" },
+  author: { "@type": "Person", "@id": "https://depriver.tech/#person", name: "Privatus Cosmas", url: "https://depriver.tech/story/" },
   keywords: post.data.tags.join(", "),
 };
 ---
