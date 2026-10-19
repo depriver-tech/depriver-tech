@@ -27,7 +27,7 @@ if(root){
    }
    nextPage=Number.isInteger(data.nextPage)&&data.nextPage>nextPage! ? data.nextPage:null;
    more.hidden=nextPage===null;more.textContent='Load more files';status.textContent=nextPage===null?'':'More files are available. Load more to search the rest of the archive.';filter();
-  }catch{status.textContent='New uploads could not be loaded. The Git notebook is still available.';more.hidden=false;more.textContent='Retry loading files';}
+  }catch{status.textContent='New uploads could not be loaded. The featured notebooks and practice files are still available.';more.hidden=false;more.textContent='Retry loading files';}
   finally{more.disabled=false;}
  }
  more.addEventListener('click',load);void load();

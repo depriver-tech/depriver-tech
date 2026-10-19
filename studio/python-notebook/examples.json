@@ -1,0 +1,74 @@
+[
+  [
+    "01 / Think like a programmer",
+    "prices = [1200, 800, 500]\ntotal = sum(prices)\nprint(\"Total:\", total, \"TZS\")"
+  ],
+  [
+    "02 / Install and run",
+    "# Save this Python code as hello.py\nname = \"Priver\"\nprint(f\"Hello, {name}!\")"
+  ],
+  [
+    "04 / Values and names",
+    "quantity = 3\nprice = 1500\nitem = \"Notebook\"\navailable = True\ntotal = quantity * price\nprint(item, total)\nprint(type(quantity).__name__)\nprint(7 / 2, 7 // 2, 7 % 2)\nprint(2 ** 3)"
+  ],
+  [
+    "05 / Text and user input",
+    "name = \"  Asha  \"\nclean = name.strip()\nprint(f\"Hello, {clean}!\")\nprint(clean[0], clean[:2])\nprint(\"python\".upper())\nprint(\"web,data,ai\".split(\",\"))"
+  ],
+  [
+    "06 / Make decisions",
+    "budget = 5000\ncost = 4200\nif cost < 0:\n    print(\"Invalid cost\")\nelif cost <= budget:\n    print(\"Within budget\")\nelse:\n    print(\"Over budget\")\n\nis_member = True\nprint(is_member and cost <= budget)"
+  ],
+  [
+    "07 / Lists and tuples",
+    "items = [\"pen\", \"book\"]\nitems.append(\"bag\")\nprint(items[0], items[-1])\nprint(items[:2])\nprint(len(items))\ncopy = items.copy()\ncopy.append(\"ruler\")\nprint(len(items), len(copy))\nlocation = (-8.9, 33.4)\nlatitude, longitude = location"
+  ],
+  [
+    "08 / Dictionaries and sets",
+    "student = {\"name\": \"Asha\", \"score\": 82}\nstudent[\"city\"] = \"Mbeya\"\nprint(student[\"name\"])\nprint(student.get(\"phone\", \"Not supplied\"))\nfor key, value in student.items():\n    print(key, value)\n\nskills = {\"Python\", \"SQL\", \"Python\"}\nprint(len(skills))\nprint(\"SQL\" in skills)"
+  ],
+  [
+    "09 / Repeat with loops",
+    "prices = [1000, 2500, 500]\nfor number, price in enumerate(prices, start=1):\n    print(number, price)\n\nremaining = 3\nwhile remaining > 0:\n    print(\"Attempts:\", remaining)\n    remaining -= 1\n\nprint(sum(prices))"
+  ],
+  [
+    "10 / Functions that return",
+    "def line_total(price: int, quantity: int = 1) -> int:\n    if price < 0 or quantity < 0:\n        raise ValueError(\"Use non-negative values\")\n    return price * quantity\n\nfirst = line_total(1500, 3)\nsecond = line_total(price=500)\nprint(first + second)"
+  ],
+  [
+    "11 / Comprehensions & generators",
+    "prices = [100, 200, 300, 400]\nlarge = [p for p in prices if p >= 300]\nprint(large)\n\ndef squares(limit):\n    for n in range(limit):\n        yield n * n\n\nvalues = squares(4)\nprint(list(values))\nprint(list(values))"
+  ],
+  [
+    "12 / Modules and packages",
+    "from statistics import mean\nfrom datetime import date\n\nscores = [60, 75, 90]\nprint(mean(scores))\nprint(date(2026, 10, 19).isoformat())\n\ndef main():\n    print(\"Notebook ready\")\n\nif __name__ == \"__main__\":\n    main()"
+  ],
+  [
+    "13 / Errors are information",
+    "raw = \"not a number\"\ntry:\n    quantity = int(raw)\nexcept ValueError:\n    print(\"Enter a whole number\")\nelse:\n    print(quantity * 1500)\nfinally:\n    print(\"Check complete\")"
+  ],
+  [
+    "14 / Files and paths",
+    "from pathlib import Path\n\nfolder = Path(\"practice_output\")\nfolder.mkdir(exist_ok=True)\npath = folder / \"notes.txt\"\npath.write_text(\"Learn Python\\nTry a project\\n\",\n                encoding=\"utf-8\")\nwith path.open(encoding=\"utf-8\") as handle:\n    for line in handle:\n        print(line.strip())"
+  ],
+  [
+    "15 / CSV and JSON",
+    "import csv\nimport io\nimport json\n\nsource = \"category,amount\\nfood,3000\\ntravel,1500\\n\"\nrows = list(csv.DictReader(io.StringIO(source)))\ntotal = sum(int(row[\"amount\"]) for row in rows)\nreport = {\"currency\": \"TZS\", \"total\": total}\nencoded = json.dumps(report, indent=2)\nprint(encoded)\nprint(json.loads(encoded)[\"total\"])"
+  ],
+  [
+    "16 / Classes and dataclasses",
+    "from dataclasses import dataclass\n\n@dataclass\nclass Expense:\n    category: str\n    amount: int\n\n    def label(self):\n        return f\"{self.category}: {self.amount} TZS\"\n\nentry = Expense(\"food\", 3000)\nprint(entry.label())"
+  ],
+  [
+    "17 / Test behaviour",
+    "import unittest\n\ndef total_amount(amounts):\n    if any(x < 0 for x in amounts):\n        raise ValueError(\"Negative amount\")\n    return sum(amounts)\n\nclass TotalTests(unittest.TestCase):\n    def test_total(self):\n        self.assertEqual(total_amount([2, 3]), 5)\n    def test_empty(self):\n        self.assertEqual(total_amount([]), 0)\n    def test_invalid(self):\n        with self.assertRaises(ValueError):\n            total_amount([-1])"
+  ],
+  [
+    "18 / A small database",
+    "import sqlite3\n\ncon = sqlite3.connect(\":memory:\")\ntry:\n    con.execute(\"CREATE TABLE expenses \"\n                \"(category TEXT, amount INTEGER)\")\n    con.execute(\"INSERT INTO expenses VALUES (?, ?)\",\n                (\"food\", 3000))\n    con.commit()\n    row = con.execute(\n        \"SELECT SUM(amount) FROM expenses\"\n    ).fetchone()\n    print(row[0])\nfinally:\n    con.close()"
+  ],
+  [
+    "23 / Automation & office work",
+    "from pathlib import Path\n\nfolder = Path(\"practice_output\")\nfor path in sorted(folder.glob(\"*.txt\")):\n    if path.is_file():\n        print(path.name, path.stat().st_size, \"bytes\")"
+  ]
+]
