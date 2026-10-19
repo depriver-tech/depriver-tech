@@ -1,0 +1,10 @@
+{
+  "pages": 84,
+  "chapters": 24,
+  "extracted_words": 14603,
+  "practice_files": 6,
+  "automated_lab_tests": 16,
+  "real_kafka_executed": false,
+  "layout_bounds": "passed",
+  "python_version": "3.14.7"
+}
