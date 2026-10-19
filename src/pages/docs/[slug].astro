@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+import { notebooks } from '../../data/archive';
+export function getStaticPaths() { return notebooks.map(resource => ({params:{slug:resource.slug},props:{resource}})); }
+const {resource}=Astro.props;
+---
+<Base title={`${resource.title} | Preview · depriver.tech`} description={resource.description}>
+  <article class="resource-preview wrap">
+    <a href="/docs/">← Back to Docs Archive</a>
+    <header><p class="label">{resource.type} / PREVIEW</p><h1>{resource.title}</h1><p class="intro">{resource.description}</p><p>{resource.meta}</p></header>
+    <div class="preview-layout">
+      <div class="preview-paper">
+        {resource.cover ? <a href={`/archive/${resource.file}`} target="_blank" rel="noopener" aria-label={`Open ${resource.title} PDF`}><img src={resource.cover} alt={`First page of ${resource.title}`} width="778" height="1100" /></a> : <div class="kit-preview"><span>THE PYTHON PRACTICE KIT</span><h2>Read it.<br />Run it.<br />Make it yours.</h2><pre>python-notebook-practice/<br />  README.md<br />  expenses.py<br />  test_expenses.py<br />  lesson_01_example.py<br />  … 17 more examples</pre><p>Small programs. Real practice.</p></div>}
+      </div>
+      <section class="preview-details"><h2>What’s inside</h2><ul>{resource.topics.map(topic=><li>{topic}</li>)}</ul>
+        {resource.cover ? <><p>Preview the actual first page here, or open the full searchable PDF to browse every lesson.</p><a class="btn" href={`/archive/${resource.file}`} target="_blank" rel="noopener">Open full PDF ↗</a></> : <><p>Extract the ZIP, open its folder in a terminal, then follow README.md. Start with the examples or run the complete project:</p><pre>python expenses.py total<br />python -m unittest test_expenses -v</pre><p>This is a preview of the ZIP contents. Download and extract the kit to run the files.</p></>}
+        <a class="download-link" href={`/archive/${resource.file}`} download>Download {resource.cover ? 'PDF' : 'practice ZIP'} ↓</a>
+        {resource.slug.startsWith('python') && <a class="companion" href={`/docs/${resource.cover ? 'python-practice' : 'python-notebook'}/`}>Explore the {resource.cover ? 'practice files' : 'companion notebook'} →</a>}
+      </section>
+    </div>
+  </article>
+</Base>
+<style>
+@font-face{font-family:Notebook;src:url('/fonts/PatrickHand-Regular.ttf') format('truetype');font-display:swap}
+.resource-preview{padding-top:155px;padding-bottom:90px}.resource-preview header{max-width:820px;margin:40px 0}.resource-preview h1{font:clamp(2.8rem,6vw,4.8rem)/1.08 Notebook,cursive;margin:15px 0}.intro{font-size:1.1rem;line-height:1.8}.preview-layout{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:start}.preview-paper{border-radius:8px;overflow:hidden;box-shadow:0 12px 35px #0002;border:1px solid var(--line)}.preview-paper img{display:block;width:100%;height:auto}.preview-details h2{font:2.4rem Notebook,cursive;margin-top:0}.preview-details li{margin:0 0 16px;line-height:1.7}.preview-details p{line-height:1.8}.download-link,.companion{display:block;margin-top:24px;font-weight:600}.kit-preview{padding:40px 35px 40px 50px;min-height:500px;background:repeating-linear-gradient(transparent 0 31px,#cddde8 31px 32px),#fbf7ed;color:#183359;border-left:3px solid #cf8d8d}.kit-preview span{font-size:.7rem;letter-spacing:.1em}.kit-preview h2{font:3.5rem/1.1 Notebook,cursive;color:#183359}.kit-preview p{font:1.6rem Notebook,cursive}pre{overflow-x:auto;padding:18px;font-size:.8rem;line-height:1.9;background:#eff3f8;color:#183359;border-radius:6px}@media(max-width:760px){.preview-layout{grid-template-columns:1fr;gap:32px}.preview-paper{max-width:520px}.kit-preview{padding:30px;min-height:0}}
+</style>
