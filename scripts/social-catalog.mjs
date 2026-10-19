@@ -33,7 +33,7 @@ for (const file of (await readdir(`${root}/src/content/blog`)).filter(f => f.end
     }
   }
   // A single branded share image is an explicit alternative to a long carousel.
-  const posterPath = data.carousel ? `/carousels/${data.carousel}/cover.jpg` : `/og/blog/${slug}.jpg`;
+  const posterPath = `/og/blog/${slug}.jpg`;
   const poster = { url: `https://depriver.tech${posterPath}`, preview: posterPath, alt: data.title };
   const tags = ['depriver', 'TechTanzania', ...(data.tags || []).map(t => t.replace(/[^a-zA-Z0-9]/g, ''))].filter(Boolean);
   const caption = `${data.title}\n\n${data.description}\n\nRead more: ${url}\n\n${[...new Set(tags)].slice(0,5).map(t=>'#'+t).join(' ')}`;

@@ -85,7 +85,7 @@ const jsonLd = {
           <div><strong>Privatus Cosmas</strong><span>Software Engineer & Digital Innovator</span></div>
         </div>
       </header>
-      {post.data.cover && <img class="cover wrap" src={post.data.cover} alt="" data-reveal />}
+      <img class="cover wrap" src={`/og/blog/${post.id}.jpg`} alt={`Privatus Cosmas — ${post.data.title}`} width="1200" height="630" loading="lazy" data-reveal />
       <div class="prose wrap" data-reveal><Content /></div>
       <div class="wrap engage-wrap"><Engage slug={post.id} title={post.data.title} url={url} /></div>
       <div class="wrap"><Comments slug={post.id} /></div>

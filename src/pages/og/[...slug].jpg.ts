@@ -13,10 +13,10 @@ const fonts = [
   { name: "Poppins", data: font("Poppins-Regular.ttf"), weight: 400 as const, style: "normal" as const },
   { name: "Poppins", data: font("Poppins-SemiBold.ttf"), weight: 600 as const, style: "normal" as const },
   { name: "Poppins", data: font("Poppins-Bold.ttf"), weight: 700 as const, style: "normal" as const },
-  { name: "Dafoe", data: font("MrDafoe-Regular.ttf"), weight: 400 as const, style: "normal" as const },
+  { name: "Hand", data: font("PatrickHand-Regular.ttf"), weight: 400 as const, style: "normal" as const },
 ];
 const dataUri = (path: string, mime: string) => `data:${mime};base64,${readFileSync(path).toString("base64")}`;
-const ME = dataUri(join(root, "src/assets/og-me.png"), "image/png");
+const ME = dataUri(join(root, "public/img/privatus-editorial.png"), "image/png");
 
 type Card = { label: string; title: string; description: string; image?: string; badge?: string };
 
@@ -37,7 +37,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     };
   });
   pages.push(
-    { params: { slug: "home" }, props: { label: "Privatus Cosmas · Blog", title: "Notes from the journey", description: "Software, learning, tech life and everything I pick up along the way. Written from Mbeya, Tanzania." } },
+    { params: { slug: "home" }, props: { label: "Software engineer · Tanzania", title: "Privatus Cosmas / Priver", description: "Web and mobile apps, business systems and practical lessons. Building and learning from Mbeya, Tanzania." } },
     { params: { slug: "story" }, props: { label: "My story", title: "From Kitwe Village to Writing Code", description: "The setbacks, the second chances and everything that made me a Software Engineer & Digital Innovator." } },
   );
   return pages;
@@ -48,40 +48,30 @@ const el = (type: string, style: Record<string, unknown>, children?: unknown, ex
 
 export const GET: APIRoute = async ({ props }) => {
   const c = props as Card;
-  const size = c.title.length > 60 ? 46 : c.title.length > 40 ? 54 : 66;
-  const maxDesc = c.title.length > 40 ? 105 : 150;
-  const visual = c.image
-    ? el("div", { display: "flex", position: "relative", width: 330, height: 520, marginRight: 70 }, [
-        el("div", { position: "absolute", top: 18, left: 34, width: 300, height: 375, borderRadius: 26, background: "#e8603a", transform: "rotate(7deg)" }),
-        el("img", { position: "absolute", top: 40, left: 0, width: 330, height: 412, borderRadius: 26, objectFit: "cover", transform: "rotate(-3deg)",
-          boxShadow: "0 30px 60px rgba(0,0,0,0.45)" }, undefined, { src: c.image, width: 330, height: 412 }),
-      ])
-    : el("div", { display: "flex", position: "relative", width: 380, height: 630, alignItems: "flex-end", justifyContent: "center" }, [
-        el("div", { position: "absolute", bottom: 90, width: 330, height: 330, borderRadius: 330, border: "10px solid #e8603a", opacity: 0.9 }),
-        el("img", { width: 360, height: 480 }, undefined, { src: ME, width: 360, height: 480 }),
-      ]);
-
+  const size = c.title.length > 75 ? 48 : c.title.length > 50 ? 57 : 68;
+  const lines = Array.from({length:16},(_,i)=>el("div",{position:"absolute",left:0,top:75+i*33,width:1200,height:1,background:"#d7e2e9"}));
   const svg = await satori(
-    el("div", { display: "flex", width: 1200, height: 630, background: "#0b1e3f", fontFamily: "Poppins", position: "relative", alignItems: "center", justifyContent: "space-between" }, [
-      el("div", { position: "absolute", left: 0, top: 0, width: 1200, height: 10, background: "#e8603a" }),
-      el("div", { display: "flex", flexDirection: "column", width: c.image ? 700 : 740, paddingLeft: 72 }, [
-        el("div", { display: "flex", fontSize: 22, fontWeight: 600, letterSpacing: 3, color: "#e8603a", textTransform: "uppercase" }, c.label),
-        el("div", { display: "flex", width: 64, height: 6, background: "#e8603a", borderRadius: 3, marginTop: 14 }),
-        el("div", { display: "flex", fontSize: size, fontWeight: 700, color: "#ffffff", lineHeight: 1.08, marginTop: 26, letterSpacing: -1.5 }, c.title),
-        el("div", { display: "flex", fontSize: 25, color: "#c4d0e8", lineHeight: 1.45, marginTop: 22 },
-          c.description.length > maxDesc ? c.description.slice(0, maxDesc - 3).trimEnd() + "…" : c.description),
-        el("div", { display: "flex", alignItems: "center", marginTop: 38 }, [
-          el("div", { display: "flex", fontFamily: "Dafoe", fontSize: 44, color: "#ffffff" }, "Privatus"),
-          el("div", { display: "flex", fontSize: 22, fontWeight: 600, color: "#a9c4f5", marginLeft: 22 }, "depriver.tech"),
-          ...(c.badge ? [el("div", { display: "flex", fontSize: 19, fontWeight: 600, color: "#ffffff", background: "#e8603a", borderRadius: 999, padding: "8px 18px", marginLeft: 22 }, c.badge)] : []),
-        ]),
+    el("div", { display:"flex",width:1200,height:630,background:"#fbf7ed",fontFamily:"Poppins",position:"relative",overflow:"hidden" }, [
+      ...lines,
+      el("div",{position:"absolute",left:41,top:0,width:1,height:630,background:"#d79a96"}),
+      el("div",{position:"absolute",left:45,top:0,width:1,height:630,background:"#d79a96"}),
+      el("div",{display:"flex",position:"absolute",left:75,top:32,fontSize:18,letterSpacing:2,color:"#45607b"},"DEPRIVER.TECH / FIELD NOTES"),
+      el("div",{display:"flex",position:"absolute",left:75,top:96,width:670,flexDirection:"column"},[
+        el("div",{display:"flex",fontSize:17,color:"#31568b",fontWeight:600},c.badge || c.label),
+        el("div",{display:"flex",fontFamily:"Hand",fontSize:size,lineHeight:1.04,color:"#17345b",marginTop:20},c.title),
+        el("div",{display:"flex",width:150,height:7,background:"#f4d96e",marginTop:18,transform:"rotate(-2deg)"}),
+        el("div",{display:"flex",fontSize:23,lineHeight:1.45,color:"#425873",marginTop:22,width:620},c.description.length>130?c.description.slice(0,127).trimEnd()+"…":c.description),
       ]),
-      visual,
-    ]) as never,
-    { width: 1200, height: 630, fonts },
+      el("div",{display:"flex",position:"absolute",right:22,top:47,width:350,height:535,borderRadius:12,background:"#f3df99",transform:"rotate(3deg)"}),
+      ...(c.image?[el("img",{position:"absolute",right:280,top:53,width:90,height:112,objectFit:"cover",border:"4px solid #ffffff",borderRadius:5,transform:"rotate(-8deg)"},undefined,{src:c.image,width:90,height:112})]:[]),
+      el("img",{position:"absolute",right:0,bottom:0,width:385,height:513,objectFit:"contain"},undefined,{src:ME,width:385,height:513}),
+      el("div",{display:"flex",position:"absolute",left:75,bottom:39,flexDirection:"column"},[
+        el("div",{display:"flex",fontFamily:"Hand",fontSize:32,color:"#17345b"},"Privatus Cosmas / Priver"),
+        el("div",{display:"flex",fontSize:15,color:"#45607b",marginTop:5},"Software engineer · Mbeya, Tanzania"),
+      ]),
+    ]) as never,{width:1200,height:630,fonts},
   );
-  const png = new Resvg(svg, { fitTo: { mode: "width", value: 1200 } }).render().asPng();
-  // JPEG keeps previews well under WhatsApp's size limit
-  const jpg = await sharp(png).jpeg({ quality: 86, mozjpeg: true }).toBuffer();
-  return new Response(new Uint8Array(jpg), { headers: { "Content-Type": "image/jpeg" } });
+  const png = new Resvg(svg,{fitTo:{mode:"width",value:1200}}).render().asPng();
+  const jpg=await sharp(png).jpeg({quality:86,mozjpeg:true}).toBuffer();
+  return new Response(new Uint8Array(jpg),{headers:{"Content-Type":"image/jpeg"}});
 };

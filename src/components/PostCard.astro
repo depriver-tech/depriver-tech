@@ -1,16 +1,16 @@
 ---
-import { coverFor, slidesFor, formatDate, type Post } from "../lib/posts";
+import { slidesFor, formatDate, type Post } from "../lib/posts";
 import { site } from "../data/site";
 interface Props { post: Post; featured?: boolean }
 const { post, featured = false } = Astro.props;
-const cover = coverFor(post);
+const cover = `/og/blog/${post.id}.jpg`;
 const slides = slidesFor(post.data.carousel).length;
 ---
 <a href={`/blog/${post.id}/`} class:list={["post", { featured, carousel: slides > 0 }]} data-reveal data-card-slug={post.id}>
   <div class="cover">
-    {slides > 0 && <span class="stack" aria-hidden="true"><i></i><i></i></span>}
+
     {cover
-      ? <img src={cover} alt="" loading="lazy" decoding="async" />
+      ? <img src={cover} alt={`Privatus Cosmas — ${post.data.title}`} width="1200" height="630" loading="lazy" decoding="async" />
       : <span class="cover-fallback deep" aria-hidden="true"><span class="script">{post.data.title.split(" ")[0]}</span></span>}
     {slides > 0 && (
       <span class="badge">
@@ -45,17 +45,8 @@ const slides = slidesFor(post.data.carousel).length;
   .cover { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--deep); }
   .cover img { position: relative; width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease); }
   .post:hover .cover img { transform: scale(1.05); }
-  /* carousel covers: portrait slide on a deep panel with two cards fanned behind it */
-  .carousel .cover { background: var(--deep); }
-  .carousel .cover img { position: absolute; top: 7%; left: 50%; translate: -50% 0; width: auto; height: 86%; aspect-ratio: 4 / 5;
-    border-radius: 14px; box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.55); }
-  .carousel:hover .cover img { transform: translateY(-4px) scale(1.03); }
-  .stack { position: absolute; inset: 0; display: grid; place-items: center; }
-  .stack i { position: absolute; height: 80%; aspect-ratio: 4 / 5; border-radius: 14px; transition: transform 0.7s var(--ease); }
-  .stack i:first-child { background: var(--accent); transform: rotate(8deg) translateX(18px); opacity: 0.9; }
-  .stack i:last-child { background: var(--accent-2); transform: rotate(-7deg) translateX(-18px); opacity: 0.7; }
-  .carousel:hover .stack i:first-child { transform: rotate(14deg) translateX(46px); }
-  .carousel:hover .stack i:last-child { transform: rotate(-13deg) translateX(-46px); }
+  .cover, .featured .cover { aspect-ratio: 1200 / 630; min-height: 0; }
+  .cover img { object-fit: contain; }
   .badge { position: absolute; right: 14px; top: 14px; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px;
     font-size: 0.78rem; font-weight: 600; background: color-mix(in srgb, var(--bg) 90%, transparent); color: var(--heading); backdrop-filter: blur(6px); }
   .cover-fallback { display: grid; place-items: center; width: 100%; height: 100%; background: var(--deep); }
@@ -71,10 +62,10 @@ const slides = slidesFor(post.data.carousel).length;
   .stats span { display: inline-flex; align-items: center; gap: 5px; }
   .stats b { font-weight: 600; }
   .featured { display: grid; grid-template-columns: 1.1fr 1fr; }
-  .featured .cover { aspect-ratio: auto; min-height: 340px; }
+  .featured .cover { aspect-ratio: auto; min-height: 0; align-self: center; }
   .featured h3 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
   .featured .meta { padding: 40px; justify-content: center; }
-  @media (max-width: 760px) { .featured { grid-template-columns: 1fr; } .featured .cover { min-height: 260px; } .featured .meta { padding: 26px; } }
+  @media (max-width: 760px) { .featured { grid-template-columns: 1fr; } .featured .cover { min-height: 0; } .featured .meta { padding: 26px; } }
 </style>
 
 <script>
