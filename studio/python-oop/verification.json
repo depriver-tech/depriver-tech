@@ -1,0 +1,252 @@
+{
+  "python": "3.13.15",
+  "lesson_scripts": 48,
+  "capstone_tests": 16,
+  "checks": [
+    {
+      "file": "lesson_01_example.py",
+      "passed": true,
+      "output": "Hello, Asha"
+    },
+    {
+      "file": "lesson_01_solution.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_02_example.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_02_solution.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_03_example.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_03_solution.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_04_example.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_04_solution.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_05_example.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_05_solution.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_06_example.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_06_solution.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_07_example.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_07_solution.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_08_example.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_08_solution.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_09_example.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_09_solution.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_10_example.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_10_solution.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_11_example.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_11_solution.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_12_example.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_12_solution.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_13_example.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_13_solution.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_14_example.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_14_solution.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_15_example.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_15_solution.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_16_example.py",
+      "passed": true,
+      "output": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK"
+    },
+    {
+      "file": "lesson_16_solution.py",
+      "passed": true,
+      "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK"
+    },
+    {
+      "file": "lesson_17_example.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_17_solution.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_18_example.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_18_solution.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_19_example.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_19_solution.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_20_example.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_20_solution.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_21_example.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_21_solution.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_22_example.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_22_solution.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_23_example.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_23_solution.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_24_example.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "lesson_24_solution.py",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "file": "test_capstone.py",
+      "passed": true,
+      "output": "test_blank_or_wrong_borrower_rejected (test_capstone.LibraryTests.test_blank_or_wrong_borrower_rejected) ... ok\ntest_book_is_frozen_and_hashable (test_capstone.LibraryTests.test_book_is_frozen_and_hashable) ... ok\ntest_duplicate_code_preserves_original (test_capstone.LibraryTests.test_duplicate_code_preserves_original) ... ok\ntest_duplicate_loan_preserves_borrower (test_capstone.LibraryTests.test_duplicate_loan_preserves_borrower) ... ok\ntest_invalid_records_rejected (test_capstone.LibraryTests.test_invalid_records_rejected) ... ok\ntest_lend_then_return (test_capstone.LibraryTests.test_lend_then_return) ... ok\ntest_libraries_are_independent (test_capstone.LibraryTests.test_libraries_are_independent) ... ok\ntest_multiple_copies_same_title (test_capstone.LibraryTests.test_multiple_copies_same_title) ... ok\ntest_new_copy_available (test_capstone.LibraryTests.test_new_copy_available) ... ok\ntest_normalises_text (test_capstone.LibraryTests.test_normalises_text) ... ok\ntest_repeated_return_rejected (test_capstone.LibraryTests.test_repeated_return_rejected) ... ok\ntest_return_without_loan (test_capstone.LibraryTests.test_return_without_loan) ... ok\ntest_returned_copy_can_be_lent_again (test_capstone.LibraryTests.test_returned_copy_can_be_lent_again) ... ok\ntest_snapshot_does_not_expose_internal_state (test_capstone.LibraryTests.test_snapshot_does_not_expose_internal_state) ... ok\ntest_unknown_copy_operations (test_capstone.LibraryTests.test_unknown_copy_operations) ... ok\ntest_wrong_record_type (test_capstone.LibraryTests.test_wrong_record_type) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.001s\n\nOK"
+    }
+  ]
+}
