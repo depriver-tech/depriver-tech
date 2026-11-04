@@ -42,16 +42,18 @@ const privatus = {
 ### GitHub activity
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=depriver-tech&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&border_radius=12" alt="GitHub stats" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=depriver-tech&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&border_radius=12" alt="Top languages" />
+  <img width="100%" src="https://raw.githubusercontent.com/depriver-tech/depriver-tech/output/cards/tokyonight/0-profile-details.svg" alt="Profile details and contributions" />
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=depriver-tech&theme=tokyonight&hide_border=true&border_radius=12&date_format=M%20j%5B%2C%20Y%5D" alt="Contribution streak" />
+  <img height="180" src="https://raw.githubusercontent.com/depriver-tech/depriver-tech/output/cards/tokyonight/3-stats.svg" alt="GitHub stats" />
+  <img height="180" src="https://streak-stats.demolab.com?user=depriver-tech&theme=tokyonight&hide_border=true&border_radius=12" alt="Contribution streak" />
 </p>
 
 <p align="center">
-  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=depriver-tech&theme=tokyo-night&hide_border=true&area=true&radius=12" alt="Contribution graph" />
+  <img height="180" src="https://raw.githubusercontent.com/depriver-tech/depriver-tech/output/cards/tokyonight/1-repos-per-language.svg" alt="Repos per language" />
+  <img height="180" src="https://raw.githubusercontent.com/depriver-tech/depriver-tech/output/cards/tokyonight/2-most-commit-language.svg" alt="Most commit language" />
+  <img height="180" src="https://raw.githubusercontent.com/depriver-tech/depriver-tech/output/cards/tokyonight/4-productive-time.svg" alt="Productive time" />
 </p>
 
 <p align="center">
@@ -62,15 +64,6 @@ const privatus = {
 </p>
 
 ### Featured projects
-
-<p align="center">
-  <a href="https://github.com/depriver-tech/incdai"><img src="https://github-readme-stats.vercel.app/api/pin/?username=depriver-tech&repo=incdai&theme=tokyonight&hide_border=true&border_radius=12" alt="incdai" /></a>
-  <a href="https://github.com/depriver-tech/mizuku"><img src="https://github-readme-stats.vercel.app/api/pin/?username=depriver-tech&repo=mizuku&theme=tokyonight&hide_border=true&border_radius=12" alt="mizuku" /></a>
-  <a href="https://github.com/depriver-tech/depriver-tech"><img src="https://github-readme-stats.vercel.app/api/pin/?username=depriver-tech&repo=depriver-tech&theme=tokyonight&hide_border=true&border_radius=12" alt="depriver-tech" /></a>
-  <a href="https://github.com/depriver-tech/percelio-app"><img src="https://github-readme-stats.vercel.app/api/pin/?username=depriver-tech&repo=percelio-app&theme=tokyonight&hide_border=true&border_radius=12" alt="percelio-app" /></a>
-  <a href="https://github.com/depriver-tech/campusvibe"><img src="https://github-readme-stats.vercel.app/api/pin/?username=depriver-tech&repo=campusvibe&theme=tokyonight&hide_border=true&border_radius=12" alt="campusvibe" /></a>
-  <a href="https://github.com/depriver-tech/Attendvio"><img src="https://github-readme-stats.vercel.app/api/pin/?username=depriver-tech&repo=Attendvio&theme=tokyonight&hide_border=true&border_radius=12" alt="Attendvio" /></a>
-</p>
 
 | Project | What it is |
 | --- | --- |
