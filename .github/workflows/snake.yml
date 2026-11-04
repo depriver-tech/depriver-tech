@@ -30,7 +30,10 @@ jobs:
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#22d3ee
 
       - name: Collect cards
-        run: cp -r profile-summary-card-output dist/cards
+        # dist/ is created by snk's container as root
+        run: |
+          sudo chown -R "$(id -u):$(id -g)" dist
+          cp -r profile-summary-card-output dist/cards
 
       - uses: crazy-max/ghaction-github-pages@v4
         with:
