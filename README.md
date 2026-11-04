@@ -1,114 +1,88 @@
-# depriver.tech
+<!-- GitHub profile README for @depriver-tech. Site/developer docs live in docs/site.md -->
 
-Personal storytelling site and blog for Privatus Cosmas. Built with Astro, GSAP and Lenis.
-Colours and fonts match the Instagram carousels.
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:1e3a8a,100:06b6d4&height=200&section=header&text=Privatus%20Cosmas&fontSize=52&fontColor=ffffff&fontAlignY=36&desc=Software%20Engineer%20%C2%B7%20Mbeya,%20Tanzania&descAlignY=58&descSize=18&animation=fadeIn" width="100%" alt="Privatus Cosmas, Software Engineer in Mbeya, Tanzania" />
+</p>
 
-## Run it
-    npm install
-    npm run dev        # http://localhost:4321
-    npm run build      # static site in dist/
+<p align="center">
+  <a href="https://depriver.tech">
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3200&pause=900&color=22D3EE&center=true&vCenter=true&width=640&lines=Full-Stack+%26+Mobile+Developer;Building+AI+tools+and+business+systems;CEO+%40+INCPRITECH;Flutter+%C2%B7+TypeScript+%C2%B7+Python+%C2%B7+Swift" alt="Full-Stack & Mobile Developer · AI tools · CEO at INCPRITECH" />
+  </a>
+</p>
 
-## Pages
-- `/`: the blog (home page)
-- `/story/`: the life story, told as chapters
-- `/blog/<post>/`: individual posts (`/blog` redirects to `/`)
+<p align="center">
+  <a href="https://depriver.tech"><img src="https://img.shields.io/badge/Website-depriver.tech-0f172a?style=for-the-badge&logo=googlechrome&logoColor=22d3ee" alt="Website" /></a>
+  <a href="https://incpritech.com"><img src="https://img.shields.io/badge/INCPRITECH-Company-0f172a?style=for-the-badge&logo=buffer&logoColor=22d3ee" alt="INCPRITECH" /></a>
+  <a href="mailto:privercosmas@gmail.com"><img src="https://img.shields.io/badge/Email-Let's_talk-0f172a?style=for-the-badge&logo=gmail&logoColor=22d3ee" alt="Email" /></a>
+  <img src="https://komarev.com/ghpvc/?username=depriver-tech&style=for-the-badge&color=0e7490&label=Profile+views" alt="Profile views" />
+</p>
 
-## Themes
-Press **T** anywhere (or click the palette icon) to open the theme menu, **Shift+T** to jump to the next theme.
-It has Auto/Light/Dark, a search box, and grouped themes (Depriver plus every Omarchy theme on this machine)
-with a live preview card. The choice is remembered per visitor.
-After installing or changing Omarchy themes, run `npm run themes` to regenerate
-`src/styles/themes.css` and `src/data/themes.json`, then commit them.
-
-## Docs Archive
-
-- `/docs/`: searchable public downloads, including the 22-page Git notebook.
-- `/docs/manage/`: owner-only uploads with draft, publish and hide controls.
-- [Archive setup and operations](docs/docs-archive.md) covers R2/D1 deployment and limits.
-
-## Where things live
-- `/publisher/`: private social publishing studio; see [setup and operating guide](docs/social-publisher.md).
-- `src/data/story.ts`: every chapter of the life story, services, lessons and contact details. Edit text here.
-- `STORY.md`: the raw life-story notes (local only, git-ignored, never published).
-- `src/content/blog/*.md`: blog posts (Markdown).
-- `studio/`: carousel design sources (render with `npm run carousel -- <slug>`).
-- `worker/`: views + likes API (Cloudflare Worker).
-- `scripts/terrain.mjs`: generates the topographic background artwork.
-
-## Publishing (everything lives in git)
-Posts are Markdown files in `src/content/blog/`. The file name is the link:
-`src/content/blog/coding-basics-for-beginners.md` → `https://depriver.tech/blog/coding-basics-for-beginners/`.
-Use short, lowercase, hyphenated names.
-
-```md
 ---
-title: "My post title"
-description: "One or two sentences, shown on cards and in link previews."
-date: 2026-10-01
-status: live          # live = published · draft = hidden
-tags: ["tech"]
-cover: /img/blog/photo.jpg     # optional (text posts)
-carousel: my-carousel          # optional: folder in public/carousels
-slides:                        # optional: one caption per slide (also alt text)
-  - "Slide 1 caption"
----
-Write the caption / article here in Markdown.
+
+### About me
+
+```ts
+const privatus = {
+  role:      "Software Engineer · Full-Stack & Mobile",
+  company:   ["Rohi Company Limited", "INCPRITECH (CEO)"],
+  education: "Computer Science · Mbeya University of Science and Technology",
+  based:     "Mbeya, Tanzania 🇹🇿",
+  building:  ["web apps", "Flutter apps", "AI tools", "business automation"],
+  motto:     "Do not lose the moon while counting the shining stars.",
+};
 ```
 
-Push to `main` and GitHub Actions publishes it in about a minute. To take a post down, set `status: draft` and push.
+### Tech stack
 
-## Carousels
-Every carousel is designed in `studio/` (shared palette, fonts and helpers in `studio/base.py`, your photo in `studio/assets/`).
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=flutter,dart,ts,js,react,nextjs,astro,nodejs,python,swift&perline=10" alt="Flutter, Dart, TypeScript, JavaScript, React, Next.js, Astro, Node.js, Python, Swift" /><br/>
+  <img src="https://skillicons.dev/icons?i=tailwind,firebase,supabase,postgres,mysql,cloudflare,vercel,docker,git,figma&perline=10" alt="Tailwind, Firebase, Supabase, PostgreSQL, MySQL, Cloudflare, Vercel, Docker, Git, Figma" />
+</p>
 
-    npm run carousel -- coding-basics-for-beginners
+### GitHub activity
 
-renders `studio/<slug>/make.py` to full-size Instagram JPGs in `studio/<slug>/export/` (not committed) and imports
-web slides into `public/carousels/<slug>/`. Then write `src/content/blog/<slug>.md` with `carousel: <slug>`.
-New carousel: copy one of the `studio/<slug>/` folders, rename it to the new slug, and edit `make.py`.
+<p align="center">
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=depriver-tech&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&border_radius=12" alt="GitHub stats" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=depriver-tech&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&border_radius=12" alt="Top languages" />
+</p>
 
-## Post downloads
-Every published post includes a **Download article (TXT)** link with the complete article and source URL.
-Carousel posts also offer **Download all slides (ZIP)** with every numbered image and the article in one file.
-These files are generated at build time under `/downloads/`, using the same publication filter as the blog;
-draft and future posts do not get downloads. Download links work without JavaScript.
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=depriver-tech&theme=tokyonight&hide_border=true&border_radius=12&date_format=M%20j%5B%2C%20Y%5D" alt="Contribution streak" />
+</p>
 
-## Link previews
-Every post gets a branded 1200×630 share image at `/og/blog/<slug>.jpg` (built by `src/pages/og/`), plus full
-Open Graph/Twitter tags, so links unfurl properly on WhatsApp, X, LinkedIn and Facebook.
+<p align="center">
+  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=depriver-tech&theme=tokyo-night&hide_border=true&area=true&radius=12" alt="Contribution graph" />
+</p>
 
-## AI discoverability
-- `/llms.txt` and `/llms-full.txt`: plain-text profile, story and posts for AI assistants (generated from `src/data/story.ts` and posts).
-- schema.org JSON-LD `Person` + `WebSite` on every page, `ProfilePage` on /story/, `BlogPosting` on posts.
-- `robots.txt` explicitly welcomes AI crawlers; `sitemap-index.xml` lists every live page with last-modified dates.
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/depriver-tech/depriver-tech/output/github-contribution-grid-snake-dark.svg" />
+    <img width="100%" src="https://raw.githubusercontent.com/depriver-tech/depriver-tech/output/github-contribution-grid-snake.svg" alt="Snake eating my contribution graph" />
+  </picture>
+</p>
 
-## Cloudflare (free tier) · `worker/`
-One Worker powers views, likes, comments (no login), the contact form and the "Ask about me" assistant.
+### Featured projects
 
-| Feature | Cloudflare service | Free allowance |
-|---|---|---|
-| API | Workers | 100,000 requests/day |
-| Views, likes, comments, messages | D1 (SQLite) | 5 GB, 5M reads + 100k writes/day |
-| "Ask about me" assistant | Workers AI | 10,000 neurons/day |
-| Spam protection | Turnstile | unlimited |
-| Visitor stats | Web Analytics | unlimited, cookie-free |
+<p align="center">
+  <a href="https://github.com/depriver-tech/incdai"><img src="https://github-readme-stats.vercel.app/api/pin/?username=depriver-tech&repo=incdai&theme=tokyonight&hide_border=true&border_radius=12" alt="incdai" /></a>
+  <a href="https://github.com/depriver-tech/mizuku"><img src="https://github-readme-stats.vercel.app/api/pin/?username=depriver-tech&repo=mizuku&theme=tokyonight&hide_border=true&border_radius=12" alt="mizuku" /></a>
+  <a href="https://github.com/depriver-tech/depriver-tech"><img src="https://github-readme-stats.vercel.app/api/pin/?username=depriver-tech&repo=depriver-tech&theme=tokyonight&hide_border=true&border_radius=12" alt="depriver-tech" /></a>
+  <a href="https://github.com/depriver-tech/percelio-app"><img src="https://github-readme-stats.vercel.app/api/pin/?username=depriver-tech&repo=percelio-app&theme=tokyonight&hide_border=true&border_radius=12" alt="percelio-app" /></a>
+  <a href="https://github.com/depriver-tech/campusvibe"><img src="https://github-readme-stats.vercel.app/api/pin/?username=depriver-tech&repo=campusvibe&theme=tokyonight&hide_border=true&border_radius=12" alt="campusvibe" /></a>
+  <a href="https://github.com/depriver-tech/Attendvio"><img src="https://github-readme-stats.vercel.app/api/pin/?username=depriver-tech&repo=Attendvio&theme=tokyonight&hide_border=true&border_radius=12" alt="Attendvio" /></a>
+</p>
 
-Spam protection without logins: Turnstile, a honeypot field, per-visitor rate limits, and comments with links held for review.
-Moderate at `https://depriver.tech/moderate/` with the `ADMIN_KEY`. Optional Telegram alerts for new comments and messages.
+| Project | What it is |
+| --- | --- |
+| [**incdai**](https://github.com/depriver-tech/incdai) | Public protocol, SDKs and embeddable widget for incdai, sovereign decentralized AI by INCPRITECH ([website](https://incdai.incpritech.com)) |
+| [**mizuku**](https://github.com/depriver-tech/mizuku) | Open-source live wallpapers and desktop customization, a native macOS app in Swift |
+| [**depriver.tech**](https://depriver.tech) | My storytelling site and blog, built with Astro, GSAP and Lenis on Cloudflare ([developer docs](docs/site.md)) |
+| [**percelio**](https://github.com/depriver-tech/percelio-app) | Courier and logistics platform: Flutter mobile app plus [web](https://github.com/depriver-tech/percelio-web) |
 
-Setup (once):
+### Let's connect
 
-    cd worker
-    npx wrangler login
-    npx wrangler d1 create depriver-engage                            # paste the id into wrangler.toml
-    npx wrangler d1 execute depriver-engage --remote --file schema.sql
-    npx wrangler secret put SALT          # any long random string
-    npx wrangler secret put ADMIN_KEY     # your moderation password
-    npx wrangler deploy                   # prints https://depriver-engage.<account>.workers.dev
+I'm open to collaborations on web, mobile and AI products. The fastest way to reach me is [privercosmas@gmail.com](mailto:privercosmas@gmail.com), or read my story at [depriver.tech](https://depriver.tech/story/).
 
-Then set `engageApi` in `src/data/site.ts` to that URL and push. Optional:
-- Turnstile: create a widget for depriver.tech in the dashboard, put the site key in `site.ts` → `turnstileSiteKey`
-  and run `npx wrangler secret put TURNSTILE_SECRET`.
-- Web Analytics: add depriver.tech in the dashboard and put the token in `site.ts` → `cfAnalyticsToken`.
-- Telegram alerts: `npx wrangler secret put TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID`.
-
-Local testing: `npx wrangler dev` in `worker/` with a `.dev.vars` file, and `engageApi: "http://localhost:8787"`.
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:06b6d4,50:1e3a8a,100:0f172a&height=110&section=footer" width="100%" alt="" />
+</p>
