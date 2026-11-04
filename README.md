@@ -1,7 +1,7 @@
 <!-- GitHub profile README for @depriver-tech. Site/developer docs live in docs/site.md -->
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:1e3a8a,100:06b6d4&height=120&section=header&text=Privatus%20Cosmas&fontSize=40&fontColor=ffffff&fontAlignY=40&animation=fadeIn" width="100%" alt="Privatus Cosmas" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:1e3a8a,100:06b6d4&height=100&section=header&text=Privatus%20Cosmas&fontSize=36&fontColor=ffffff&fontAlignY=45&animation=fadeIn" width="100%" alt="Privatus Cosmas" />
   <br/>
   <a href="https://depriver.tech"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&duration=3200&pause=900&color=22D3EE&center=true&vCenter=true&width=560&height=30&lines=Software+Engineer+%C2%B7+Mbeya,+Tanzania;Full-Stack+%26+Mobile+Developer;Building+AI+tools+and+business+systems;CEO+%40+INCPRITECH" alt="Software Engineer · Full-Stack & Mobile Developer · CEO at INCPRITECH" /></a>
   <br/>
@@ -14,14 +14,14 @@
 </p>
 
 <p align="center">
-  <img height="150" src="https://raw.githubusercontent.com/depriver-tech/depriver-tech/output/cards/tokyonight/3-stats.svg" alt="GitHub stats" />
-  <img height="150" src="https://streak-stats.demolab.com?user=depriver-tech&theme=tokyonight&hide_border=true&border_radius=12" alt="Contribution streak" />
-  <img height="150" src="https://raw.githubusercontent.com/depriver-tech/depriver-tech/output/cards/tokyonight/2-most-commit-language.svg" alt="Most commit language" />
+  <img height="125" src="https://raw.githubusercontent.com/depriver-tech/depriver-tech/output/cards/tokyonight/3-stats.svg" alt="GitHub stats" />
+  <img height="125" src="https://streak-stats.demolab.com?user=depriver-tech&theme=tokyonight&hide_border=true&border_radius=12" alt="Contribution streak" />
+  <img height="125" src="https://raw.githubusercontent.com/depriver-tech/depriver-tech/output/cards/tokyonight/2-most-commit-language.svg" alt="Most commit language" />
 </p>
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/depriver-tech/depriver-tech/output/github-contribution-grid-snake-dark.svg" />
-    <img width="100%" src="https://raw.githubusercontent.com/depriver-tech/depriver-tech/output/github-contribution-grid-snake.svg" alt="Snake eating my contribution graph" />
+    <img width="85%" src="https://raw.githubusercontent.com/depriver-tech/depriver-tech/output/github-contribution-grid-snake.svg" alt="Snake eating my contribution graph" />
   </picture>
 </p>
