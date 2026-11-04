@@ -20,8 +20,14 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/depriver-tech/incdai"><img width="32%" src=".github/profile/incdai.svg" alt="incdai: sovereign decentralized AI. Protocol, SDK and embeddable widget." /></a>
+  <a href="https://github.com/depriver-tech/mizuku"><img width="32%" src=".github/profile/mizuku.svg" alt="mizuku: live wallpapers for macOS, built in Swift." /></a>
+  <a href="https://depriver.tech"><img width="32%" src=".github/profile/depriver.svg" alt="depriver.tech: storytelling site and blog built with Astro, GSAP and Cloudflare." /></a>
+</p>
+
+<p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/depriver-tech/depriver-tech/output/github-contribution-grid-snake-dark.svg" />
-    <img width="85%" src="https://raw.githubusercontent.com/depriver-tech/depriver-tech/output/github-contribution-grid-snake.svg" alt="Snake eating my contribution graph" />
+    <img width="70%" src="https://raw.githubusercontent.com/depriver-tech/depriver-tech/output/github-contribution-grid-snake.svg" alt="Snake eating my contribution graph" />
   </picture>
 </p>
