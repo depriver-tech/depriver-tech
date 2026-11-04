@@ -1,7 +1,7 @@
-name: Profile contribution snake
+name: Profile widgets
 
-# Draws the animated snake for the GitHub profile README and pushes it to the
-# `output` branch (not main, so it never triggers the site deploy).
+# Renders the GitHub profile widgets (summary cards + contribution snake) and
+# pushes them to the `output` branch (not main, so the site deploy never runs).
 on:
   schedule:
     - cron: "0 */12 * * *"
@@ -11,15 +11,26 @@ permissions:
   contents: write
 
 jobs:
-  snake:
+  widgets:
     runs-on: ubuntu-latest
     steps:
+      - uses: vn7n24fzkq/github-profile-summary-cards@v0.13.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          TIME_ZONE: Africa/Dar_es_Salaam
+          AUTO_PUSH: false
+
       - uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#22d3ee
+
+      - name: Collect cards
+        run: cp -r profile-summary-card-output dist/cards
 
       - uses: crazy-max/ghaction-github-pages@v4
         with:
