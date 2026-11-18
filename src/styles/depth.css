@@ -74,3 +74,5 @@ body .post.post .more svg {padding:5px;width:13px;height:13px;}
 .build-paths h3 {display:flex;align-items:center;gap:10px;}
 @media(max-width:1000px) and (min-width:681px) {.is-home .bento {grid-template-columns:1fr 1fr;}.is-home .b-main {grid-column:auto;}.is-home .grid {grid-template-columns:1fr 1fr;}}
 @media(max-width:680px) { .is-home .bento,.is-home .grid{grid-template-columns:1fr;}body .post.post .cover{flex-basis:90px;width:90px;height:90px;}.is-home .b-main {grid-column:auto;} }
+/* Keep profile copy above its photo, including Astro-scoped card styles. */
+body.is-home .duo-card.story.story img {width:100%;height:235px;object-fit:cover;object-position:center;right:0;bottom:0;filter:none;opacity:1;}
