@@ -1,6 +1,7 @@
 ---
 import { livePosts, upcomingPosts } from "../lib/posts";
 import Base from "../layouts/Base.astro";
+import "../styles/launch.css";
 import Title from "../components/Title.astro";
 import PostCard from "../components/PostCard.astro";
 import { series, topics, seriesOf, topicsOf } from "../data/series";
@@ -24,42 +25,50 @@ const PAGE = 9;
 const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short", timeZone: "Africa/Dar_es_Salaam" });
 ---
 <Base title="Privatus Cosmas (Priver) | Software Engineer in Tanzania" description="Privatus Cosmas, also known as Priver, is a software engineer in Mbeya, Tanzania. Explore web and mobile development, practical tech lessons and software development services.">
-  <section class="hero wrap" data-home-hero>
-    <div class="hero-copy">
-      <span class="label" data-reveal>Privatus Cosmas · Software engineer</span>
-      <h1 aria-label="Building useful software. Sharing what I learn."><span class="hero-line"><span data-hero-line>Building useful</span></span><span class="hero-line"><span data-hero-line>software.</span></span><span class="hero-line accent-line"><span data-hero-line>Sharing what</span></span><span class="hero-line accent-line"><span data-hero-line>I learn.</span></span></h1>
-      <p class="intro" data-reveal>Hi, I’m Priver. I build web and mobile apps, business systems and integrations from Mbeya, Tanzania. This is my corner of the internet for making things and making tech easier to understand.</p>
-      <div class="actions" data-reveal>
-        <a class="btn" href="/software-engineer-tanzania/">Let’s build something <span aria-hidden="true">↗</span></a>
-        <a class="hero-link" href="#latest">Explore my writing <span aria-hidden="true">↓</span></a>
+  <div class="cosmic-home">
+    <section class="launch-hero" aria-labelledby="launch-title">
+      <div class="launch-visual" aria-hidden="true"><div class="launch-glow"></div><img class="launch-person" src="/img/privatus-studio.webp" alt="" width="960" height="1200" fetchpriority="high" /></div>
+      <div class="launch-copy wrap">
+        <p class="eyebrow" data-launch-copy><span class="signal-dot"></span> Privatus Cosmas / Software engineer</p>
+        <h1 id="launch-title"><span class="launch-line"><span data-hero-line>Good ideas deserve</span></span><span class="launch-line"><span data-hero-line>to become <em>real.</em></span></span></h1>
+        <p class="launch-intro" data-launch-copy>I’m Priver. I build useful software and share what I learn.<br class="wide-only" /> From Mbeya, Tanzania, to wherever your idea takes us.</p>
+        <div class="launch-actions" data-launch-copy><a class="launch-btn" href="/software-engineer-tanzania/">Let’s build something <span aria-hidden="true">↗</span></a><a class="launch-secondary" href="#latest">Explore my writing <span aria-hidden="true">↓</span></a></div>
+        <div class="launch-tracks" data-launch-copy><a href="/software-engineer-tanzania/">Web & mobile</a><span>·</span><a href="/guides/">Practical learning</a><span>·</span><a href="/about/">The person behind it</a></div>
       </div>
-      <p class="hero-location" data-reveal><span></span> Based in Mbeya, Tanzania · English & Kiswahili</p>
-    </div>
-    <figure class="portrait-frame" data-photo-reveal>
-      <img src="/img/privatus-studio.webp" alt="Privatus Cosmas working at his desk in a blue sweater" width="960" height="1200" fetchpriority="high" />
-      <figcaption><span>THE PERSON BEHIND THE CODE</span><strong>Privatus Cosmas <span>↗</span></strong><a href="/about/">Get to know me</a></figcaption>
-    </figure>
-  </section>
-  <section class="start-here wrap" aria-label="Explore the site">
-    <a href="#posts"><span>01 / READ</span><strong>Practical tech lessons ↗</strong><p>Code, careers and student life, explained simply.</p></a>
-    <a href="/guides/"><span>02 / LEARN</span><strong>Guides you can keep ↗</strong><p>Free books, notes and resources to learn at your pace.</p></a>
-    <a href="/software-engineer-tanzania/"><span>03 / BUILD</span><strong>Work with me ↗</strong><p>Web, mobile and business software built around your needs.</p></a>
-  </section>
+      <div class="launch-bottom wrap"><span>English & Kiswahili</span><a href="#journey">Scroll to discover <span class="scroll-cue" aria-hidden="true">↓</span></a><span>Mbeya, TZ <i class="signal-dot"></i></span></div>
+    </section>
 
-  <section class="work-journal wrap block" aria-labelledby="journal-title">
-    <div class="journal-heading"><div><span class="label">A little behind the scenes</span><h2 id="journal-title">Ideas become real<br /><em>at the desk.</em></h2></div><p>Building, testing, learning. A glimpse into the everyday work behind the articles and applications.</p></div>
-    <div class="journal-photos">
-      <figure data-photo-reveal><img src="/img/privatus-working-v2.webp" alt="Privatus working at his desk with a monitor, keyboard and mouse" width="1200" height="800" loading="lazy" /><figcaption>01 / In the flow · Mbeya, Tanzania</figcaption></figure>
-      <figure data-photo-reveal><img src="/img/privatus-workspace.webp" alt="Privatus coding on his laptop with his real multi-monitor workstation" width="1200" height="800" loading="lazy" /><figcaption>02 / From an idea to working software</figcaption></figure>
-    </div>
-    <a class="journal-about" href="/about/">A little more about me <span aria-hidden="true">↗</span></a>
-  </section>
+    <section class="journey" id="journey" aria-label="Build, learn and share">
+      <article class="journey-scene" data-scene>
+        <div class="scene-media"><img src="/img/privatus-working-v2.webp" alt="Privatus working at his real desk with a monitor, keyboard and mouse" width="1200" height="800" loading="lazy" /></div>
+        <div class="scene-shade"></div>
+        <div class="scene-copy wrap"><p class="eyebrow">01 / Build with purpose</p><h2>Real problems.<br /><em>Useful software.</em></h2><p>Web and mobile applications, business systems and integrations.<br class="wide-only" /> Built around the people who will use them.</p><a class="text-arrow" href="/software-engineer-tanzania/">Explore what I build <span aria-hidden="true">↗</span></a></div>
+      </article>
+      <article class="journey-scene" id="learning-scene" data-scene>
+        <div class="scene-media"><img src="/img/privatus-workspace.webp" alt="Privatus learning and coding on his laptop at his multi-monitor workstation" width="1200" height="800" loading="lazy" /></div>
+        <div class="scene-shade"></div>
+        <div class="scene-copy wrap"><p class="eyebrow">02 / Keep moving forward</p><h2>Always building.<br /><em>Always a student.</em></h2><p>Diploma completed. Bachelor of Computer Science underway at MUST.<br class="wide-only" /> First year, first semester. Learning never stops.</p><a class="text-arrow" href="/about/">Get to know me <span aria-hidden="true">↗</span></a></div>
+      </article>
+      <article class="journey-scene scene-share" id="sharing-scene" data-scene>
+        <div class="scene-media"><img src="/img/privatus-studio.webp" alt="Privatus Cosmas, software engineer and writer" width="960" height="1200" loading="lazy" /></div>
+        <div class="scene-shade"></div>
+        <div class="scene-copy wrap"><p class="eyebrow">03 / Pass it on</p><h2>What I learn,<br /><em>we can share.</em></h2><p>Code, careers and student life, explained simply.<br class="wide-only" /> Practical lessons in English and Kiswahili.</p><a class="text-arrow" href="#latest">Find your next read <span aria-hidden="true">↓</span></a></div>
+      </article>
+      <nav class="journey-dots" aria-label="Story chapters"><a href="#journey" aria-label="Build with purpose"></a><a href="#learning-scene" aria-label="Always a student"></a><a href="#sharing-scene" aria-label="Share what I learn"></a></nav>
+    </section>
+
+    <section class="build-universe wrap" aria-labelledby="build-title">
+      <div class="universe-intro"><span class="eyebrow">From idea to everyday use</span><h2 id="build-title">Bring the pieces<br /><em>together.</em></h2><p>A clear interface. The right connections. A system that makes work easier. Let’s turn the moving parts into something people can use.</p><a class="launch-btn" href="/software-engineer-tanzania/">Discuss your project <span aria-hidden="true">↗</span></a></div>
+      <div class="universe-art" data-photo-reveal><img src="/img/software-universe.webp" alt="Abstract blue glass and metal modules connected into a single structure" width="1200" height="800" loading="lazy" /></div>
+      <div class="build-paths"><a href="/software-engineer-tanzania/"><span>01</span><h3>Web & mobile</h3><p>Applications that turn an idea into a useful experience.</p><b aria-hidden="true">↗</b></a><a href="/software-engineer-tanzania/"><span>02</span><h3>Business systems</h3><p>Bring records, everyday tasks and workflows together.</p><b aria-hidden="true">↗</b></a><a href="/software-engineer-tanzania/"><span>03</span><h3>Connected tools</h3><p>Integrations and dashboards that make information useful.</p><b aria-hidden="true">↗</b></a></div>
+    </section>
+  </div>
 
   {first && (
     <section id="latest" class="wrap block">
       <div class="block-head">
-        <span class="label" data-reveal>Latest</span>
-        <Title title="Notes from" accent="my desk" size="clamp(2rem, 4.6vw, 3.4rem)" />
+        <span class="label" data-reveal>Fresh perspectives</span>
+        <Title title="A little knowledge." accent="A new possibility." size="clamp(2rem, 4.6vw, 3.4rem)" />
       </div>
       <div class="bento">
         <div class="b-main"><PostCard post={first} featured /></div>
@@ -68,45 +77,6 @@ const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", da
       </div>
     </section>
   )}
-
-  <!-- ── ARCHIVE ─────────────────────────────────────── -->
-  <section id="posts" class="wrap block">
-    <div class="block-head split">
-      <div>
-        <span class="label" data-reveal>All posts</span>
-        <Title title="Find what" accent="you need" size="clamp(2rem, 4.6vw, 3.4rem)" />
-      </div>
-      <label class="search" data-reveal>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <input type="search" placeholder="Search posts" aria-label="Search posts" data-search />
-      </label>
-    </div>
-    <div class="filters" data-reveal>
-      <ul class="chips" role="list">
-        <li><button class="on" data-topic="all" aria-pressed="true">All <small>{posts.length}</small></button></li>
-        {usedTopics.map((t) => {
-          const n = posts.filter((p) => topicsOf(p.data.tags).includes(t.id)).length;
-          return <li><button data-topic={t.id} aria-pressed="false">{t.name} <small>{n}</small></button></li>;
-        })}
-      </ul>
-      <p class="active-series" hidden data-active-series>
-        <span></span><button type="button" data-clear-series>Show all</button>
-      </p>
-    </div>
-
-    <div class="grid" data-grid>
-      {posts.map((p, i) => (
-        <div class="cell" data-latest={i < 3 ? "" : undefined} data-topics={topicsOf(p.data.tags).join(",")} data-series-tag={seriesOf(p.data.tags)?.tag ?? ""}
-          data-text={`${p.data.title} ${p.data.description} ${p.data.tags.join(" ")}`.toLowerCase()} hidden={i < 3 || i >= PAGE + 3}>
-          <PostCard post={p} />
-        </div>
-      ))}
-    </div>
-    <p class="empty" hidden data-empty>Nothing matches that yet. Try another word, or ask viora in the corner.</p>
-    {posts.length > PAGE + 3 && (
-      <div class="more-row"><button class="btn ghost" data-more>Show more posts <span data-left></span></button></div>
-    )}
-  </section>
 
   <!-- ── SERIES ─────────────────────────────────────── -->
   <section class="series-wrap deep" id="series">
@@ -181,6 +151,45 @@ const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", da
       <span class="go">Meet the engineer <span aria-hidden="true">→</span></span>
     </a>
   </section>
+  <!-- ── ARCHIVE ─────────────────────────────────────── -->
+  <section id="posts" class="wrap block">
+    <div class="block-head split">
+      <div>
+        <span class="label" data-reveal>All posts</span>
+        <Title title="Find what" accent="you need" size="clamp(2rem, 4.6vw, 3.4rem)" />
+      </div>
+      <label class="search" data-reveal>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" placeholder="Search posts" aria-label="Search posts" data-search />
+      </label>
+    </div>
+    <div class="filters" data-reveal>
+      <ul class="chips" role="list">
+        <li><button class="on" data-topic="all" aria-pressed="true">All <small>{posts.length}</small></button></li>
+        {usedTopics.map((t) => {
+          const n = posts.filter((p) => topicsOf(p.data.tags).includes(t.id)).length;
+          return <li><button data-topic={t.id} aria-pressed="false">{t.name} <small>{n}</small></button></li>;
+        })}
+      </ul>
+      <p class="active-series" hidden data-active-series>
+        <span></span><button type="button" data-clear-series>Show all</button>
+      </p>
+    </div>
+
+    <div class="grid" data-grid>
+      {posts.map((p, i) => (
+        <div class="cell" data-latest={i < 3 ? "" : undefined} data-topics={topicsOf(p.data.tags).join(",")} data-series-tag={seriesOf(p.data.tags)?.tag ?? ""}
+          data-text={`${p.data.title} ${p.data.description} ${p.data.tags.join(" ")}`.toLowerCase()} hidden={i < 3 || i >= PAGE + 3}>
+          <PostCard post={p} />
+        </div>
+      ))}
+    </div>
+    <p class="empty" hidden data-empty>Nothing matches that yet. Try another word, or ask viora in the corner.</p>
+    {posts.length > PAGE + 3 && (
+      <div class="more-row"><button class="btn ghost" data-more>Show more posts <span data-left></span></button></div>
+    )}
+  </section>
+
 </Base>
 
 <script>
@@ -278,36 +287,6 @@ const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", da
 </script>
 
 <style>
-  /* HERO */
-  .hero { display: grid; grid-template-columns: 1.15fr 1fr; gap: 40px; align-items: center; padding: 150px 0 70px; min-height: min(92vh, 860px); }
-  .hero :global(.display) { margin-top: 22px; }
-  .intro { font-size: 1.2rem; color: var(--muted); max-width: 30em; margin: 24px 0 30px; }
-  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
-  .stats { display: flex; gap: 36px; margin: 40px 0 0; }
-  .stats div { display: grid; }
-  .stats dt { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; color: var(--heading); line-height: 1; }
-  .stats dd { margin: 6px 0 0; color: var(--muted); font-size: 0.85rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; }
-  .hero-art { position: relative; aspect-ratio: 1 / 1.05; display: grid; place-items: center; }
-  .hero-art::before { content: ""; position: absolute; inset: 8% 4% 6% 10%; border-radius: 40px; background: var(--deep); transform: rotate(-4deg); }
-  .fan { position: relative; width: 54%; aspect-ratio: 4 / 5; }
-  .fan img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.6); }
-  .fan .f0 { z-index: 3; rotate: -3deg; }
-  .fan .f1 { z-index: 2; rotate: 9deg; translate: 18% 4%; }
-  .fan .f2 { z-index: 1; rotate: -12deg; translate: -18% 6%; }
-  .me { position: absolute; left: 0; bottom: 6%; z-index: 4; display: flex; align-items: center; gap: 12px; padding: 10px 18px 10px 10px; border-radius: 18px;
-    background: var(--surface); color: inherit; text-decoration: none; box-shadow: 0 24px 50px -24px color-mix(in srgb, var(--shadow) 60%, transparent); }
-  .me img { width: 48px; height: 48px; border-radius: 12px; object-fit: cover; object-position: top; background: var(--deep); filter: var(--photo-filter); }
-  .me strong { display: block; color: var(--heading); font-size: 0.95rem; }
-  .me em { font-style: normal; color: var(--muted); font-size: 0.78rem; }
-
-  /* MARQUEE */
-  .marquee { background: var(--accent); color: var(--on-accent); overflow: hidden; padding: 16px 0; transform: rotate(-1.2deg) scale(1.02); margin: 0 0 30px; }
-  .marquee-track { display: flex; width: max-content; animation: marquee 40s linear infinite; }
-  .marquee span { display: flex; align-items: center; gap: 28px; padding-right: 28px; font-weight: 600; font-size: 1.15rem; white-space: nowrap; }
-  .marquee i { width: 9px; height: 9px; border-radius: 50%; background: var(--deep); }
-  @keyframes marquee { to { transform: translateX(-50%); } }
-  @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
-
   /* SECTIONS */
   .block { padding: 90px 0; }
   .block-head { margin-bottom: 40px; }
@@ -397,8 +376,6 @@ const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", da
   .story:hover img { transform: translateY(-8px) scale(1.02); }
 
   @media (max-width: 960px) {
-    .hero { grid-template-columns: 1fr; min-height: 0; padding-top: 130px; }
-    .hero-art { max-width: 460px; width: 100%; margin: 0 auto; }
     .grid { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 680px) {
@@ -417,8 +394,6 @@ const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", da
     .story { min-height: 380px; }
     .story img { height: 70%; opacity: 0.55; }
     .search { width: 100%; }
-    .hero-art { max-width: 340px; }
-    .fan .f1 { translate: 12% 3%; } .fan .f2 { translate: -12% 5%; }
     /* archive on phones: a compact list, cover on the left and the title beside it */
     .grid { gap: 12px; }
     .grid :global(.post) { flex-direction: row; border-radius: 20px; }
@@ -431,60 +406,4 @@ const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", da
     .grid :global(.foot) { margin-top: 2px; font-size: 0.9rem; }
     .grid :global(.cover-fallback .script) { font-size: 1.6rem; }
   }
-</style>
-
-<style>
-  .hero { grid-template-columns: 1.15fr 1fr; gap: clamp(32px, 6vw, 90px); padding: 150px 0 64px; min-height: 0; }
-  h1 { font-size: clamp(2.9rem, 5.3vw, 5rem); line-height: 1.08; letter-spacing: -.065em; color: var(--heading); margin: 26px 0 0; font-weight: 600; }
-  h1 span { color: var(--accent); }
-  .intro { font-size: 1rem; line-height: 1.85; max-width: 34em; margin: 24px 0 28px; }
-  .actions { align-items: center; gap: 24px; }
-  .hero-link { font-size: .9rem; font-weight: 500; text-decoration: none; color: var(--heading); padding-block: 12px; }
-  .hero-link span { margin-left: 8px; }
-  .hero-location { display: flex; align-items: center; gap: 8px; font-size: .72rem; color: var(--muted); margin: 30px 0 0; }
-  .hero-location > span { width: 6px; height: 6px; border-radius: 100%; background: #48836c; }
-  .portrait-frame { position: relative; margin: 0; background: #dedbd4; border-radius: 8px; overflow: hidden; aspect-ratio: 4/5; }
-  .portrait-frame > img { height: 100%; width: 100%; object-fit: cover; }
-  .portrait-frame figcaption { position: absolute; inset: auto 20px 20px; padding: 18px 22px; background: #fffef8ed; color: #172922; border: 1px solid #ffffff80; backdrop-filter: blur(12px); border-radius: 4px; }
-  figcaption > span { font-size: .58rem; letter-spacing: .15em; display: block; margin-bottom: 6px; }
-  figcaption strong { font-size: 1.1rem; font-weight: 500; display: flex; justify-content: space-between; }
-  figcaption a { font-size: .7rem; text-underline-offset: 4px; }
-  .start-here { display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .start-here a { text-decoration: none; padding: 28px 26px; border-right: 1px solid var(--line); transition: background .2s; }
-  .start-here a:first-child { padding-left: 0; } .start-here a:last-child { border-right: 0; }
-  .start-here a:hover { background: var(--surface-2); }
-  .start-here span { font-size: .63rem; letter-spacing: .14em; color: var(--muted); display: block; margin-bottom: 10px; }
-  .start-here strong { color: var(--heading); font-size: .98rem; font-weight: 500; }
-  .start-here p { margin: 8px 0 0; color: var(--muted); font-size: .78rem; max-width: 28em; }
-  .block { padding-block: 76px; }
-  .series { grid-template-columns: repeat(2,1fr); }
-  .s-card { border-radius: 8px; }
-  .story { min-height: 470px; padding-bottom: 260px; }
-  .story img { width: 100%; height: 235px; object-fit: cover; object-position: center 42%; right: 0; bottom: 0; filter: none; opacity: 1; }
-  .story .about-summary { max-width: 100%; }
-  .story .go { margin-top: 0; }
-  @media (max-width: 960px) { .hero { grid-template-columns: 1.1fr 1fr; gap: 30px; } .actions { gap: 14px; } }
-  @media (max-width: 760px) { .hero { padding-top: 145px; grid-template-columns: 1fr; gap: 32px; } h1 { font-size: clamp(2.8rem, 9vw, 4rem); } .desktop-break { display: none; } .portrait-frame { max-width: 520px; width: 100%; aspect-ratio: 5/4; } .portrait-frame > img { object-position: center 30%; } .start-here { grid-template-columns: 1fr; } .start-here a, .start-here a:first-child { padding: 22px 0; border-right: 0; border-bottom: 1px solid var(--line); } .start-here a:last-child { border-bottom: 0; } .block { padding-block: 52px; } .hero-location { font-size: .65rem; } }
-</style>
-
-<style>
-  h1 > .hero-line { display: block; overflow: hidden; color: var(--heading); padding-bottom: .08em; margin-bottom: -.08em; }
-  h1 .hero-line > span { display: block; color: inherit; }
-  h1 > .accent-line { color: var(--accent); }
-  .portrait-frame { will-change: clip-path; }
-  .portrait-frame > img { transition: filter .5s; }
-  .portrait-frame figcaption { animation: caption-in 1.2s .8s both; }
-  @keyframes caption-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
-  .journal-heading { display: flex; justify-content: space-between; align-items: end; gap: 32px; margin-bottom: 32px; }
-  .journal-heading h2 { color: var(--heading); font-size: clamp(2.4rem, 4.5vw, 4rem); line-height: 1.1; letter-spacing: -.055em; font-weight: 500; margin: 18px 0 0; }
-  .journal-heading em { font-family: Georgia, serif; font-weight: 400; color: var(--accent); }
-  .journal-heading p { max-width: 28em; color: var(--muted); font-size: .85rem; }
-  .journal-photos { display: grid; grid-template-columns: 1.35fr 1fr; align-items: start; gap: 24px; }
-  .journal-photos figure { margin: 0; overflow: hidden; border-radius: 8px; background: var(--surface); }
-  .journal-photos figure:nth-child(2) { margin-top: 70px; }
-  .journal-photos img { width: 100%; height: auto; aspect-ratio: 3/2; object-fit: cover; }
-  .journal-photos figcaption { padding: 14px 0; background: var(--bg); font-size: .66rem; color: var(--muted); letter-spacing: .06em; }
-  .journal-about { display: inline-flex; gap: 24px; margin-top: 24px; text-decoration: none; color: var(--heading); font-size: .85rem; border-bottom: 1px solid var(--line); padding-bottom: 8px; }
-  @media (max-width:760px) { .journal-heading { display: block; } .journal-photos { grid-template-columns: 1fr; gap: 24px; } .journal-photos figure:nth-child(2) { margin-top: 0; } }
-  @media (prefers-reduced-motion:reduce) { .portrait-frame figcaption { animation: none; } }
 </style>

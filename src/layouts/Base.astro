@@ -88,7 +88,7 @@ const imageUrl = new URL(image, Astro.site);
       try { const t = localStorage.getItem("depriver-theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch {}
     </script>
   </head>
-  <body>
+  <body class:list={{ "is-home": Astro.url.pathname === "/" }}>
     {!bare && <div class="progress" aria-hidden="true"><span></span></div>}
     {!bare && <Nav />}
     <main id="top"><slot /></main>
