@@ -1,0 +1,422 @@
+[
+  {
+    "slug": "linear-algebra-and-calculus",
+    "code": "MS 8121",
+    "title": "Linear Algebra and Calculus",
+    "description": "By the end of this foundation module, you should be able to describe functions, solve small linear systems, interpret vectors and matrices, evaluate elementary limits, differentiate functions, and use integration to calculate accumulation. These are original foundation lessons based on the module title, not a reproduction of a lecturer's syllabus. Complete Sessions 1-8 in order; solve the practice questions before opening the answers.",
+    "sessions": [
+      {
+        "number": 1,
+        "title": "Functions are input-output rules",
+        "objective": "Determine domains and distinguish composition from inversion.",
+        "href": "/study/linear-algebra-and-calculus/session-01/"
+      },
+      {
+        "number": 2,
+        "title": "Vectors describe magnitude and direction",
+        "objective": "Calculate components, length, dot products and a projection.",
+        "href": "/study/linear-algebra-and-calculus/session-02/"
+      },
+      {
+        "number": 3,
+        "title": "Matrices and transformations",
+        "objective": "Check dimensions before multiplying and interpret a matrix as a transformation.",
+        "href": "/study/linear-algebra-and-calculus/session-03/"
+      },
+      {
+        "number": 4,
+        "title": "Solving linear systems and understanding solutions",
+        "objective": "Classify a system as having one, none or infinitely many solutions.",
+        "href": "/study/linear-algebra-and-calculus/session-04/"
+      },
+      {
+        "number": 5,
+        "title": "Limits and continuity",
+        "objective": "Use one-sided limits to check whether a removable or jump discontinuity occurs.",
+        "href": "/study/linear-algebra-and-calculus/session-05/"
+      },
+      {
+        "number": 6,
+        "title": "Derivatives measure local change",
+        "objective": "Apply the product and chain rules and interpret derivative units.",
+        "href": "/study/linear-algebra-and-calculus/session-06/"
+      },
+      {
+        "number": 7,
+        "title": "Optimization is a reasoning process",
+        "objective": "Compare critical points and boundaries in a constrained optimization problem.",
+        "href": "/study/linear-algebra-and-calculus/session-07/"
+      },
+      {
+        "number": 8,
+        "title": "Integration measures accumulation",
+        "objective": "Calculate signed accumulation and distinguish displacement from distance.",
+        "href": "/study/linear-algebra-and-calculus/session-08/"
+      }
+    ],
+    "pages": 12,
+    "pdf": "/guides/subjects/linear-algebra-and-calculus/linear-algebra-and-calculus.pdf",
+    "notes": "/guides/subjects/linear-algebra-and-calculus/notes.md",
+    "resources": "## Practice set | Attempt independently\n1. Find the real domain of h(x) = sqrt(5-x)/(x-2).\n2. For u=(2,-1), v=(1,3), find u+v, 2u and u.v.\n3. Find the length of (6,8) and a unit vector in its direction.\n4. Multiply [[1,3],[2,0]] by the column vector (2,4).\n5. Find the determinant and inverse of [[2,1],[1,1]].\n6. Solve 2x+y=8 and x-y=1. Show an elimination step and check.\n7. Explain the solution set of x+y=2 and 2x+2y=5.\n8. Evaluate lim as x -> 3 of (x^2-9)/(x-3).\n9. Differentiate x^3 - 4x + 7 and (x^2+1)^3.\n10. For position s(t)=3t^2-t, find velocity at t=2 and acceleration.\n11. Find the minimum of f(x)=x^2-6x+10 on [0,4].\n12. Evaluate integral from 0 to 2 of (3x^2+2) dx and explain its units if x is seconds and the integrand is m/s.\n\n## Answers and reasoning\n1. The square root needs x <= 5; the denominator excludes x=2. Domain: (-infinity,2) union (2,5].\n2. u+v=(3,2); 2u=(4,-2); u.v=2-3=-1.\n3. Length 10. Divide each component by 10: (0.6,0.8).\n4. First entry 1*2+3*4=14; second 2*2+0*4=4. Result (14,4).\n5. Determinant 2*1-1*1=1. Inverse [[1,-1],[-1,2]]. Multiplying by the original gives I.\n6. Add the equations: 3x=9, so x=3. Then y=2. Check 6+2=8 and 3-2=1.\n7. Doubling the first equation gives 2x+2y=4, contradicting 5. No solution.\n8. Cancel x-3 for x != 3 to obtain x+3. The limit is 6.\n9. 3x^2-4; and, by the chain rule, 6x(x^2+1)^2.\n10. v(t)=6t-1, so v(2)=11; acceleration a(t)=6. Use m/s and m/s^2 if s is metres and t is seconds.\n11. f'(x)=2x-6 gives x=3. Endpoint values are f(0)=10 and f(4)=2; f(3)=1 is the minimum.\n12. Antiderivative x^3+2x gives 8+4=12. The result is metres, representing displacement; the integrand is positive, so distance agrees.\n\n## Check your understanding\nExplain matrix multiplication without saying \"multiply corresponding entries.\" Explain why a limit can exist where the function is undefined. Solve a new derivative and a new integral without looking at the rules. If you can only repeat these examples, choose different coefficients and try again.\n\nFurther study: MIT 18.06 Linear Algebra, https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/ ; OpenStax Calculus Volume 1, https://openstax.org/books/calculus-volume-1/pages/preface . These are independently published resources; the examples and exercises above were created for this pack."
+  },
+  {
+    "slug": "communication-skills",
+    "code": "HS 8101",
+    "title": "Communication Skills",
+    "description": "Communication in computing means helping a specific audience understand something accurately and act on it. This module develops purposeful reading, clear paragraphs, technical explanations, reports, source use, email, presentations and collaborative feedback. Work through eight sessions and produce the written evidence requested. This is an original foundation course, not an official assessment guide.",
+    "sessions": [
+      {
+        "number": 1,
+        "title": "Purpose, audience and channel",
+        "objective": "Adapt a technical message to a specific audience and required action.",
+        "href": "/study/communication-skills/session-01/"
+      },
+      {
+        "number": 2,
+        "title": "Active reading and useful notes",
+        "objective": "Turn reading into a question-led set of retrievable notes.",
+        "href": "/study/communication-skills/session-02/"
+      },
+      {
+        "number": 3,
+        "title": "Sentences and paragraphs",
+        "objective": "Build a paragraph around one supported claim and revise ambiguous wording.",
+        "href": "/study/communication-skills/session-03/"
+      },
+      {
+        "number": 4,
+        "title": "Explaining a technical process",
+        "objective": "Explain a process in a reproducible sequence with inputs and checks.",
+        "href": "/study/communication-skills/session-04/"
+      },
+      {
+        "number": 5,
+        "title": "Reports and evidence",
+        "objective": "Separate observation, interpretation and recommendation in a short report.",
+        "href": "/study/communication-skills/session-05/"
+      },
+      {
+        "number": 6,
+        "title": "Summarizing, paraphrasing and citing",
+        "objective": "Paraphrase accurately while retaining attribution and uncertainty.",
+        "href": "/study/communication-skills/session-06/"
+      },
+      {
+        "number": 7,
+        "title": "Professional email and collaborative communication",
+        "objective": "Write an actionable email and record a collaborative decision clearly.",
+        "href": "/study/communication-skills/session-07/"
+      },
+      {
+        "number": 8,
+        "title": "Presentations, listening and feedback",
+        "objective": "Structure a short talk and respond to feedback using observable criteria.",
+        "href": "/study/communication-skills/session-08/"
+      }
+    ],
+    "pages": 12,
+    "pdf": "/guides/subjects/communication-skills/communication-skills.pdf",
+    "notes": "/guides/subjects/communication-skills/notes.md",
+    "resources": "## Practice set | Produce evidence\n1. State an audience and intended action for a compiler-installation guide.\n2. Rewrite: \"The system is very good and works perfectly.\"\n3. Write a four-sentence paragraph explaining why boundary tests matter.\n4. Turn \"memory management\" into three retrieval questions.\n5. Separate observation and inference: \"The app crashed because the database is broken.\"\n6. Design a results table for five C test cases.\n7. Explain the difference between results and discussion in a lab report.\n8. Outline a citation record for an online textbook chapter.\n9. Write a professional email asking a lecturer to clarify an ambiguous submission format.\n10. Create a three-minute presentation outline on a topic from another module.\n11. Give constructive feedback on a diagram with no labels or units.\n12. Write a 150-word explanation of one concept, then shorten it by about one third without losing essential meaning.\n\n## Answer guide and assessment rubric\n1. Example: first-year students who need to compile and run one C file. Intended action: run a supplied command and verify the expected output. Specify the operating system.\n2. Replace praise with evidence: \"The program passed the five listed tests. Performance and invalid-file handling have not yet been evaluated.\" The exact claim depends on actual tests.\n3. Include a topic sentence, a boundary example such as 0 and 100, an explanation of what these cases can expose, and a limit on the conclusion. Do not claim that five tests prove every case.\n4. Examples: What does virtual memory give a process? How does an address translate? Why can a page fault be expensive? Questions should require an explanation, not only a term.\n5. Observation: the app crashed. Inference: a database problem caused it. State the steps, error message and evidence needed before assigning cause.\n6. Columns: case ID, input, expected result, actual result, pass/fail and explanation. A useful test table makes disagreement visible.\n7. Results document findings. Discussion explains their meaning, limitations and relation to the objective. A screenshot alone rarely supplies an adequate discussion.\n8. Record organization or author, title, date if present, chapter or section, URL and access date when required by the selected style. Use the lecturer's specified citation format.\n9. A strong answer includes a specific subject, relevant context, one answerable question, courtesy and identification. Do not invent an emergency or blame the lecturer.\n10. A strong outline has one central idea, one worked example, clearly timed sections and a final takeaway. Demonstrate the explanation aloud.\n11. Example: \"Please label both axes and add voltage/current units. Without them I cannot tell whether the plotted slope represents resistance or conductance.\"\n12. Assess accuracy, audience fit, structure, evidence and concision, each from 0 to 2. A score is a self-assessment aid, not an institutional grade. Compare drafts and identify one concrete improvement.\n\n## Further study and weekly artifact\nRead Google Technical Writing One, https://developers.google.com/tech-writing/one , and Purdue OWL's paragraph guidance, https://owl.purdue.edu/owl/general_writing/academic_writing/paragraphs_and_paragraphing/index.html . Use the sources as further reading; all examples in this pack are original.\n\nKeep one revised artifact each week: email, explanation, test report, diagram caption or presentation outline. Preserve the first draft so improvement is visible."
+  },
+  {
+    "slug": "theory-of-computation",
+    "code": "CS 8101",
+    "title": "Theory of Computation",
+    "description": "This module asks what computational models can recognize, what problems are solvable in principle, and how we reason about those claims. Learn to specify a language, build and trace finite automata, translate simple regular expressions, read grammars and distinguish computability from efficiency. The eight sessions form a foundation route; the lecturer's outline determines assessment depth.",
+    "sessions": [
+      {
+        "number": 1,
+        "title": "Sets, alphabets, strings and languages",
+        "objective": "Distinguish strings, sets of strings and language operations.",
+        "href": "/study/theory-of-computation/session-01/"
+      },
+      {
+        "number": 2,
+        "title": "Deterministic finite automata",
+        "objective": "Use a state invariant to justify a complete DFA.",
+        "href": "/study/theory-of-computation/session-02/"
+      },
+      {
+        "number": 3,
+        "title": "State meaning is more useful than guessing circles",
+        "objective": "Derive states from the suffix information required by a specification.",
+        "href": "/study/theory-of-computation/session-03/"
+      },
+      {
+        "number": 4,
+        "title": "Nondeterminism and subset construction",
+        "objective": "Carry out a concrete subset construction including an empty subset.",
+        "href": "/study/theory-of-computation/session-04/"
+      },
+      {
+        "number": 5,
+        "title": "Regular expressions and closure",
+        "objective": "Interpret formal regular expressions as whole-string specifications.",
+        "href": "/study/theory-of-computation/session-05/"
+      },
+      {
+        "number": 6,
+        "title": "Why some languages need more memory",
+        "objective": "Use the quantifier order of the pumping lemma correctly.",
+        "href": "/study/theory-of-computation/session-06/"
+      },
+      {
+        "number": 7,
+        "title": "Grammars and pushdown intuition",
+        "objective": "Trace a context-free derivation and relate it to stack behavior.",
+        "href": "/study/theory-of-computation/session-07/"
+      },
+      {
+        "number": 8,
+        "title": "Computability and complexity are different questions",
+        "objective": "Separate decision, recognition and practical resource bounds.",
+        "href": "/study/theory-of-computation/session-08/"
+      }
+    ],
+    "pages": 12,
+    "pdf": "/guides/subjects/theory-of-computation/theory-of-computation.pdf",
+    "notes": "/guides/subjects/theory-of-computation/notes.md",
+    "resources": "Build a new DFA from a precise specification, state the meaning of every state and trace five strings. Explain why your construction handles all prefixes. Then contrast finite-state memory with stack memory using your own example.\n\nFurther study: MIT Automata, Computability, and Complexity, https://ocw.mit.edu/courses/6-045j-automata-computability-and-complexity-spring-2011/ . The original lessons here are a foundation pathway; consult the course notes and your lecturer for formal proof depth."
+  },
+  {
+    "slug": "operating-systems",
+    "code": "CS 8140",
+    "title": "Operating Systems",
+    "description": "An operating system coordinates access to hardware and provides abstractions that make programs usable. This module develops a working understanding of processes, scheduling, memory, concurrency, files and protection. Use the eight sessions, paper calculations and a safe shell sandbox. These foundation topics are inferred from the module title, not an official weekly outline.",
+    "sessions": [
+      {
+        "number": 1,
+        "title": "Abstractions and the kernel",
+        "objective": "Explain how kernel abstractions support controlled sharing of hardware.",
+        "href": "/study/operating-systems/session-01/"
+      },
+      {
+        "number": 2,
+        "title": "Programs, processes and threads",
+        "objective": "Distinguish a program file, a process instance and threads sharing a process.",
+        "href": "/study/operating-systems/session-02/"
+      },
+      {
+        "number": 3,
+        "title": "Scheduling and performance measures",
+        "objective": "Calculate turnaround, waiting and response time under stated assumptions.",
+        "href": "/study/operating-systems/session-03/"
+      },
+      {
+        "number": 4,
+        "title": "Virtual memory and address translation",
+        "objective": "Translate a virtual address using page number and offset.",
+        "href": "/study/operating-systems/session-04/"
+      },
+      {
+        "number": 5,
+        "title": "Allocation, locality and replacement",
+        "objective": "Trace a replacement policy and explain locality without equating it to a guarantee.",
+        "href": "/study/operating-systems/session-05/"
+      },
+      {
+        "number": 6,
+        "title": "Concurrency, races and synchronization",
+        "objective": "Demonstrate a lost update and state what synchronization must protect.",
+        "href": "/study/operating-systems/session-06/"
+      },
+      {
+        "number": 7,
+        "title": "Deadlock and progress",
+        "objective": "Identify a circular wait and compare prevention with detection.",
+        "href": "/study/operating-systems/session-07/"
+      },
+      {
+        "number": 8,
+        "title": "Files, permissions and a safe shell lab",
+        "objective": "Inspect files safely and interpret permissions within a temporary lab.",
+        "href": "/study/operating-systems/session-08/"
+      }
+    ],
+    "pages": 12,
+    "pdf": "/guides/subjects/operating-systems/operating-systems.pdf",
+    "notes": "/guides/subjects/operating-systems/notes.md",
+    "resources": "## Practice set\n1. Explain kernel versus shell in two sentences.\n2. Can one program correspond to two processes? Give an example.\n3. State a resource threads commonly share and one item each thread needs separately.\n4. Why does blocked differ from ready?\n5. FCFS: A arrives 0, burst 4; B arrives 1, burst 2; C arrives 2, burst 1. Find completion, turnaround and waiting times. Assume no overhead and no I/O.\n6. All arrive at 0: A needs 3, B needs 2. Round robin, quantum 1, starting A then B, no overhead. Give the timeline and completion times.\n7. With 1024-byte pages, split address 3500 into page number and offset.\n8. If that page maps to frame 5, calculate the physical address.\n9. Two frames, FIFO, reference string 1,2,1,2,3. Count faults.\n10. Give an interleaving that loses one of two increments from an initial count of 4.\n11. Explain a lock-order solution for an X/Y deadlock.\n12. Translate mode 750 into owner/group/other permissions. Explain why applying it to a directory is not the same as applying it to a regular file.\n\n## Answers and reasoning\n1. The kernel manages resources and protection at a privileged level. A shell reads commands and launches programs or performs its own built-in operations.\n2. Yes. Opening two separate instances of the same executable can create two processes with different execution states and resources.\n3. Threads share the process address space. Each needs its own stack and execution context, including a program-counter state.\n4. A blocked task is waiting for an event such as I/O. A ready task can run when the scheduler assigns execution resources.\n5. A runs 0-4, B 4-6, C 6-7. Completion A=4,B=6,C=7. Turnaround 4,5,5. Waiting 0,3,4.\n6. A 0-1, B 1-2, A 2-3, B 3-4, A 4-5. B completes at 4; A at 5.\n7. 3500=3*1024+428, so page 3, offset 428.\n8. 5*1024+428=5548. Frame number replaces page number; offset is preserved.\n9. Faults on 1,2,3; hits on the repeated 1 and 2. Total three faults. Page 1 is replaced at the final access.\n10. Both read 4; A writes 5; B writes 5. Final 5 rather than 6. The update needs coordination.\n11. Require all code needing both locks to acquire X before Y. A participant cannot hold Y while waiting for X under this protocol, breaking the circular pattern.\n12. Owner rwx, group r-x, others --- . On a directory, x means traversal and r means listing; on an ordinary file, x means permission to execute, subject to other requirements.\n\n## Further study and evidence\nUse the authors' free OSTEP chapters at https://pages.cs.wisc.edu/~remzi/OSTEP/ for deeper treatment. Consult your local man pages for commands on your machine; Linux and macOS details may differ. Produce one annotated scheduling timeline, one address-translation calculation and one terminal transcript from the sandbox. Original explanations and exercises in this pack are not copied from OSTEP."
+  },
+  {
+    "slug": "programming-concepts-in-c",
+    "code": "CS 8138",
+    "title": "Programming Concepts in C",
+    "description": "Learn to turn a problem into a precise algorithm, express it in C, compile with warnings, test boundary cases and explain the result. This foundation course covers types, control flow, functions, arrays, strings, pointers, structures, files and debugging. The supplied practice folder contains standalone C17 programs and a test runner. They use the standard library, not a course-specific library.",
+    "sessions": [
+      {
+        "number": 1,
+        "title": "From problem to executable",
+        "objective": "Connect a problem specification to translation and a verified run.",
+        "href": "/study/programming-concepts-in-c/session-01/"
+      },
+      {
+        "number": 2,
+        "title": "Types, expressions and input",
+        "objective": "Predict arithmetic conversions and validate an input before using it.",
+        "href": "/study/programming-concepts-in-c/session-02/"
+      },
+      {
+        "number": 3,
+        "title": "Selection and Boolean conditions",
+        "objective": "Construct boundary conditions with the correct logical operators.",
+        "href": "/study/programming-concepts-in-c/session-03/"
+      },
+      {
+        "number": 4,
+        "title": "Loops, invariants and tracing",
+        "objective": "Trace initialization, condition, body and update while maintaining an invariant.",
+        "href": "/study/programming-concepts-in-c/session-04/"
+      },
+      {
+        "number": 5,
+        "title": "Functions, scope and contracts",
+        "objective": "Specify a function contract and distinguish local changes from caller state.",
+        "href": "/study/programming-concepts-in-c/session-05/"
+      },
+      {
+        "number": 6,
+        "title": "Arrays, strings and bounds",
+        "objective": "Keep array accesses within bounds and account for a string terminator.",
+        "href": "/study/programming-concepts-in-c/session-06/"
+      },
+      {
+        "number": 7,
+        "title": "Pointers, structures and data ownership",
+        "objective": "Reason about pointer validity, structure fields and object lifetime.",
+        "href": "/study/programming-concepts-in-c/session-07/"
+      },
+      {
+        "number": 8,
+        "title": "Files, testing and debugging",
+        "objective": "Test file operations and debug by comparing predictions with observations.",
+        "href": "/study/programming-concepts-in-c/session-08/"
+      }
+    ],
+    "pages": 12,
+    "pdf": "/guides/subjects/programming-concepts-in-c/programming-concepts-in-c.pdf",
+    "notes": "/guides/subjects/programming-concepts-in-c/notes.md",
+    "resources": "## Practice set\n1. Write an input-output contract for a function finding the minimum of three integers.\n2. Predict 9/4, 9%4 and 9/4.0.\n3. Why does double mean = sum/count fail when both operands are int and the total is not divisible by the count?\n4. Write a correct condition for an integer between 10 and 20 inclusive.\n5. Trace a loop adding 2,4,6 to an initially zero total. Show each state.\n6. What is wrong with indexing a five-element array using i <= 5 starting at i=0?\n7. How many elements are required to store \"Mbeya\" as a C string?\n8. A function receives int *p and performs *p=12. Under what conditions can this change a caller's variable safely?\n9. Why is returning the address of a local automatic int invalid for later access?\n10. Design six tests for a mark parser accepting integers 0-100.\n11. Explain how to avoid accidentally truncating a personal file in a file-writing exercise.\n12. Build the supplied C examples, run their tests and modify one program to handle a new requirement. Record your change and a test for it.\n\n## Answers and reasoning\n1. Example: accepts three representable int values and returns a value no larger than any of them and equal to at least one input. Ties are valid.\n2. 2,1,2.25. The first two use integer arithmetic; the third uses a floating-point operand.\n3. Integer division happens before assignment. Use (double)sum/count after ensuring count is nonzero and the sum has not overflowed.\n4. x >= 10 && x <= 20. Do not use a chained mathematical comparison.\n5. Before iteration 1 total=0; after adding 2 total=2; after 4 total=6; after 6 total=12.\n6. It attempts indices 0,1,2,3,4,5. Index 5 is outside the array. Use i < 5 for that range.\n7. Six: five letters plus '\\0'.\n8. p must point to a live, writable int object that the caller allows the function to change. It must not be null, dangling or otherwise invalid.\n9. The object's lifetime ends on return. An address value does not preserve that object's validity.\n10. 0 and 100 accept; -1 and 101 reject; \"abc\" rejects; \"42x\" rejects. Also consider empty input and unusually long input when extending the parser.\n11. Use a fresh sandbox directory and a fixed practice filename. Understand the file mode, check errors and never reuse an important existing path.\n12. Evidence must include compiler output, expected/actual results and your changed source. A pass from the provided test runner verifies its listed cases, not every possible input or platform.\n\n## Further study\nHarvard CS50 C materials: https://cs50.harvard.edu/x/weeks/1/ . C language reference for precise semantics: WG14 N1570 committee draft, https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf . N1570 is a C11-era draft, not the latest language edition; these examples intentionally use the widely supported C17 mode and standard-library foundations. The practice files and explanations are original."
+  },
+  {
+    "slug": "basics-in-digital-circuit",
+    "code": "CS 8102",
+    "title": "Basics in Digital Circuit",
+    "description": "Digital circuits use physical signals to represent discrete logical values. Learn to convert representations, reason with Boolean algebra, build combinational functions and explain how sequential circuits store state. This foundation module has eight sessions, original examples and a practice set. Use paper or a simulator unless your instructor supervises appropriate hardware work.",
+    "sessions": [
+      {
+        "number": 1,
+        "title": "Number systems and representation",
+        "objective": "Convert representations while stating width and signedness.",
+        "href": "/study/basics-in-digital-circuit/session-01/"
+      },
+      {
+        "number": 2,
+        "title": "Binary arithmetic and two's complement",
+        "objective": "Perform fixed-width addition and distinguish carry from signed overflow.",
+        "href": "/study/basics-in-digital-circuit/session-02/"
+      },
+      {
+        "number": 3,
+        "title": "Gates and truth tables",
+        "objective": "Derive a truth table from a gate expression rather than its visual shape.",
+        "href": "/study/basics-in-digital-circuit/session-03/"
+      },
+      {
+        "number": 4,
+        "title": "Boolean algebra and equivalent circuits",
+        "objective": "Verify an algebraic simplification and apply De Morgan's law correctly.",
+        "href": "/study/basics-in-digital-circuit/session-04/"
+      },
+      {
+        "number": 5,
+        "title": "From truth tables to simplified logic",
+        "objective": "Construct a sum of products from the rows that require output one.",
+        "href": "/study/basics-in-digital-circuit/session-05/"
+      },
+      {
+        "number": 6,
+        "title": "Combinational building blocks",
+        "objective": "Relate multiplexers and adders to selection and arithmetic functions.",
+        "href": "/study/basics-in-digital-circuit/session-06/"
+      },
+      {
+        "number": 7,
+        "title": "State, latches, flip-flops and counters",
+        "objective": "Trace state changes at a clock edge and distinguish state from input.",
+        "href": "/study/basics-in-digital-circuit/session-07/"
+      },
+      {
+        "number": 8,
+        "title": "State machines, timing and verification",
+        "objective": "Specify state transitions and check a timing budget with units.",
+        "href": "/study/basics-in-digital-circuit/session-08/"
+      }
+    ],
+    "pages": 12,
+    "pdf": "/guides/subjects/basics-in-digital-circuit/basics-in-digital-circuit.pdf",
+    "notes": "/guides/subjects/basics-in-digital-circuit/notes.md",
+    "resources": "## Practice set\n1. Convert decimal 26 to binary and hex.\n2. Interpret 110010 as an unsigned binary value.\n3. Represent -12 in 8-bit two's complement.\n4. Add 0111 and 0001 as 4-bit numbers. Discuss unsigned and signed interpretation.\n5. Complete the XOR truth table from memory.\n6. Simplify A + AB and explain the law used.\n7. Apply De Morgan's law to (A+B+C)'.\n8. Build the sum-of-products expression for a two-input function that is 1 only for inputs 01 and 10.\n9. Evaluate a 2:1 mux for A=0,B=1, first with S=0 and then S=1.\n10. For A=1,B=0,C_in=1, find full-adder sum and carry.\n11. List six successive states of a 2-bit counter starting from 10.\n12. Explain why a truth table alone does not prove a clocked circuit meets timing requirements.\n\n## Answers and reasoning\n1. 26=16+8+2, so binary 11010; pad to 0001 1010 for hex 1A.\n2. 32+16+2=50.\n3. +12 is 00001100; invert to 11110011, add 1: 11110100.\n4. The bit result is 1000. Unsigned 7+1=8 fits. Signed 4-bit values range -8 to 7, so adding +7 and +1 overflows and the stored pattern reads as -8.\n5. For inputs 00,01,10,11 the outputs are 0,1,1,0.\n6. A+AB=A by absorption. If A=1 the output is already 1; if A=0 both terms are 0.\n7. A'B'C'. All OR terms become complemented AND terms.\n8. A'B+AB', which is XOR. Include the complement on the input that is 0 in each selected row.\n9. S=0 selects A, giving 0. S=1 selects B, giving 1.\n10. 1+0+1=2, whose two-bit form is 10: sum=0, carry=1.\n11. 10,11,00,01,10,11. State whether the starting value counts as the first listed state, as done here.\n12. A truth table describes stable logical relationships. It does not quantify propagation delay or show whether data meets setup and hold requirements around clock edges.\n\n## Further study and evidence\nMIT Computation Structures has topic videos and worksheets: https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/ . Use it as a supporting course, not as proof that every topic appears in your current module. Produce one verified truth table, one simplified Boolean function and one counter waveform. The examples in this pack are original."
+  },
+  {
+    "slug": "electrical-fundamentals",
+    "code": "CS 8103",
+    "title": "Electrical Fundamentals",
+    "description": "This module builds the language needed to reason about voltage, current, resistance, power, simple circuits and elementary time-dependent behavior. Work through eight sessions and practise drawing a circuit before selecting equations. These are foundation notes based on the module title; your laboratory instructions and current syllabus take priority for assessed work.",
+    "sessions": [
+      {
+        "number": 1,
+        "title": "Quantities, units and physical meaning",
+        "objective": "Convert prefixes and distinguish charge flow from energy transfer.",
+        "href": "/study/electrical-fundamentals/session-01/"
+      },
+      {
+        "number": 2,
+        "title": "Ohm's law and power",
+        "objective": "Use Ohm's law and power with consistent units and assumptions.",
+        "href": "/study/electrical-fundamentals/session-02/"
+      },
+      {
+        "number": 3,
+        "title": "Series circuits and voltage division",
+        "objective": "Calculate series current and predict the effect of loading a divider.",
+        "href": "/study/electrical-fundamentals/session-03/"
+      },
+      {
+        "number": 4,
+        "title": "Parallel circuits and current division",
+        "objective": "Use a common branch voltage to calculate parallel resistance and currents.",
+        "href": "/study/electrical-fundamentals/session-04/"
+      },
+      {
+        "number": 5,
+        "title": "Kirchhoff's laws and nodal analysis",
+        "objective": "Choose a reference node and solve a one-unknown nodal equation.",
+        "href": "/study/electrical-fundamentals/session-05/"
+      },
+      {
+        "number": 6,
+        "title": "Capacitors and RC transients",
+        "objective": "Use an RC time constant and recognize initial and final conditions.",
+        "href": "/study/electrical-fundamentals/session-06/"
+      },
+      {
+        "number": 7,
+        "title": "Inductors and AC foundations",
+        "objective": "Relate an ideal sinusoid's frequency, period, RMS value and reactive behavior.",
+        "href": "/study/electrical-fundamentals/session-07/"
+      },
+      {
+        "number": 8,
+        "title": "Measurement, uncertainty and checking answers",
+        "objective": "Compare measurements with a model and express an approximate tolerance range.",
+        "href": "/study/electrical-fundamentals/session-08/"
+      }
+    ],
+    "pages": 12,
+    "pdf": "/guides/subjects/electrical-fundamentals/electrical-fundamentals.pdf",
+    "notes": "/guides/subjects/electrical-fundamentals/notes.md",
+    "resources": "## Practice set\n1. Convert 4.7 kOhm, 220 microfarads and 15 mA to base units.\n2. Find current through 2 kOhm with 6 V across it.\n3. Find power dissipated in that resistor using two formulas.\n4. An ideal 9 V source drives 1 kOhm and 2 kOhm in series. Find current and both voltage drops.\n5. Find the equivalent of 1 kOhm and 1 kOhm in parallel.\n6. Across 10 V, parallel branches are 2 kOhm and 5 kOhm. Find both currents and total current.\n7. An unloaded divider has R_top=3 kOhm, R_bottom=1 kOhm and V_in=8 V. Find V_out.\n8. Write KCL for a node connected to 12 V through 2 kOhm and to ground through 4 kOhm. Solve for the node voltage.\n9. Find tau for R=5 kOhm and C=200 microfarads.\n10. A capacitor charges from zero toward 10 V. Approximately what voltage is reached at one time constant?\n11. Find the period and RMS voltage of a 100 Hz sine wave with peak 8 V.\n12. Explain correct conceptual placement of a voltmeter and ammeter, and why \"it has numbers on the display\" does not prove the measurement is valid.\n\n## Answers and reasoning\n1. 4700 Ohm; 0.000220 F; 0.015 A.\n2. I=6/2000=0.003 A=3 mA.\n3. VI=6*0.003=0.018 W. V^2/R=36/2000=0.018 W, or 18 mW.\n4. Total R=3000 Ohm; I=3 mA. Drops: 3 V across 1 kOhm and 6 V across 2 kOhm; their sum is 9 V.\n5. Equal branches give half either resistance: 500 Ohm.\n6. I1=10/2000=5 mA; I2=10/5000=2 mA; total 7 mA.\n7. 8*1000/(3000+1000)=2 V. This assumes no loading at the output.\n8. (V-12)/2000+V/4000=0. Multiply by 4000: 2V-24+V=0, so V=8 V. Both branch-current magnitudes are 2 mA.\n9. 5000*0.0002=1 s.\n10. About 6.32 V, using 10*(1-exp(-1)).\n11. T=0.01 s=10 ms. V_rms=8/sqrt(2), approximately 5.66 V.\n12. A voltmeter connects across the voltage of interest; an ammeter belongs in series with the branch. Correct mode, range, connections and instrument characteristics matter. A displayed value can reflect a wrong or unsafe setup.\n\n## Further study and evidence\nMIT Circuits and Electronics: https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/ . OpenStax University Physics Volume 2, current chapter: https://openstax.org/books/university-physics-volume-2/pages/9-1-electrical-current . The examples above were created for this pack. Submit a labeled circuit sketch, a complete calculation with units and a short explanation of your checks for each problem you solve."
+  }
+]

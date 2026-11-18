@@ -14,6 +14,10 @@ const fmt = (d: string) => new Date(d + "T12:00:00+03:00").toLocaleDateString("e
     <p class="intro" data-reveal>Longer, deeper and free. Everything a carousel can't fit, written as a proper book you can read online, print or share.</p>
   </section>
 
+  <section class="wrap subject-entry" data-reveal>
+    <div><span class="label">Individual subject notes</span><h2>Pick a subject. Follow each session.</h2><p>Seven separate guides, 56 online sessions, original tasks and worked answers. Read a little at a time or download a whole subject.</p></div>
+    <a class="btn" href="/study/">Explore subject notes <span aria-hidden="true">↗</span></a>
+  </section>
   <section class="wrap list">
     {sorted.map((g, i) => (
       <article class="guide" data-reveal>
@@ -68,6 +72,12 @@ const fmt = (d: string) => new Date(d + "T12:00:00+03:00").toLocaleDateString("e
 </Base>
 
 <style>
+  .subject-entry { display:flex; align-items:center; gap:30px; margin-bottom:40px; padding:30px; border:1px solid var(--line); border-radius:24px; background:var(--surface); }
+  .subject-entry h2 { font-size:clamp(1.7rem,3vw,2.5rem); margin:16px 0; }
+  .subject-entry p { color:var(--muted); max-width:650px; line-height:1.7; }
+  .subject-entry .btn { flex-shrink:0; }
+  @media(max-width:760px) { .subject-entry { flex-direction:column; align-items:flex-start; } }
+
   .head { padding: 150px 0 50px; }
   .head :global(.display) { margin-top: 20px; }
   .intro { font-size: 1.15rem; color: var(--muted); max-width: 34em; margin: 22px 0 0; }

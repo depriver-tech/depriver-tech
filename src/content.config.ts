@@ -24,4 +24,8 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { blog };
+const study = defineCollection({
+  loader: glob({pattern: "**/*.md", base: "./src/content/study"}),
+  schema: z.object({title:z.string(),module:z.string(),code:z.string(),number:z.number().int().min(1).max(8),objective:z.string()}),
+});
+export const collections = { blog, study };

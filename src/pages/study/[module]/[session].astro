@@ -1,0 +1,25 @@
+---
+import {getCollection,render} from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import subjects from '../../../data/subjects.json';
+import '../../../styles/study.css';
+export async function getStaticPaths() {
+  const sessions=await getCollection('study');
+  return sessions.map(entry=>({params:{module:entry.data.module,session:`session-${String(entry.data.number).padStart(2,'0')}`},props:{entry}}));
+}
+const {entry}=Astro.props;
+const subject=subjects.find(s=>s.slug===entry.data.module)!;
+const current=entry.data.number;
+const previous=subject.sessions[current-2];
+const next=subject.sessions[current];
+const {Content}=await render(entry);
+---
+<Base title={`${entry.data.title} · ${subject.title}`} description={entry.data.objective}>
+  <div class="study study-reader wrap">
+    <a class="study-back" href={`/study/${subject.slug}/`}>← {subject.title}</a>
+    <div class="reader-grid">
+      <aside class="study-sidebar" aria-label="Subject session navigation"><span class="label">{subject.code}</span><p>Session {current} of 8</p><progress value={current} max="8" aria-label={`Position in study route: session ${current} of eight`}></progress><nav aria-label="Sessions"><ol>{subject.sessions.map(s=><li><a href={s.href} aria-current={s.number===current?'page':undefined}><span>{String(s.number).padStart(2,'0')}</span>{s.title}</a></li>)}</ol></nav><a class="study-pdf" href={subject.pdf} download>Download subject PDF ↓</a><small>Independent foundation notes. Follow your lecturer’s current outline for assessed coverage.</small></aside>
+      <article class="study-article"><span class="label">Session {String(current).padStart(2,'0')} · Guided notes</span><h1>{entry.data.title}</h1><p class="reader-subtitle">{subject.title} · Read, work through, then test yourself.</p><div class="study-prose"><Content /></div><nav class="session-pagination" aria-label="Continue studying">{previous?<a href={previous.href}><small>← Previous session</small><span>{previous.title}</span></a>:<a href={`/study/${subject.slug}/`}><small>← Module overview</small><span>Preparation and session route</span></a>}{next?<a href={next.href}><small>Next session →</small><span>{next.title}</span></a>:<a href={subject.pdf}><small>Module practice →</small><span>Open the questions and answers in your PDF</span></a>}</nav></article>
+    </div>
+  </div>
+</Base>

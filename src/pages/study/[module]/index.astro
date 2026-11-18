@@ -1,0 +1,19 @@
+---
+import Base from '../../../layouts/Base.astro';
+import subjects from '../../../data/subjects.json';
+import '../../../styles/study.css';
+export function getStaticPaths() { return subjects.map(subject=>({params:{module:subject.slug},props:{subject}})); }
+const {subject}=Astro.props;
+---
+<Base title={`${subject.title} · Subject notes`} description={`Eight independent study sessions for ${subject.code}: objectives, notes, worked examples, tasks and answers.`}>
+  <div class="study wrap">
+    <a class="study-back" href="/study/">← All subjects</a>
+    <span class="label">{subject.code} · Independent study</span>
+    <h1 class="study-title">{subject.title}</h1>
+    <p class="study-lead">{subject.description}</p>
+    <div class="study-actions"><a class="btn" href={subject.pdf} download>Download subject PDF · {subject.pages} pages <span aria-hidden="true">↓</span></a><a class="btn ghost" href={subject.notes} download>Editable Markdown notes</a></div>
+    <p class="study-scope">Eight proposed foundation sessions. Study at your own pace and check assessment depth against your current lecturer’s outline.</p>
+    <section aria-labelledby="session-heading"><h2 id="session-heading">Your session route</h2><ol class="session-list">{subject.sessions.map(session=><li><a href={session.href}><span class="session-number">{String(session.number).padStart(2,'0')}</span><div><h3>{session.title}</h3><p>{session.objective}</p></div><span class="session-arrow" aria-hidden="true">↗</span></a></li>)}</ol></section>
+    <section class="study-method"><h2>After session eight</h2><p>Complete the twelve-question module practice set in your subject PDF. It includes answer reasoning, a mastery checkpoint and further-study resources. Attempt the questions before checking the answers.</p><a href={subject.pdf}>Open the subject book →</a></section>
+  </div>
+</Base>
