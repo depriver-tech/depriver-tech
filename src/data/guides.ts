@@ -11,10 +11,40 @@ export type Guide = {
   level: string;
   chapters: string[];
   previews: string[]; // page numbers with a <nn>.webp preview in public/guides/<slug>/
+  companion?: string; // optional editable notes and practice package
   post?: string; // companion blog post slug, linked once it is live
 };
 
 export const guides: Guide[] = [
+  {
+    "slug": "computer-science-semester-one",
+    "title": "Computer Science Foundations",
+    "subtitle": "Semester One: notes, examples and practice",
+    "date": "2026-11-18",
+    "description": "An independent 39-page study book covering seven first-semester foundation modules: 56 lessons, worked examples, 84 practice questions and answer guides. Includes a twelve-week study pathway, with editable notes and tested C exercises in the companion ZIP. Match the material to your current lecturer outlines.",
+    "pages": 39,
+    "sizeMB": 0.11,
+    "level": "First-year foundations",
+    "chapters": [
+        "Linear Algebra and Calculus",
+        "Communication Skills",
+        "Theory of Computation",
+        "Operating Systems",
+        "Programming Concepts in C",
+        "Basics in Digital Circuit",
+        "Electrical Fundamentals",
+        "Study plan and practical work",
+        "Resources and provenance"
+    ],
+    "previews": [
+        "03",
+        "12",
+        "22",
+        "32"
+    ],
+    "post": "c-integer-division-average",
+    "companion": "/guides/computer-science-semester-one.zip"
+},
   {
     slug: "python-daily",
     title: "Python Daily",

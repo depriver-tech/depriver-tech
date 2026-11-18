@@ -127,7 +127,7 @@ const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", da
         <div class="guide-text">
           <span class="label">Free book</span>
           <h3>{guide.title}: <span>{guide.subtitle.toLowerCase()}</span></h3>
-          <p>{guide.pages} pages of explanations, real code, exercises and projects, plus every area where Python is used. Free to download and share.</p>
+          <p>{guide.description}</p>
           <div class="guide-actions">
             <a class="btn" href={guideFile(guide.slug)} download>Download free</a>
             <a class="go" href="/guides/">All guides <span aria-hidden="true">→</span></a>

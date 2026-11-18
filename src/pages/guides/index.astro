@@ -35,7 +35,8 @@ const fmt = (d: string) => new Date(d + "T12:00:00+03:00").toLocaleDateString("e
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg>
             </a>
             <a class="btn ghost" href={guideFile(g.slug)} target="_blank" rel="noopener">Read online</a>
-            {g.post && live.has(g.post) && <a class="more" href={`/blog/${g.post}/`}>The roadmap post <span aria-hidden="true">→</span></a>}
+            {g.companion && <a class="btn ghost" href={g.companion} download>Notes + practice ZIP</a>}
+            {g.post && live.has(g.post) && <a class="more" href={`/blog/${g.post}/`}>Read the companion article <span aria-hidden="true">→</span></a>}
           </div>
           <details class="toc">
             <summary>What's inside: {g.chapters.length} chapters</summary>
