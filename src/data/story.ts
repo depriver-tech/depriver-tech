@@ -164,7 +164,7 @@ export const chapters: Chapter[] = [
     body: [
       "I kept going: the second-year field attachment, then third year. As a side job I served as Lead Technical Officer at a tech innovation company, where I learnt a lot about hardware. I presented my work at exhibitions and earned certificates and prizes along the way.",
       "In March 2026 I joined a campus media startup as its technical person. We were paid in shares. I gave it my best, but my family's needs were real, so I resigned to find work that could support them.",
-      "In June 2026 I interviewed at a software company in Mbeya and got the job as a Software Engineer while still a student. Thank God. Soon after, I graduated from MUST with my Diploma in Computer Science.",
+      "In June 2026 I interviewed at a software company in Mbeya and got the job as a Software Engineer while still a student. Thank God. Soon after, I graduated from MUST with my Diploma in Computer Science. After the diploma, I continued into the Bachelor of Computer Science programme at MUST. I’m now in my first year, first semester of the 2026/2027 academic year, studying alongside my work.",
     ],
     facts: [
       { value: "Lead", label: "Technical officer · Year two" },
@@ -196,7 +196,7 @@ export const services = [
     code: ['<k>#</k> Tech for the community', '', 'Works on cheap phones. Works offline.', 'Speaks <s>Kiswahili</s>. Solves a <f>real</f> problem.'] },
 ];
 
-export const outside = ["Bike rides", "Calisthenics", "Content creation", "Nature", "Gaming", "Piano & music", "Data & cloud"];
+export const outside = ["Basketball", "Inline skating (four-wheel skates)", "Cycling", "Calisthenics", "Content creation", "Nature", "Gaming", "Piano & music", "Data & cloud"];
 
 export const dreams = [
   {

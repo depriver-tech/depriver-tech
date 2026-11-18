@@ -96,19 +96,19 @@ const brand = [
   {
     id: "light", name: "Depriver Light", mode: "light",
     tokens: {
-      "--bg": "#fafaf9", "--surface": "#ffffff", "--surface-2": "#eef1f6", "--heading": "#0b1e3f", "--text": "#3b414d",
-      "--muted": "#5c626e", "--line": "#e2e4e9", "--accent": "#e8603a", "--accent-hover": "#f07a57", "--accent-2": "#a9c4f5",
-      "--on-accent": "#ffffff", "--deep": "#0b1e3f", "--accent-deep": "#e8603a", "--on-deep": "#ffffff", "--deep-text": "#c4d0e8",
-      "--terrain": "#d3d9e6", "--terrain-deep": "#1f3a6b", "--shadow": "#0b1e3f", "--neu-hi": "#ffffff", "--neu-lo": "#d9dde6", "--photo-filter": "none",
+      "--bg": "#f7f6f2", "--surface": "#ffffff", "--surface-2": "#eef1f6", "--heading": "#192e28", "--text": "#3b414d",
+      "--muted": "#5c626e", "--line": "#e2e4e9", "--accent": "#366958", "--accent-hover": "#285443", "--accent-2": "#a9c4f5",
+      "--on-accent": "#ffffff", "--deep": "#192e28", "--accent-deep": "#366958", "--on-deep": "#ffffff", "--deep-text": "#bdcec3",
+      "--terrain": "#d3d9e6", "--terrain-deep": "#1f3a6b", "--shadow": "#192e28", "--neu-hi": "#ffffff", "--neu-lo": "#d9dde6", "--photo-filter": "none",
     },
   },
   {
     id: "dark", name: "Depriver Dark", mode: "dark",
     tokens: {
-      "--bg": "#071329", "--surface": "#0e2146", "--surface-2": "#15295a", "--heading": "#f4f6fb", "--text": "#c9d3ea",
-      "--muted": "#95a3c2", "--line": "#1b3163", "--accent": "#f07a57", "--accent-hover": "#f5946f", "--accent-2": "#a9c4f5",
-      "--on-accent": "#ffffff", "--deep": "#0f2a5c", "--accent-deep": "#f07a57", "--on-deep": "#ffffff", "--deep-text": "#c4d0e8", "--terrain": "#142a52",
-      "--terrain-deep": "#23447f", "--shadow": "#000000", "--neu-hi": "#0c1b37", "--neu-lo": "#030a17", "--photo-filter": "brightness(0.92)",
+      "--bg": "#111c19", "--surface": "#192722", "--surface-2": "#23352e", "--heading": "#f4f6fb", "--text": "#d1dbd5",
+      "--muted": "#a4b6ab", "--line": "#33463d", "--accent": "#82b59a", "--accent-hover": "#a6cfb6", "--accent-2": "#a9c4f5",
+      "--on-accent": "#111c19", "--deep": "#172b22", "--accent-deep": "#82b59a", "--on-deep": "#ffffff", "--deep-text": "#bdcec3", "--terrain": "#233d30",
+      "--terrain-deep": "#304b3b", "--shadow": "#000000", "--neu-hi": "#0c1b37", "--neu-lo": "#030a17", "--photo-filter": "brightness(0.92)",
     },
   },
 ];

@@ -5,9 +5,9 @@
     "mode": "light",
     "group": "Depriver",
     "swatch": [
-      "#fafaf9",
-      "#0b1e3f",
-      "#e8603a",
+      "#f7f6f2",
+      "#192e28",
+      "#366958",
       "#a9c4f5"
     ]
   },
@@ -17,9 +17,9 @@
     "mode": "dark",
     "group": "Depriver",
     "swatch": [
-      "#071329",
-      "#0f2a5c",
-      "#f07a57",
+      "#111c19",
+      "#172b22",
+      "#82b59a",
       "#a9c4f5"
     ]
   },

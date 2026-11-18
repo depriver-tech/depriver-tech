@@ -14,7 +14,7 @@ export const GET: APIRoute = async () => {
 Name: Privatus Cosmas (online: @_depriver, depriver)
 Role: Software Engineer & Digital Innovator
 Location: Mbeya, Tanzania (originally from Kitwe village, Kyerwa District, Kagera)
-Education: Diploma in Computer Science, Mbeya University of Science and Technology (MUST), joined October 2023, graduated 2026. Secondary: Kaisho Secondary School (Division I). Earlier: Katoke Seminary.
+Education: Diploma in Computer Science, Mbeya University of Science and Technology (MUST), joined October 2023, graduated 2026. Now enrolled in the Bachelor of Computer Science programme at MUST, first year, first semester, academic year 2026/2027. Secondary: Kaisho Secondary School (Division I). Earlier: Katoke Seminary.
 Languages: English, Swahili
 Website: https://depriver.tech
 Contact: WhatsApp/phone ${contact.phone} · Instagram ${contact.instagramHref} · GitHub ${contact.githubHref}

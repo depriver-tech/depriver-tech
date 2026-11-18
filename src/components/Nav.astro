@@ -2,9 +2,9 @@
 import ThemePicker from "./ThemePicker.astro";
 const path = Astro.url.pathname;
 const links = [
-  { href: "/", label: "Blog", match: (p: string) => p === "/" || p.startsWith("/blog") },
+  { href: "/#posts", label: "Writing", match: (p: string) => p === "/" || p.startsWith("/blog") },
   { href: "/guides/", label: "Guides", match: (p: string) => p.startsWith("/guides") },
-  { href: "/docs/", label: "Docs Archive", match: (p: string) => p.startsWith("/docs") },
+  { href: "/docs/", label: "Resources", match: (p: string) => p.startsWith("/docs") },
   { href: "/talks/", label: "Talks", match: (p: string) => p.startsWith("/talks") },
   { href: "/about/", label: "About", match: (p: string) => p.startsWith("/about") },
   { href: "/about/#contact", label: "Contact", match: () => false },

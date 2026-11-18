@@ -7,19 +7,19 @@
 /* Theme tokens. Default = "Depriver" light (the carousel palette).
    Other themes (brand dark + Omarchy palettes) live in themes.css and switch via <html data-theme>. */
 :root {
-  --bg: #fafaf9;
+  --bg: #f7f6f2;
   --surface: #ffffff;
   --surface-2: #eef1f6;
-  --heading: #0b1e3f;
+  --heading: #192e28;
   --text: #3b414d;
   --muted: #5c626e;
   --line: #e2e4e9;
-  --accent: #e8603a;
-  --accent-hover: #f07a57;
+  --accent: #366958;
+  --accent-hover: #285443;
   --accent-2: #a9c4f5;
   --on-accent: #ffffff;
-  --deep: #0b1e3f;
-  --accent-deep: #e8603a;
+  --deep: #192e28;
+  --accent-deep: #c4dbb0;
   --on-deep: #ffffff;
   --deep-text: #c4d0e8;
   --terrain: #d3d9e6;
@@ -28,7 +28,7 @@
   --neu-hi: #ffffff;
   --neu-lo: #d9dde6;
   --photo-filter: none;
-  --radius: 28px;
+  --radius: 10px;
   --gutter: clamp(20px, 5vw, 72px);
   --max: 1240px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -148,3 +148,22 @@ a { color: inherit; }
 
 /* Omarchy-style theme switch: a circle wipes out from the theme button */
 ::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+
+/* Quiet editorial surfaces keep photography and writing in focus. */
+body::before, body::after { opacity: .06; }
+.label { font-size: .65rem; letter-spacing: .16em; }
+.label::after { display: none; }
+.btn { border-radius: 5px; box-shadow: none; font-size: .85rem; padding: 14px 20px; }
+.btn:hover { box-shadow: none; }
+.display { font-weight: 600; letter-spacing: -.05em; }
+
+/* Interaction polish with a reduced-motion fallback. */
+@media (hover:hover) and (prefers-reduced-motion:no-preference) {
+ .btn { transition: transform .35s var(--ease), background .35s; }
+ .btn:hover { transform: translateY(-3px); }
+ .post { transition: transform .5s var(--ease), box-shadow .5s var(--ease); }
+ .post:hover { transform: translateY(-6px); box-shadow: 0 18px 36px -24px color-mix(in srgb,var(--shadow) 40%,transparent); }
+}
+@media (prefers-reduced-motion:reduce) {
+ *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}

@@ -16,12 +16,14 @@ const jsonLd = {
         <p class="lead">I’m a software engineer based in Mbeya, Tanzania. I build web and mobile applications, business systems and integrations that help people get things done.</p>
         <div class="actions"><a class="btn" href="#contact">Let’s work together</a><a href="/software-engineer-tanzania/">Explore my services →</a></div>
       </div>
-      <figure><img src="/img/privatus-editorial.png" alt="Portrait of Privatus Cosmas" width="768" height="1024" /><figcaption>Priver / Software engineer</figcaption></figure>
+      <figure data-photo-reveal><img src="/img/privatus-studio.webp" alt="Portrait of Privatus Cosmas" width="960" height="1200" /><figcaption>Priver / Software engineer</figcaption></figure>
     </header>
     <div class="details">
       <section><p class="label">MY WORK</p><h2>Useful software starts with understanding people.</h2><p>My work spans web and mobile apps, SaaS and business systems, systems integration, and dashboards. I’m interested in the everyday problems behind a project: where work slows down, what information is missing and how software can make the next step easier.</p><a href="/software-engineer-tanzania/">What I can help you build →</a></section>
-      <section><p class="label">BACKGROUND</p><h2>Learning by building.</h2><p>I graduated from Mbeya University of Science and Technology with a Diploma in Computer Science. My experience includes computer repairs, technical work, exhibitions and software engineering while studying.</p><p>I share practical lessons through articles, talks and downloadable guides, helping others find their way into technology.</p><a href="/docs/">Explore the Docs Archive →</a></section>
+      <section><p class="label">BACKGROUND</p><h2>Learning by building.</h2><p>After completing my Diploma in Computer Science at Mbeya University of Science and Technology (MUST), I continued into the Bachelor of Computer Science programme at MUST. I’m now in my first year, first semester (2026/2027), studying alongside my work as a software engineer.</p><p>My experience includes computer repairs, technical work, exhibitions and software engineering while studying. I share what I learn through articles, talks and downloadable guides.</p><a href="/docs/">Explore the Docs Archive →</a></section>
     </div>
+    <section class="interests" data-reveal><span class="label">Away from the screen</span><h2>A little movement. A fresh perspective.</h2><p>Outside software, I enjoy basketball, inline skating on four-wheel skates, and cycling. Making time to move is part of my life beyond the desk.</p><ul><li>Basketball</li><li>Inline skating</li><li>Cycling</li></ul></section>
+    <figure class="work-photo" data-photo-reveal><img src="/img/privatus-workspace.webp" alt="Privatus working on a laptop at his multi-monitor desk" width="1200" height="800" loading="lazy" /><figcaption>At the desk, turning ideas into working software.</figcaption></figure>
     <section id="contact" class="contact deep">
       <p class="label">GET IN TOUCH</p><h2>Have something in mind?</h2>
       <p>Tell me what you’re building, who it’s for and where you need help. You can reach me in English or Kiswahili.</p>
@@ -50,3 +52,7 @@ const jsonLd = {
   .actions a { overflow-wrap: anywhere; }
   @media (max-width: 760px) { .intro, .details { grid-template-columns: 1fr; } .details { gap: 36px; margin: 48px 0; } figure { max-width: 420px; width: 100%; margin-inline: auto; } }
 </style>
+
+<style>.work-photo { margin: 0 0 64px; } .work-photo img { width:100%;max-height:620px;object-fit:cover; }</style>
+
+<style>.interests{margin-bottom:64px;max-width:760px}.interests ul{display:flex;flex-wrap:wrap;gap:12px;list-style:none;padding:0}.interests li{padding:8px 16px;border:1px solid var(--line);border-radius:100px;font-size:.85rem}</style>

@@ -16,7 +16,7 @@ const fonts = [
   { name: "Hand", data: font("PatrickHand-Regular.ttf"), weight: 400 as const, style: "normal" as const },
 ];
 const dataUri = (path: string, mime: string) => `data:${mime};base64,${readFileSync(path).toString("base64")}`;
-const ME = dataUri(join(root, "public/img/privatus-editorial.png"), "image/png");
+const ME = dataUri(join(root, "public/img/privatus-studio.jpg"), "image/jpeg");
 
 type Card = { label: string; title: string; description: string; image?: string; badge?: string };
 

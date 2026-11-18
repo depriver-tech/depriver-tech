@@ -1,5 +1,5 @@
 ---
-import { livePosts, upcomingPosts, coverFor, formatDate } from "../lib/posts";
+import { livePosts, upcomingPosts } from "../lib/posts";
 import Base from "../layouts/Base.astro";
 import Title from "../components/Title.astro";
 import PostCard from "../components/PostCard.astro";
@@ -10,7 +10,7 @@ import { guides, guideFile, guideAsset } from "../data/guides";
 const posts = await livePosts();
 const upcoming = await upcomingPosts(4);
 const [first, second, third] = posts;
-const fan = posts.slice(0, 3).map(coverFor).filter(Boolean) as string[];
+
 
 // series that already have a live episode, newest episode first
 const liveSeries = series
@@ -20,50 +20,46 @@ const usedTopics = topics.filter((t) => posts.some((p) => topicsOf(p.data.tags).
 const talk = [...talks].sort((a, b) => b.date.localeCompare(a.date))[0];
 const guide = [...guides].sort((a, b) => b.date.localeCompare(a.date))[0];
 const PAGE = 9;
-const marquee = ["Software", "Careers", "Students", "Kiswahili", "Security", "Code", "Mbeya", "Tanzania", "Learning in public"];
+
 const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short", timeZone: "Africa/Dar_es_Salaam" });
 ---
 <Base title="Privatus Cosmas (Priver) | Software Engineer in Tanzania" description="Privatus Cosmas, also known as Priver, is a software engineer in Mbeya, Tanzania. Explore web and mobile development, practical tech lessons and software development services.">
-  <!-- ── HERO ─────────────────────────────────────────── -->
   <section class="hero wrap" data-home-hero>
     <div class="hero-copy">
-      <span class="label" data-reveal>Software engineer · Mbeya, Tanzania</span>
-      <Title tag="h1" title="Privatus" accent="Cosmas" size="clamp(2.8rem, 7.4vw, 6.2rem)" />
-      <p class="intro" data-reveal>I’m Privatus Cosmas, also known as Priver. I build web and mobile apps, business systems and integrations from Mbeya, Tanzania. Here I share practical lessons on software, careers and student life in English and Kiswahili.</p>
+      <span class="label" data-reveal>Privatus Cosmas · Software engineer</span>
+      <h1 aria-label="Building useful software. Sharing what I learn."><span class="hero-line"><span data-hero-line>Building useful</span></span><span class="hero-line"><span data-hero-line>software.</span></span><span class="hero-line accent-line"><span data-hero-line>Sharing what</span></span><span class="hero-line accent-line"><span data-hero-line>I learn.</span></span></h1>
+      <p class="intro" data-reveal>Hi, I’m Priver. I build web and mobile apps, business systems and integrations from Mbeya, Tanzania. This is my corner of the internet for making things and making tech easier to understand.</p>
       <div class="actions" data-reveal>
-        <a class="btn" href="#latest">Start reading
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-        </a>
-        <a class="btn ghost" href="/software-engineer-tanzania/">Work with me</a>
+        <a class="btn" href="/software-engineer-tanzania/">Let’s build something <span aria-hidden="true">↗</span></a>
+        <a class="hero-link" href="#latest">Explore my writing <span aria-hidden="true">↓</span></a>
       </div>
-      <dl class="stats" data-reveal>
-        <div><dt><span data-count={posts.length}>{posts.length}</span></dt><dd>Posts</dd></div>
-        <div><dt><span data-count={series.length}>{series.length}</span></dt><dd>Series</dd></div>
-        <div><dt><span data-count={talks.length}>{talks.length}</span></dt><dd>{talks.length === 1 ? "Talk" : "Talks"}</dd></div>
-      </dl>
+      <p class="hero-location" data-reveal><span></span> Based in Mbeya, Tanzania · English & Kiswahili</p>
     </div>
-    <div class="hero-art" aria-hidden="true">
-      <div class="fan" data-fan>
-        {fan.map((src, i) => <img class={`f${i}`} src={src} alt="" width="400" height="500" loading={i ? "lazy" : "eager"} />)}
-      </div>
-      <a class="me" href="/about/" tabindex="-1" data-float>
-        <img src="/img/me-cut.webp" alt="" width="56" height="56" />
-        <span><strong>Privatus Cosmas</strong><em>Software Engineer & Digital Innovator</em></span>
-      </a>
-    </div>
+    <figure class="portrait-frame" data-photo-reveal>
+      <img src="/img/privatus-studio.webp" alt="Privatus Cosmas working at his desk in a blue sweater" width="960" height="1200" fetchpriority="high" />
+      <figcaption><span>THE PERSON BEHIND THE CODE</span><strong>Privatus Cosmas <span>↗</span></strong><a href="/about/">Get to know me</a></figcaption>
+    </figure>
+  </section>
+  <section class="start-here wrap" aria-label="Explore the site">
+    <a href="#posts"><span>01 / READ</span><strong>Practical tech lessons ↗</strong><p>Code, careers and student life, explained simply.</p></a>
+    <a href="/guides/"><span>02 / LEARN</span><strong>Guides you can keep ↗</strong><p>Free books, notes and resources to learn at your pace.</p></a>
+    <a href="/software-engineer-tanzania/"><span>03 / BUILD</span><strong>Work with me ↗</strong><p>Web, mobile and business software built around your needs.</p></a>
   </section>
 
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      {[0, 1].map(() => marquee.map((m) => <span>{m}<i></i></span>))}
+  <section class="work-journal wrap block" aria-labelledby="journal-title">
+    <div class="journal-heading"><div><span class="label">A little behind the scenes</span><h2 id="journal-title">Ideas become real<br /><em>at the desk.</em></h2></div><p>Building, testing, learning. A glimpse into the everyday work behind the articles and applications.</p></div>
+    <div class="journal-photos">
+      <figure data-photo-reveal><img src="/img/privatus-working-v2.webp" alt="Privatus working at his desk with a monitor, keyboard and mouse" width="1200" height="800" loading="lazy" /><figcaption>01 / In the flow · Mbeya, Tanzania</figcaption></figure>
+      <figure data-photo-reveal><img src="/img/privatus-workspace.webp" alt="Privatus coding on his laptop with his real multi-monitor workstation" width="1200" height="800" loading="lazy" /><figcaption>02 / From an idea to working software</figcaption></figure>
     </div>
-  </div>
+    <a class="journal-about" href="/about/">A little more about me <span aria-hidden="true">↗</span></a>
+  </section>
 
   {first && (
     <section id="latest" class="wrap block">
       <div class="block-head">
         <span class="label" data-reveal>Latest</span>
-        <Title title="Fresh from" accent="the desk" size="clamp(2rem, 4.6vw, 3.4rem)" />
+        <Title title="Notes from" accent="my desk" size="clamp(2rem, 4.6vw, 3.4rem)" />
       </div>
       <div class="bento">
         <div class="b-main"><PostCard post={first} featured /></div>
@@ -72,44 +68,6 @@ const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", da
       </div>
     </section>
   )}
-
-  <!-- ── SERIES ─────────────────────────────────────── -->
-  <section class="series-wrap deep" id="series">
-    <div class="wrap block">
-      <div class="block-head split">
-        <div>
-          <span class="label" data-reveal>Series</span>
-          <Title title="Come back for" accent="the next episode" size="clamp(2rem, 4.6vw, 3.4rem)" light />
-        </div>
-        <p class="block-note" data-reveal>New carousels every Tuesday, Thursday and Saturday at 19:00, plus Swali la Wiki on Sundays.</p>
-      </div>
-      <ul class="series" data-stagger>
-        {series.map((s, i) => {
-          const live = liveSeries.find((x) => x.tag === s.tag);
-          return (
-            <li class:list={["s-card", { soon: !live }]}>
-              <span class="s-num">{String(i + 1).padStart(2, "0")}</span>
-              <h3>{s.name}</h3>
-              <p>{s.blurb}</p>
-              {live
-                ? <button type="button" data-series={s.tag}>{live.posts.length} {live.posts.length === 1 ? "episode" : "episodes"} <span aria-hidden="true">→</span></button>
-                : <span class="s-soon">Starting soon</span>}
-            </li>
-          );
-        })}
-      </ul>
-      {upcoming.length > 0 && (
-        <div class="upcoming" data-reveal>
-          <span class="up-title">Coming up</span>
-          <ol>
-            {upcoming.map((p) => (
-              <li><time datetime={p.data.date.toISOString()}>{dayFmt(p.data.date)}</time><span>{p.data.title}</span></li>
-            ))}
-          </ol>
-        </div>
-      )}
-    </div>
-  </section>
 
   <!-- ── ARCHIVE ─────────────────────────────────────── -->
   <section id="posts" class="wrap block">
@@ -150,6 +108,44 @@ const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", da
     )}
   </section>
 
+  <!-- ── SERIES ─────────────────────────────────────── -->
+  <section class="series-wrap deep" id="series">
+    <div class="wrap block">
+      <div class="block-head split">
+        <div>
+          <span class="label" data-reveal>Series</span>
+          <Title title="Learn a little" accent="at a time" size="clamp(2rem, 4.6vw, 3.4rem)" light />
+        </div>
+        <p class="block-note" data-reveal>Follow a topic from the first question to the next useful idea. Browse the published episodes below.</p>
+      </div>
+      <ul class="series" data-stagger>
+        {liveSeries.map((s, i) => {
+          const live = liveSeries.find((x) => x.tag === s.tag);
+          return (
+            <li class:list={["s-card", { soon: !live }]}>
+              <span class="s-num">{String(i + 1).padStart(2, "0")}</span>
+              <h3>{s.name}</h3>
+              <p>{s.blurb}</p>
+              {live
+                ? <button type="button" data-series={s.tag}>{live.posts.length} {live.posts.length === 1 ? "episode" : "episodes"} <span aria-hidden="true">→</span></button>
+                : <span class="s-soon">Starting soon</span>}
+            </li>
+          );
+        })}
+      </ul>
+      {upcoming.length > 0 && (
+        <div class="upcoming" data-reveal>
+          <span class="up-title">Coming up</span>
+          <ol>
+            {upcoming.map((p) => (
+              <li><time datetime={p.data.date.toISOString()}>{dayFmt(p.data.date)}</time><span>{p.data.title}</span></li>
+            ))}
+          </ol>
+        </div>
+      )}
+    </div>
+  </section>
+
   <!-- ── GUIDE + TALK + ABOUT ──────────────────────── -->
   <section class="wrap block duo">
     {guide && (
@@ -181,7 +177,7 @@ const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", da
       <span class="label">About Privatus</span>
       <h3>Software with a practical purpose.</h3>
       <p class="about-summary">Web and mobile apps, business systems and practical tech lessons from Mbeya, Tanzania.</p>
-      <img src="/img/me-cut-540.webp" alt="" width="540" height="720" loading="lazy" />
+      <img src="/img/privatus-working-v2.webp" alt="Privatus working at his computer" width="960" height="640" loading="lazy" />
       <span class="go">Meet the engineer <span aria-hidden="true">→</span></span>
     </a>
   </section>
@@ -197,7 +193,7 @@ const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", da
   const grid = document.querySelector<HTMLElement>("[data-grid]")!;
   const cells = [...grid.querySelectorAll<HTMLElement>(".cell")];
   const topicBtns = [...document.querySelectorAll<HTMLButtonElement>("[data-topic]")];
-  const search = document.querySelector<HTMLInputElement>("[data-search]")!;
+  const search = document.querySelector<HTMLInputElement>("input[data-search]")!;
   const more = document.querySelector<HTMLButtonElement>("[data-more]");
   const left = document.querySelector<HTMLElement>("[data-left]");
   const empty = document.querySelector<HTMLElement>("[data-empty]")!;
@@ -242,10 +238,10 @@ const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", da
       apply();
     }),
   );
-  let t = 0;
   search.addEventListener("input", () => {
-    clearTimeout(t);
-    t = window.setTimeout(() => { state.q = search.value.trim().toLowerCase(); state.shown = PAGE; apply(); }, 160);
+    state.q = search.value.trim().toLowerCase();
+    state.shown = PAGE;
+    apply(false);
   });
   more?.addEventListener("click", () => { state.shown += PAGE; apply(); });
   apply(false);
@@ -268,24 +264,6 @@ const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", da
   });
 
   if (!reduce) {
-    // hero: fan of the latest carousel covers settles in, then floats with the pointer
-    const fan = document.querySelector<HTMLElement>("[data-fan]");
-    if (fan) {
-      const imgs = fan.querySelectorAll("img");
-      gsap.from(imgs, { y: 120, rotate: 0, opacity: 0, duration: 1.4, ease: "expo.out", stagger: 0.12, delay: 0.2 });
-      gsap.from("[data-float]", { y: 40, opacity: 0, duration: 1.2, ease: "expo.out", delay: 0.8 });
-      gsap.to("[data-float]", { y: -10, duration: 2.6, ease: "sine.inOut", yoyo: true, repeat: -1, delay: 2 });
-      if (matchMedia("(hover: hover) and (pointer: fine)").matches) {
-        const art = fan.parentElement!;
-        art.addEventListener("pointermove", (e) => {
-          const r = art.getBoundingClientRect();
-          const x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
-          imgs.forEach((img, i) => gsap.to(img, { x: x * (14 + i * 10), y: y * (10 + i * 8), duration: 0.8, ease: "power3.out" }));
-        });
-        art.addEventListener("pointerleave", () => gsap.to(imgs, { x: 0, y: 0, duration: 1, ease: "expo.out" }));
-      }
-    }
-
     // series cards come in one after another
     const sCards = document.querySelectorAll<HTMLElement>("[data-stagger] > li");
     gsap.set(sCards, { opacity: 0, y: 50 });
@@ -453,4 +431,60 @@ const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", da
     .grid :global(.foot) { margin-top: 2px; font-size: 0.9rem; }
     .grid :global(.cover-fallback .script) { font-size: 1.6rem; }
   }
+</style>
+
+<style>
+  .hero { grid-template-columns: 1.15fr 1fr; gap: clamp(32px, 6vw, 90px); padding: 150px 0 64px; min-height: 0; }
+  h1 { font-size: clamp(2.9rem, 5.3vw, 5rem); line-height: 1.08; letter-spacing: -.065em; color: var(--heading); margin: 26px 0 0; font-weight: 600; }
+  h1 span { color: var(--accent); }
+  .intro { font-size: 1rem; line-height: 1.85; max-width: 34em; margin: 24px 0 28px; }
+  .actions { align-items: center; gap: 24px; }
+  .hero-link { font-size: .9rem; font-weight: 500; text-decoration: none; color: var(--heading); padding-block: 12px; }
+  .hero-link span { margin-left: 8px; }
+  .hero-location { display: flex; align-items: center; gap: 8px; font-size: .72rem; color: var(--muted); margin: 30px 0 0; }
+  .hero-location > span { width: 6px; height: 6px; border-radius: 100%; background: #48836c; }
+  .portrait-frame { position: relative; margin: 0; background: #dedbd4; border-radius: 8px; overflow: hidden; aspect-ratio: 4/5; }
+  .portrait-frame > img { height: 100%; width: 100%; object-fit: cover; }
+  .portrait-frame figcaption { position: absolute; inset: auto 20px 20px; padding: 18px 22px; background: #fffef8ed; color: #172922; border: 1px solid #ffffff80; backdrop-filter: blur(12px); border-radius: 4px; }
+  figcaption > span { font-size: .58rem; letter-spacing: .15em; display: block; margin-bottom: 6px; }
+  figcaption strong { font-size: 1.1rem; font-weight: 500; display: flex; justify-content: space-between; }
+  figcaption a { font-size: .7rem; text-underline-offset: 4px; }
+  .start-here { display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .start-here a { text-decoration: none; padding: 28px 26px; border-right: 1px solid var(--line); transition: background .2s; }
+  .start-here a:first-child { padding-left: 0; } .start-here a:last-child { border-right: 0; }
+  .start-here a:hover { background: var(--surface-2); }
+  .start-here span { font-size: .63rem; letter-spacing: .14em; color: var(--muted); display: block; margin-bottom: 10px; }
+  .start-here strong { color: var(--heading); font-size: .98rem; font-weight: 500; }
+  .start-here p { margin: 8px 0 0; color: var(--muted); font-size: .78rem; max-width: 28em; }
+  .block { padding-block: 76px; }
+  .series { grid-template-columns: repeat(2,1fr); }
+  .s-card { border-radius: 8px; }
+  .story { min-height: 470px; padding-bottom: 260px; }
+  .story img { width: 100%; height: 235px; object-fit: cover; object-position: center 42%; right: 0; bottom: 0; filter: none; opacity: 1; }
+  .story .about-summary { max-width: 100%; }
+  .story .go { margin-top: 0; }
+  @media (max-width: 960px) { .hero { grid-template-columns: 1.1fr 1fr; gap: 30px; } .actions { gap: 14px; } }
+  @media (max-width: 760px) { .hero { padding-top: 145px; grid-template-columns: 1fr; gap: 32px; } h1 { font-size: clamp(2.8rem, 9vw, 4rem); } .desktop-break { display: none; } .portrait-frame { max-width: 520px; width: 100%; aspect-ratio: 5/4; } .portrait-frame > img { object-position: center 30%; } .start-here { grid-template-columns: 1fr; } .start-here a, .start-here a:first-child { padding: 22px 0; border-right: 0; border-bottom: 1px solid var(--line); } .start-here a:last-child { border-bottom: 0; } .block { padding-block: 52px; } .hero-location { font-size: .65rem; } }
+</style>
+
+<style>
+  h1 > .hero-line { display: block; overflow: hidden; color: var(--heading); padding-bottom: .08em; margin-bottom: -.08em; }
+  h1 .hero-line > span { display: block; color: inherit; }
+  h1 > .accent-line { color: var(--accent); }
+  .portrait-frame { will-change: clip-path; }
+  .portrait-frame > img { transition: filter .5s; }
+  .portrait-frame figcaption { animation: caption-in 1.2s .8s both; }
+  @keyframes caption-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+  .journal-heading { display: flex; justify-content: space-between; align-items: end; gap: 32px; margin-bottom: 32px; }
+  .journal-heading h2 { color: var(--heading); font-size: clamp(2.4rem, 4.5vw, 4rem); line-height: 1.1; letter-spacing: -.055em; font-weight: 500; margin: 18px 0 0; }
+  .journal-heading em { font-family: Georgia, serif; font-weight: 400; color: var(--accent); }
+  .journal-heading p { max-width: 28em; color: var(--muted); font-size: .85rem; }
+  .journal-photos { display: grid; grid-template-columns: 1.35fr 1fr; align-items: start; gap: 24px; }
+  .journal-photos figure { margin: 0; overflow: hidden; border-radius: 8px; background: var(--surface); }
+  .journal-photos figure:nth-child(2) { margin-top: 70px; }
+  .journal-photos img { width: 100%; height: auto; aspect-ratio: 3/2; object-fit: cover; }
+  .journal-photos figcaption { padding: 14px 0; background: var(--bg); font-size: .66rem; color: var(--muted); letter-spacing: .06em; }
+  .journal-about { display: inline-flex; gap: 24px; margin-top: 24px; text-decoration: none; color: var(--heading); font-size: .85rem; border-bottom: 1px solid var(--line); padding-bottom: 8px; }
+  @media (max-width:760px) { .journal-heading { display: block; } .journal-photos { grid-template-columns: 1fr; gap: 24px; } .journal-photos figure:nth-child(2) { margin-top: 0; } }
+  @media (prefers-reduced-motion:reduce) { .portrait-frame figcaption { animation: none; } }
 </style>

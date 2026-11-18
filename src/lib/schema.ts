@@ -10,7 +10,7 @@ export const personJsonLd = {
   name: "Privatus Cosmas",
   alternateName: ["Priver", "Privatus", "depriver", "@_depriver"],
   url: `${SITE}/about/`,
-  image: `${SITE}/img/me-cut.webp`,
+  image: `${SITE}/img/privatus-studio.webp`,
   jobTitle: "Software Engineer",
   description:
     "Privatus Cosmas, also known as Priver, is a software engineer from Kagera, based in Mbeya, Tanzania. Builds web and mobile apps, SaaS and business systems, systems integrations and data dashboards, and uses technology to solve community problems.",
