@@ -39,52 +39,17 @@ const slides = slidesFor(post.data.carousel).length;
 </a>
 
 <style>
-  .post { display: flex; flex-direction: column; background: var(--surface); border-radius: var(--radius); overflow: hidden; text-decoration: none; color: inherit;
-    box-shadow: 0 1px 0 var(--line), 0 30px 60px -40px color-mix(in srgb, var(--shadow) 35%, transparent); transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease); }
-  .post:hover { transform: translateY(-6px); box-shadow: 0 1px 0 var(--line), 0 40px 70px -36px color-mix(in srgb, var(--shadow) 45%, transparent); }
-  .cover { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--deep); }
-  .cover img { position: relative; width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease); }
-  .post:hover .cover img { transform: scale(1.05); }
-  .cover, .featured .cover { aspect-ratio: 1200 / 630; min-height: 0; }
-  .cover img { object-fit: contain; }
-  .badge { position: absolute; right: 14px; top: 14px; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px;
-    font-size: 0.78rem; font-weight: 600; background: color-mix(in srgb, var(--bg) 90%, transparent); color: var(--heading); backdrop-filter: blur(6px); }
-  .cover-fallback { display: grid; place-items: center; width: 100%; height: 100%; background: var(--deep); }
-  .cover-fallback .script { color: var(--on-deep); font-size: 3.6rem; }
-  .meta { padding: 24px 26px 26px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
-  .date { margin: 0; font-size: 0.85rem; font-weight: 500; color: var(--accent); text-transform: capitalize; }
-  h3 { margin: 0; color: var(--heading); font-size: 1.3rem; line-height: 1.3; }
-  .desc { margin: 0; color: var(--muted); flex: 1; }
-  .foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 8px; }
-  .more { display: inline-flex; gap: 8px; align-items: center; font-weight: 600; color: var(--heading); }
-  .post:hover .more { color: var(--accent); }
-  .stats { display: inline-flex; gap: 14px; color: var(--muted); font-size: 0.85rem; }
-  .stats span { display: inline-flex; align-items: center; gap: 5px; }
-  .stats b { font-weight: 600; }
-  .featured { display: grid; grid-template-columns: 1.1fr 1fr; }
-  .featured .cover { aspect-ratio: auto; min-height: 0; align-self: center; }
-  .featured h3 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
-  .featured .meta { padding: 40px; justify-content: center; }
-  @media (max-width: 760px) { .featured { grid-template-columns: 1fr; } .featured .cover { min-height: 0; } .featured .meta { padding: 26px; } }
+ .post { display:flex;flex-direction:row;align-items:center;text-decoration:none;color:inherit;border-radius:20px;overflow:hidden;background:var(--surface);position:relative;min-height:146px; }
+ .cover {position:relative;flex:0 0 92px;width:92px;height:106px;margin:10px;border-radius:13px;overflow:hidden;background:var(--surface-2);}
+ .cover img {width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .6s;}
+ .post:hover .cover img {transform:scale(1.06);}
+ .badge,.desc,.stats,.cover-fallback {display:none;}
+ .meta {min-width:0;flex:1;display:flex;flex-direction:column;gap:7px;padding:16px 16px 16px 4px;}
+ .date {font-size:.63rem;font-weight:500;color:var(--muted);margin:0;}
+ .date span {display:none;}
+ h3 {font-size:.9rem;line-height:1.45;letter-spacing:-.02em;color:var(--heading);margin:0;font-weight:500;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+ .foot {margin:3px 0 0;}
+ .more {display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-size:.65rem;font-weight:500;}
+ .more svg {width:13px;height:13px;}
+ @media(max-width:680px) {.post{min-height:120px;}.cover{flex-basis:90px;width:90px;height:90px;}.meta{padding:13px 14px 13px 2px;}h3{font-size:.9rem;-webkit-line-clamp:2;}}
 </style>
-
-<script>
-  // Fill view/like counts on cards (one request for the whole page).
-  import { site } from "../data/site";
-  const cards = [...document.querySelectorAll<HTMLElement>("[data-card-slug]")];
-  if (site.engageApi && cards.length) {
-    const slugs = [...new Set(cards.map((c) => c.dataset.cardSlug!))];
-    fetch(`${site.engageApi}/stats?slugs=${slugs.map(encodeURIComponent).join(",")}`)
-      .then((r) => (r.ok ? r.json() : {}))
-      .then((all: Record<string, { views: number; likes: number; comments: number }>) => {
-        cards.forEach((c) => {
-          const d = all[c.dataset.cardSlug!];
-          if (!d) return;
-          c.querySelector("[data-card-views]")!.textContent = String(d.views);
-          c.querySelector("[data-card-likes]")!.textContent = String(d.likes);
-          c.querySelector("[data-card-cmts]")!.textContent = String(d.comments ?? 0);
-        });
-      })
-      .catch(() => {});
-  }
-</script>

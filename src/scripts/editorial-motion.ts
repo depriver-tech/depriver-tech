@@ -49,3 +49,31 @@ media.add("(prefers-reduced-motion: no-preference)", () => {
   });
   gsap.from(".build-paths > a", { y: 35, opacity: 0, stagger: .12, duration: .9, ease: "power3.out", scrollTrigger: { trigger: ".build-paths", start: "top 90%", once: true } });
 });
+
+// Tactile cards: a small tilt and local specular highlight, never on touch devices.
+media.add("(prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine)", () => {
+  const disposers: Array<() => void> = [];
+  document.querySelectorAll<HTMLElement>(".post, .duo-card, .build-paths > a, .launch-tracks > a").forEach((card) => {
+    const move = (event: PointerEvent) => {
+      const rect = card.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width;
+      const y = (event.clientY - rect.top) / rect.height;
+      card.style.setProperty("--shine-x", `${x * 100}%`);
+      card.style.setProperty("--shine-y", `${y * 100}%`);
+      gsap.to(card, { rotateX: (0.5 - y) * 7, rotateY: (x - 0.5) * 7, y: -5, transformPerspective: 1000, duration: .45, ease: "power2.out", overwrite: "auto" });
+    };
+    const leave = () => gsap.to(card, { rotateX: 0, rotateY: 0, y: 0, duration: .7, ease: "elastic.out(1, .55)", overwrite: "auto" });
+    card.addEventListener("pointermove", move);
+    card.addEventListener("pointerleave", leave);
+    disposers.push(() => { card.removeEventListener("pointermove", move); card.removeEventListener("pointerleave", leave); });
+  });
+  return () => disposers.forEach((dispose) => dispose());
+});
+
+media.add("(prefers-reduced-motion: no-preference)", () => {
+  gsap.from(".nav-in", { y: -30, duration: .9, ease: "power3.out", delay: .1 });
+  gsap.utils.toArray<HTMLElement>(".service-sculpture").forEach((sculpture, index) => {
+    gsap.from(sculpture.children, { y: 35, opacity: 0, rotateY: -25, duration: 1.1, stagger: .12, ease: "back.out(1.4)", scrollTrigger: { trigger: sculpture, start: "top 93%", once: true } });
+    gsap.to(sculpture, { y: -8, duration: 2.8 + index * .4, yoyo: true, repeat: -1, ease: "sine.inOut", scrollTrigger: { trigger: sculpture, start: "top bottom", end: "bottom top", toggleActions: "play pause resume pause" } });
+  });
+});

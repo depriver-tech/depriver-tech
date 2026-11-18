@@ -4,6 +4,7 @@ import Base from "../layouts/Base.astro";
 import "../styles/launch.css";
 import Title from "../components/Title.astro";
 import PostCard from "../components/PostCard.astro";
+import Icon from "../components/Icon.astro";
 import { series, topics, seriesOf, topicsOf } from "../data/series";
 import { talks, talkBase } from "../data/talks";
 import { guides, guideFile, guideAsset } from "../data/guides";
@@ -20,20 +21,20 @@ const liveSeries = series
 const usedTopics = topics.filter((t) => posts.some((p) => topicsOf(p.data.tags).includes(t.id)));
 const talk = [...talks].sort((a, b) => b.date.localeCompare(a.date))[0];
 const guide = [...guides].sort((a, b) => b.date.localeCompare(a.date))[0];
-const PAGE = 9;
+const PAGE = 6;
 
 const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short", timeZone: "Africa/Dar_es_Salaam" });
 ---
 <Base title="Privatus Cosmas (Priver) | Software Engineer in Tanzania" description="Privatus Cosmas, also known as Priver, is a software engineer in Mbeya, Tanzania. Explore web and mobile development, practical tech lessons and software development services.">
   <div class="cosmic-home">
     <section class="launch-hero" aria-labelledby="launch-title">
-      <div class="launch-visual" aria-hidden="true"><div class="launch-glow"></div><img class="launch-person" src="/img/privatus-studio.webp" alt="" width="960" height="1200" fetchpriority="high" /></div>
+      <div class="launch-visual" aria-hidden="true"><div class="launch-glow"></div><div class="hero-orbit"><div class="orbit-ring ring-one"></div><div class="orbit-ring ring-two"></div><div class="orbit-core"><i class="cube-front"></i><i class="cube-back"></i><i class="cube-left"></i><i class="cube-right"></i><i class="cube-top"></i><i class="cube-bottom"></i></div></div><img class="launch-person" src="/img/privatus-studio.webp" alt="" width="960" height="1200" fetchpriority="high" /></div>
       <div class="launch-copy wrap">
         <p class="eyebrow" data-launch-copy><span class="signal-dot"></span> Privatus Cosmas / Software engineer</p>
         <h1 id="launch-title"><span class="launch-line"><span data-hero-line>Good ideas deserve</span></span><span class="launch-line"><span data-hero-line>to become <em>real.</em></span></span></h1>
         <p class="launch-intro" data-launch-copy>I’m Priver. I build useful software and share what I learn.<br class="wide-only" /> From Mbeya, Tanzania, to wherever your idea takes us.</p>
         <div class="launch-actions" data-launch-copy><a class="launch-btn" href="/software-engineer-tanzania/">Let’s build something <span aria-hidden="true">↗</span></a><a class="launch-secondary" href="#latest">Explore my writing <span aria-hidden="true">↓</span></a></div>
-        <div class="launch-tracks" data-launch-copy><a href="/software-engineer-tanzania/">Web & mobile</a><span>·</span><a href="/guides/">Practical learning</a><span>·</span><a href="/about/">The person behind it</a></div>
+        <div class="launch-tracks" data-launch-copy><a href="/software-engineer-tanzania/"><span class="track-icon"><Icon name="code" /></span><span><small>MAKE IT REAL</small>Web & mobile</span><b aria-hidden="true">↗</b></a><a href="/guides/"><span class="track-icon"><Icon name="book" /></span><span><small>KEEP EXPLORING</small>Practical learning</span><b aria-hidden="true">↗</b></a><a href="/about/"><span class="track-icon"><Icon name="user" /></span><span><small>BEHIND THE CODE</small>Meet Priver</span><b aria-hidden="true">↗</b></a></div>
       </div>
       <div class="launch-bottom wrap"><span>English & Kiswahili</span><a href="#journey">Scroll to discover <span class="scroll-cue" aria-hidden="true">↓</span></a><span>Mbeya, TZ <i class="signal-dot"></i></span></div>
     </section>
@@ -60,7 +61,7 @@ const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", da
     <section class="build-universe wrap" aria-labelledby="build-title">
       <div class="universe-intro"><span class="eyebrow">From idea to everyday use</span><h2 id="build-title">Bring the pieces<br /><em>together.</em></h2><p>A clear interface. The right connections. A system that makes work easier. Let’s turn the moving parts into something people can use.</p><a class="launch-btn" href="/software-engineer-tanzania/">Discuss your project <span aria-hidden="true">↗</span></a></div>
       <div class="universe-art" data-photo-reveal><img src="/img/software-universe.webp" alt="Abstract blue glass and metal modules connected into a single structure" width="1200" height="800" loading="lazy" /></div>
-      <div class="build-paths"><a href="/software-engineer-tanzania/"><span>01</span><h3>Web & mobile</h3><p>Applications that turn an idea into a useful experience.</p><b aria-hidden="true">↗</b></a><a href="/software-engineer-tanzania/"><span>02</span><h3>Business systems</h3><p>Bring records, everyday tasks and workflows together.</p><b aria-hidden="true">↗</b></a><a href="/software-engineer-tanzania/"><span>03</span><h3>Connected tools</h3><p>Integrations and dashboards that make information useful.</p><b aria-hidden="true">↗</b></a></div>
+      <div class="build-paths"><a href="/software-engineer-tanzania/"><span>01 / CREATE</span><div class="service-sculpture sculpture-app" aria-hidden="true"><i></i><i></i><i></i></div><h3><Icon name="code" /> Web & mobile</h3><p>Applications that turn an idea into a useful experience.</p><b aria-hidden="true">↗</b></a><a href="/software-engineer-tanzania/"><span>02 / ORGANIZE</span><div class="service-sculpture sculpture-stack" aria-hidden="true"><i></i><i></i><i></i></div><h3><Icon name="layers" /> Business systems</h3><p>Bring records, everyday tasks and workflows together.</p><b aria-hidden="true">↗</b></a><a href="/software-engineer-tanzania/"><span>03 / CONNECT</span><div class="service-sculpture sculpture-connect" aria-hidden="true"><i></i><i></i><i></i></div><h3><Icon name="connect" /> Connected tools</h3><p>Integrations and dashboards that make information useful.</p><b aria-hidden="true">↗</b></a></div>
     </section>
   </div>
 
@@ -198,7 +199,7 @@ const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", da
   gsap.registerPlugin(Flip);
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const PAGE = 9;
+  const PAGE = 6;
   const grid = document.querySelector<HTMLElement>("[data-grid]")!;
   const cells = [...grid.querySelectorAll<HTMLElement>(".cell")];
   const topicBtns = [...document.querySelectorAll<HTMLButtonElement>("[data-topic]")];
@@ -294,17 +295,10 @@ const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", da
   .block-head.split { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px; }
   .block-note { max-width: 24em; margin: 0; color: var(--deep-text); }
 
-  /* Latest: one wide card (cover beside the text), two compact cards under it */
-  .bento { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-  .bento > div { display: grid; }
-  .b-main { grid-column: span 2; }
-  .b-main :global(.featured .cover) { min-height: 400px; }
-  .b-side :global(.post) { flex-direction: row; }
-  .b-side :global(.cover) { flex: 0 0 40%; aspect-ratio: auto; min-height: 230px; }
-  .b-side :global(.carousel .cover img) { height: 80%; top: 10%; }
-  .b-side :global(.stack i) { height: 70%; }
-  .b-side :global(.badge) { display: none; }
-  .b-side :global(.desc) { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  /* Compact cards keep the reading list easy to scan. */
+  .bento { display:grid;grid-template-columns:repeat(3,1fr);gap:18px; }
+  .bento > div { display:grid; }
+  .b-main { grid-column:auto; }
 
   /* SERIES */
   .series-wrap { color: var(--deep-text); margin: 40px 0; }
@@ -384,9 +378,6 @@ const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", da
     .duo-card.guide { grid-template-columns: 1fr; gap: 24px; }
     .guide-book { max-width: 220px; }
     .b-main { grid-column: auto; }
-    .b-main :global(.featured .cover) { min-height: 260px; }
-    .b-side :global(.post) { flex-direction: column; }
-    .b-side :global(.cover) { aspect-ratio: 16 / 10; min-height: 0; }
     .stats { gap: 26px; }
     .upcoming { grid-template-columns: 1fr; }
     .series { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 82%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); scrollbar-width: none; }
@@ -394,16 +385,6 @@ const dayFmt = (d: Date) => d.toLocaleDateString("en-GB", { weekday: "short", da
     .story { min-height: 380px; }
     .story img { height: 70%; opacity: 0.55; }
     .search { width: 100%; }
-    /* archive on phones: a compact list, cover on the left and the title beside it */
     .grid { gap: 12px; }
-    .grid :global(.post) { flex-direction: row; border-radius: 20px; }
-    .grid :global(.cover) { flex: 0 0 34%; aspect-ratio: 4 / 5; }
-    .grid :global(.carousel .cover img) { top: 0; height: 100%; border-radius: 0; box-shadow: none; }
-    .grid :global(.stack), .grid :global(.badge), .grid :global(.desc), .grid :global(.stats) { display: none; }
-    .grid :global(.meta) { padding: 14px 16px; gap: 6px; justify-content: center; }
-    .grid :global(h3) { font-size: 1.02rem; }
-    .grid :global(.date) { font-size: 0.78rem; }
-    .grid :global(.foot) { margin-top: 2px; font-size: 0.9rem; }
-    .grid :global(.cover-fallback .script) { font-size: 1.6rem; }
   }
 </style>
