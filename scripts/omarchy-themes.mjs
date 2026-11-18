@@ -98,7 +98,7 @@ const brand = [
     tokens: {
       "--bg": "#f7f6f2", "--surface": "#ffffff", "--surface-2": "#eef1f6", "--heading": "#192e28", "--text": "#3b414d",
       "--muted": "#5c626e", "--line": "#e2e4e9", "--accent": "#366958", "--accent-hover": "#285443", "--accent-2": "#a9c4f5",
-      "--on-accent": "#ffffff", "--deep": "#192e28", "--accent-deep": "#366958", "--on-deep": "#ffffff", "--deep-text": "#bdcec3",
+      "--on-accent": "#ffffff", "--deep": "#192e28", "--accent-deep": "#c4dbb0", "--on-deep": "#ffffff", "--deep-text": "#bdcec3",
       "--terrain": "#d3d9e6", "--terrain-deep": "#1f3a6b", "--shadow": "#192e28", "--neu-hi": "#ffffff", "--neu-lo": "#d9dde6", "--photo-filter": "none",
     },
   },
