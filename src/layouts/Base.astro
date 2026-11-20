@@ -14,6 +14,7 @@ interface Props {
   description?: string;
   image?: string;
   imageAlt?: string;
+  imageDimensions?: { width: number; height: number } | null;
   type?: "website" | "article";
   published?: Date;
   modified?: Date;
@@ -27,6 +28,7 @@ const {
   title = "Privatus Cosmas (Priver) | Software Engineer in Tanzania",
   description = "Privatus Cosmas, also known as Priver, is a software engineer in Mbeya, Tanzania, building web and mobile apps, business systems and integrations.",
   image = "/og/home.jpg",
+  imageDimensions = { width: 1200, height: 630 },
   imageAlt = "Privatus Cosmas, Software Engineer & Digital Innovator",
   type = "website",
   published,
@@ -66,8 +68,8 @@ const imageUrl = new URL(image, Astro.site);
     <meta property="og:image" content={imageUrl} />
     <meta property="og:image:secure_url" content={imageUrl} />
     <meta property="og:image:type" content={image.endsWith(".png") ? "image/png" : "image/jpeg"} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    {imageDimensions && <meta property="og:image:width" content={imageDimensions.width} />}
+    {imageDimensions && <meta property="og:image:height" content={imageDimensions.height} />}
     <meta property="og:image:alt" content={imageAlt} />
     {published && <meta property="article:published_time" content={published.toISOString()} />}
     {modified && <meta property="article:modified_time" content={modified.toISOString()} />}

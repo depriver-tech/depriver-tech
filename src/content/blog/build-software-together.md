@@ -4,6 +4,7 @@ description: "An open invitation for anyone curious about tech. Try a short codi
 date: 2026-11-20T00:00:00+03:00
 status: live
 tags: ["students", "career", "skills", "beginners"]
+cover: /carousels/build-software-together/cover.jpg
 carousel: build-software-together
 slides:
   - "Let’s build software together. Daily coding challenges, full-stack projects and practical software engineering skills. Beginners are welcome."

@@ -16,6 +16,7 @@ export async function getStaticPaths() {
 const { post, posts } = Astro.props as { post: Post; posts: Post[] };
 const { Content } = await render(post);
 const slides = slidesFor(post.data.carousel);
+const shareImage = post.data.cover ?? `/og/blog/${post.id}.jpg`;
 const url = new URL(`/blog/${post.id}/`, Astro.site).toString();
 // keep reading: same series first, then posts sharing the most tags, then the newest
 const ser = seriesOf(post.data.tags);
@@ -28,7 +29,7 @@ const jsonLd = {
   description: post.data.description,
   datePublished: post.data.date.toISOString(),
   dateModified: (post.data.updated ?? post.data.date).toISOString(),
-  image: new URL(`/og/blog/${post.id}.jpg`, Astro.site).toString(),
+  image: new URL(shareImage, Astro.site).toString(),
   url,
   mainEntityOfPage: { "@type": "WebPage", "@id": url },
   publisher: { "@id": "https://depriver.tech/#person" },
@@ -36,7 +37,7 @@ const jsonLd = {
   keywords: post.data.tags.join(", "),
 };
 ---
-<Base title={`${post.data.title} · Privatus Cosmas`} description={post.data.description} image={`/og/blog/${post.id}.jpg`}
+<Base title={`${post.data.title} · Privatus Cosmas`} description={post.data.description} image={shareImage} imageDimensions={post.data.cover ? null : undefined}
   imageAlt={post.data.title} type="article" published={post.data.date} modified={post.data.updated} tags={post.data.tags}>
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   {/* carousel posts: slides on one side, caption, stats and comments on the other, in one screen */}
