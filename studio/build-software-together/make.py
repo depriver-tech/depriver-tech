@@ -7,11 +7,12 @@ OUT = os.path.join(HERE, "export") + "/"
 os.makedirs(OUT, exist_ok=True)
 
 ART_STYLE = "print"
-TOTAL = 6
 POST_URL = "depriver.tech/blog/build-software-together/"
 for shared in ("base.py", "kit.py", "editorial.py"):
     with open(os.path.join(STUDIO, shared)) as source:
         exec(compile(source.read(), source.name, "exec"))
+
+TOTAL = 6
 
 # Ink illustrations share the grain and offset shadow used in the poster series.
 SKETCHES = {
@@ -26,61 +27,85 @@ for key, paths in SKETCHES.items():
     ART[key] = svg(f'<g fill="none" stroke="#0b1e3f" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">{paths}</g>')
 
 
-s = page(1, "Open invitation")
-title2(s, "Let’s build", "software together.", y=270, size=103)
-s.para(M, 540, "Daily coding challenges, full-stack projects and practical software engineering skills.", f(MED, 38), W - 2 * M, 57, NAVY)
-chat(s, M, 715, 505, "I’m curious about tech. Can I join if I’m just starting?", "You", mine=False, size=30, lh=42)
-chat(s, M, 885, 505, "Yes. Beginners are welcome.", "Build with us", size=30, lh=42)
-paste_print(s, print_art("laptop", k(430)), 575, 718)
-horizon(s, 1)
-cover_footer(s, "Swipe to see how it works")
-finish(s)
-s.save(1)
+def illustration(s, key, width, x, y, tilt=0):
+    art = print_art(key, k(width))
+    if tilt:
+        art = art.rotate(tilt, resample=Image.BICUBIC, expand=True)
+    paste_print(s, art, x, y, offset=(12, 15), opacity=0.22)
 
-pages = [
-    ("notebook", "Learn together", "Bring what", "you’re learning.", [
-        ("From class", "Bring a concept or exercise you want to practise."),
-        ("From a course", "Share what you tried and where you got stuck."),
-        ("From your own project", "Ask for a second pair of eyes on a bug or an idea."),
-    ], "Study together", "Take turns explaining what you learned."),
-    ("calendar", "Daily practice", "One challenge.", "Every day.", [
-        ("Get a short task", "We’ll post one daily, including weekends."),
-        ("Make time to practise", "Try each daily task. Share progress or ask for help."),
-        ("Show up when you commit", "Meet online or in person. Let us know if plans change."),
-    ], "Example challenge", "Add a filter that shows only unfinished assignments."),
-    ("layers", "First full-stack project", "Build a", "study planner.", [
-        ("Frontend", "Make a form to add assignments and due dates."),
-        ("Backend", "Create an API to add and list assignments."),
-        ("Database", "Save assignments and their completion status."),
-    ], "Work as a team", "Rotate roles so everyone gets to try each part."),
-    ("branch", "Career skills", "Build skills", "you can show.", [
-        ("Work with Git", "Make small commits and open a pull request."),
-        ("Review and test", "Give feedback and check that the feature works."),
-        ("Explain your work", "Show a feature you built and why you built it that way."),
-    ], "Portfolio goal", "Aim for a demo and a contribution you can talk through."),
-]
 
-for n, (art, label, first, second, rows, note, takeaway) in enumerate(pages, 2):
-    s = page(n, label)
-    title2(s, first, second, y=242, size=91)
-    for index, (heading, copy) in enumerate(rows):
-        y = 472 + index * 166
-        card(s, (M, y, 650, y + 132))
-        s.text(M + 30, y + 53, heading, f(BOLD, 34), NAVY)
-        s.para(M + 30, y + 87, copy, f(REG, 24), 510, 30, GREY)
-    paste_print(s, print_art(art, k(380)), 638, 552)
-    horizon(s, n)
-    navy_note(s, note, takeaway)
+def save(s, number):
     finish(s)
-    s.save(n)
+    s.save(number)
 
-s = page(TOTAL, "Join us")
-title2(s, "Want to", "build with us?", y=270, size=104)
-s.para(M, 550, "If you’re curious about tech or already building projects, you’re welcome.", f(MED, 38), W - 2 * M, 56, NAVY)
-chat(s, M, 730, 560, "I’m in! I want to learn APIs. I’m usually free after 6.", "Send a message like this", size=32, lh=45)
-paste_print(s, print_art("message", k(390)), 628, 680)
-s.text(M, 970, "Share what you can commit to.", f(SEMI, 33), NAVY)
-horizon(s, TOTAL)
-navy_note(s, "Join on WhatsApp via the post", POST_URL)
-finish(s)
-s.save(TOTAL)
+
+s = page(1, "An invitation from Privatus Cosmas")
+s.text(M - 6, 271, "Let’s build", f(BOLD, 126), NAVY)
+s.text(M - 7, 405, "software", f(BOLD, 142), NAVY)
+s.text(M - 6, 535, "together.", f(BOLD, 126), ORANGE)
+swash(s, M + 5, 641, 566, thick=10)
+s.para(M, 668, "Daily coding challenges. Full-stack projects. People to learn with.", f(MED, 37), 395, 54, NAVY)
+horizon(s, 1)
+illustration(s, "laptop", 614, 421, 665, -8)
+sticker(s, 274, 969, "Beginners welcome", angle=5, bg=BLUE, fg=NAVY, size=26)
+cover_footer(s, "Swipe to see the plan")
+save(s, 1)
+
+s = page(2, "Learn together")
+title2(s, "Bring what", "you’re learning.", y=250, size=94)
+illustration(s, "notebook", 570, 235, 374, 5)
+s.text(M, 826, "A lecture. A course. A side project.", f(BOLD, 42), NAVY)
+s.para(M, 901, "Bring a question and show us what you’ve tried. We’ll work through it together.", f(MED, 33), 850, 48, GREY)
+horizon(s, 2)
+navy_note(s, "How we learn", "Take turns explaining what you learned.")
+save(s, 2)
+
+s = page(3, "Daily practice")
+title2(s, "One challenge.", "Every day.", y=242, size=91)
+illustration(s, "calendar", 446, 558, 419, -6)
+s.para(M, 512, "We’ll post a short task every day, including weekends.", f(MED, 36), 477, 52, NAVY)
+swash(s, M, 343, 665, thick=8)
+s.text(M, 771, "Try it. Share progress. Ask for help.", f(BOLD, 43), NAVY)
+s.para(M, 852, "We’ll plan online and in-person sessions together. Show up when you commit and tell us early if plans change.", f(MED, 32), 892, 47, GREY)
+horizon(s, 3)
+navy_note(s, "Example challenge", "Add a filter that shows only unfinished assignments.")
+save(s, 3)
+
+s = page(4, "First full-stack project")
+title2(s, "Build a", "study planner.", y=242, size=94)
+illustration(s, "layers", 515, 507, 493, 5)
+numbered(s, [
+    ("Frontend", "Make the assignment form."),
+    ("Backend", "Create an API to add and list tasks."),
+    ("Database", "Store assignments and due dates."),
+], 522, maxw=490, gap=146, ts=40, bs=26)
+s.para(M, 979, "Add a task, set its due date, then mark it done.", f(MED, 30), 900, 44, NAVY)
+horizon(s, 4)
+navy_note(s, "Work as a team", "Rotate roles so everyone gets to try each part.")
+save(s, 4)
+
+s = page(5, "Career skills")
+title2(s, "Build skills", "you can show.", y=242, size=91)
+illustration(s, "branch", 545, 243, 365, -3)
+for x, heading, copy in [
+    (M, "Commit", "Use Git to show how your work changed."),
+    (395, "Review", "Read a teammate’s code and test it."),
+    (714, "Demo", "Explain a feature you helped build."),
+]:
+    hairline(s, x, x + 271, 802, ORANGE, 4)
+    s.text(x, 868, heading, f(BOLD, 39), NAVY)
+    s.para(x, 921, copy, f(MED, 27), 275, 38, GREY)
+horizon(s, 5)
+navy_note(s, "Portfolio goal", "Aim for a demo and a contribution you can talk through.")
+save(s, 5)
+
+s = page(6, "Join us")
+title2(s, "Want to", "build with us?", y=260, size=104)
+s.para(M, 512, "Curious about tech? Tell me what you want to learn and what time you can commit.", f(MED, 37), 852, 56, NAVY)
+illustration(s, "message", 440, 563, 635, -9)
+chat(s, M, 685, 514, "I’m in! I want to learn APIs. I’m usually free after 6.", "Your first message", size=32, lh=45)
+horizon(s, 6)
+smallcaps(s, M, BASE + 80, "Open the post and tap", 18, SOFT)
+s.text(M, BASE + 150, "Join on WhatsApp", f(BOLD, 50), WHITE_T)
+s.text(M, BASE + 211, POST_URL, f(MED, 27), SOFT)
+save(s, 6)
